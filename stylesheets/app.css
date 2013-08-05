@@ -2716,8 +2716,8 @@ button.large, .button.large {
   }
   /* line 210, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_buttons.scss */
   button.radius, .button.radius {
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
   }
   /* line 211, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_buttons.scss */
   button.round, nav.top-bar button.row, .button.round, nav.top-bar .button.row {
@@ -2829,24 +2829,24 @@ label.inline {
 .prefix.button.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 
 /* line 275, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .postfix.button.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 /* line 276, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
@@ -2885,12 +2885,12 @@ span.prefix {
 span.prefix.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 
 /* line 283, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
@@ -2904,32 +2904,32 @@ span.postfix {
 span.postfix.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 /* Input groups will automatically style first and last elements of the group */
 /* line 290, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .input-group.radius > *:first-child, .input-group.radius > *:first-child * {
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 /* line 293, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .input-group.radius > *:last-child, .input-group.radius > *:last-child * {
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 /* line 298, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .input-group.round > *:first-child, nav.top-bar .input-group.row > *:first-child, .input-group.round > *:first-child *, nav.top-bar .input-group.row > *:first-child * {
@@ -3384,21 +3384,21 @@ form.custom .custom.disabled {
 }
 /* line 52, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_button-groups.scss */
 .button-group.radius > *:first-child, nav.top-bar .radius.row > *:first-child, .button-group.radius > *:first-child > a, nav.top-bar .radius.row > *:first-child > a, .button-group.radius > *:first-child > button, nav.top-bar .radius.row > *:first-child > button, .button-group.radius > *:first-child > .button, nav.top-bar .radius.row > *:first-child > .button {
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 /* line 56, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_button-groups.scss */
 .button-group.radius > *:last-child, nav.top-bar .radius.row > *:last-child, .button-group.radius > *:last-child > a, nav.top-bar .radius.row > *:last-child > a, .button-group.radius > *:last-child > button, nav.top-bar .radius.row > *:last-child > button, .button-group.radius > *:last-child > .button, nav.top-bar .radius.row > *:last-child > .button {
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 /* line 52, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_button-groups.scss */
 .button-group.round > *:first-child, nav.top-bar .row > *:first-child, .button-group.round > *:first-child > a, nav.top-bar .row > *:first-child > a, .button-group.round > *:first-child > button, nav.top-bar .row > *:first-child > button, .button-group.round > *:first-child > .button, nav.top-bar .row > *:first-child > .button {
@@ -3691,12 +3691,12 @@ form.custom .custom.disabled {
 }
 /* line 162, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_split-buttons.scss */
 .split.button.radius span {
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 /* line 163, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_split-buttons.scss */
 .split.button.round span, nav.top-bar .split.button.row span {
@@ -5220,8 +5220,8 @@ form.custom .custom.disabled {
 }
 /* line 98, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_alert-boxes.scss */
 .alert-box.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 /* line 99, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_alert-boxes.scss */
 .alert-box.round, nav.top-bar .alert-box.row {
@@ -5259,8 +5259,8 @@ form.custom .custom.disabled {
   border-width: 1px;
   background-color: #2d3131;
   border-color: #151717;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 /* line 119, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_breadcrumbs.scss */
 .breadcrumbs > * {
@@ -5336,8 +5336,8 @@ kbd {
   font-family: "Consolas", "Menlo", "Courier", monospace;
   font-size: 0.9375em;
   padding: 0.125em 0.25em 0em;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 
 /* Labels */
@@ -5357,8 +5357,8 @@ kbd {
 }
 /* line 76, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_labels.scss */
 .label.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 /* line 77, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_labels.scss */
 .label.round, nav.top-bar .label.row {
@@ -5526,14 +5526,14 @@ kbd {
 }
 /* line 69, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_panels.scss */
 .panel.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 
 /* Pricing Tables */
 /* line 120, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_pricing-tables.scss */
 .pricing-table {
-  border: solid 1px dotted #dddddd, 0.8;
+  border: solid 1px dotted #dddddd, 80%;
   margin-left: 0;
   margin-bottom: 0.625em;
 }
@@ -5544,7 +5544,7 @@ kbd {
 }
 /* line 123, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .title {
-  background-color: #ff7f2f;
+  background-color: #ffdec9;
   padding: 0.9375em 1.25em;
   text-align: center;
   color: black;
@@ -5583,7 +5583,7 @@ kbd {
 }
 /* line 127, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .cta-button {
-  background-color: #ff7f2f;
+  background-color: #ffdec9;
   text-align: center;
   padding: 1.25em 1.25em 0;
 }
@@ -5623,13 +5623,13 @@ kbd {
 }
 /* line 60, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_progress-bars.scss */
 .progress.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 /* line 61, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_progress-bars.scss */
 .progress.radius .meter {
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
 }
 /* line 64, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_progress-bars.scss */
 .progress.round, nav.top-bar .progress.row {
@@ -6025,8 +6025,8 @@ table tfoot tr td {
 }
 /* line 41, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_thumbs.scss */
 .th.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 
 /* line 43, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_thumbs.scss */
@@ -6066,8 +6066,8 @@ a.th {
   width: 100%;
   color: white;
   background: black;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 /* line 58, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_tooltips.scss */
 .tooltip > .nub {
@@ -8557,8 +8557,8 @@ button.large, .button.large {
   }
   /* line 210, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_buttons.scss */
   button.radius, .button.radius {
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
   }
   /* line 211, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_buttons.scss */
   button.round, nav.top-bar button.row, .button.round, nav.top-bar .button.row {
@@ -8670,24 +8670,24 @@ label.inline {
 .prefix.button.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 
 /* line 275, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .postfix.button.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 /* line 276, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
@@ -8726,12 +8726,12 @@ span.prefix {
 span.prefix.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 
 /* line 283, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
@@ -8745,32 +8745,32 @@ span.postfix {
 span.postfix.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 /* Input groups will automatically style first and last elements of the group */
 /* line 290, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .input-group.radius > *:first-child, .input-group.radius > *:first-child * {
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 /* line 293, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .input-group.radius > *:last-child, .input-group.radius > *:last-child * {
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 /* line 298, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_forms.scss */
 .input-group.round > *:first-child, nav.top-bar .input-group.row > *:first-child, .input-group.round > *:first-child *, nav.top-bar .input-group.row > *:first-child * {
@@ -9225,21 +9225,21 @@ form.custom .custom.disabled {
 }
 /* line 52, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_button-groups.scss */
 .button-group.radius > *:first-child, nav.top-bar .radius.row > *:first-child, .button-group.radius > *:first-child > a, nav.top-bar .radius.row > *:first-child > a, .button-group.radius > *:first-child > button, nav.top-bar .radius.row > *:first-child > button, .button-group.radius > *:first-child > .button, nav.top-bar .radius.row > *:first-child > .button {
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
 }
 /* line 56, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_button-groups.scss */
 .button-group.radius > *:last-child, nav.top-bar .radius.row > *:last-child, .button-group.radius > *:last-child > a, nav.top-bar .radius.row > *:last-child > a, .button-group.radius > *:last-child > button, nav.top-bar .radius.row > *:last-child > button, .button-group.radius > *:last-child > .button, nav.top-bar .radius.row > *:last-child > .button {
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 /* line 52, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_button-groups.scss */
 .button-group.round > *:first-child, nav.top-bar .row > *:first-child, .button-group.round > *:first-child > a, nav.top-bar .row > *:first-child > a, .button-group.round > *:first-child > button, nav.top-bar .row > *:first-child > button, .button-group.round > *:first-child > .button, nav.top-bar .row > *:first-child > .button {
@@ -9458,12 +9458,12 @@ form.custom .custom.disabled {
 }
 /* line 162, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_split-buttons.scss */
 .split.button.radius span {
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 /* line 163, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_split-buttons.scss */
 .split.button.round span, nav.top-bar .split.button.row span {
@@ -10264,8 +10264,8 @@ form.custom .custom.disabled {
 }
 /* line 76, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_labels.scss */
 .label.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 /* line 77, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_labels.scss */
 .label.round, nav.top-bar .label.row {
@@ -10353,14 +10353,14 @@ form.custom .custom.disabled {
 }
 /* line 69, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_panels.scss */
 .panel.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 
 /* Pricing Tables */
 /* line 120, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_pricing-tables.scss */
 .pricing-table {
-  border: solid 1px dotted #dddddd, 0.8;
+  border: solid 1px dotted #dddddd, 80%;
   margin-left: 0;
   margin-bottom: 0.625em;
 }
@@ -10371,7 +10371,7 @@ form.custom .custom.disabled {
 }
 /* line 123, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .title {
-  background-color: #ff7f2f;
+  background-color: #ffdec9;
   padding: 0.9375em 1.25em;
   text-align: center;
   color: black;
@@ -10410,7 +10410,7 @@ form.custom .custom.disabled {
 }
 /* line 127, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .cta-button {
-  background-color: #ff7f2f;
+  background-color: #ffdec9;
   text-align: center;
   padding: 1.25em 1.25em 0;
 }
@@ -10478,8 +10478,8 @@ table tfoot tr td {
 }
 /* line 41, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_thumbs.scss */
 .th.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 
 /* line 43, ../../../../Users/grahamh/Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/foundation/components/_thumbs.scss */
@@ -10662,34 +10662,83 @@ html, body {
   opacity: 0;
 }
 
-/* line 48, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) {
+  /* line 47, ../sass/_change4Charity.scss */
+  nav.top-bar .right {
+    width: 30%;
+  }
+}
+/* line 55, ../sass/_change4Charity.scss */
 nav.top-bar .has-form {
+  width: 100%;
+  margin-left: -2px;
   padding: 0.1875em;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 48, ../sass/_change4Charity.scss */
+  /* line 55, ../sass/_change4Charity.scss */
   nav.top-bar .has-form {
     padding: 0em;
   }
 }
-/* line 55, ../sass/_change4Charity.scss */
+/* line 64, ../sass/_change4Charity.scss */
 nav.top-bar .row {
   padding-left: 0em;
   padding-right: 0em;
 }
-/* line 61, ../sass/_change4Charity.scss */
+/* line 70, ../sass/_change4Charity.scss */
 nav.top-bar .name {
   background: url("../images/bwLogo.png") no-repeat scroll 3px 3px;
   width: 51px;
   height: 59px;
   /* set to $topbar-height to avoid black bar under .small  top bar*/
 }
-/* line 66, ../sass/_change4Charity.scss */
-nav.top-bar .small-3, nav.top-bar .small-6 {
+/* line 75, ../sass/_change4Charity.scss */
+nav.top-bar .smallButton {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 16.66667%;
+  float: left;
   padding-left: 0em;
   padding-right: 0em;
 }
-/* line 70, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) {
+  /* line 75, ../sass/_change4Charity.scss */
+  nav.top-bar .smallButton {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 8.33333%;
+    float: left;
+    padding-left: 0em;
+    padding-right: 0em;
+    z-index: 0;
+  }
+}
+/* line 86, ../sass/_change4Charity.scss */
+nav.top-bar .smallInput {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 66.66667%;
+  float: left;
+  padding-left: 0em;
+  padding-right: 0em;
+}
+@media screen and (min-width: 58.75em) {
+  /* line 86, ../sass/_change4Charity.scss */
+  nav.top-bar .smallInput {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 83.33333%;
+    float: left;
+    padding-left: 0em;
+    padding-right: 0em;
+    z-index: 1;
+  }
+}
+/* line 97, ../sass/_change4Charity.scss */
 nav.top-bar a.button, nav.top-bar #camera {
   text-indent: -3000px !important;
   background: url("../images/maginfi3WhiteOptim.png") no-repeat scroll center center;
@@ -10701,42 +10750,44 @@ nav.top-bar a.button, nav.top-bar #camera {
   margin-left: -2px;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 70, ../sass/_change4Charity.scss */
+  /* line 97, ../sass/_change4Charity.scss */
   nav.top-bar a.button, nav.top-bar #camera {
     margin-top: -5px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
-/* line 84, ../sass/_change4Charity.scss */
+/* line 112, ../sass/_change4Charity.scss */
 nav.top-bar #camera {
   float: right;
   background: url("../images/camera_icon_1.png") no-repeat scroll center center;
 }
-/* line 88, ../sass/_change4Charity.scss */
+/* line 116, ../sass/_change4Charity.scss */
 nav.top-bar form input {
   height: 48px;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 88, ../sass/_change4Charity.scss */
+  /* line 116, ../sass/_change4Charity.scss */
   nav.top-bar form input {
     margin-top: -5px;
   }
 }
 
-/* line 96, ../sass/_change4Charity.scss */
+/* line 124, ../sass/_change4Charity.scss */
 #wrapper {
   padding-top: 55px;
 }
 
-/* line 100, ../sass/_change4Charity.scss */
+/* line 128, ../sass/_change4Charity.scss */
 #instructionsModal.reveal-modal, #instructionsModal.reveal-modal h4, #instructionsModal.reveal-modal p.lead {
   color: #fff;
 }
-/* line 103, ../sass/_change4Charity.scss */
+/* line 131, ../sass/_change4Charity.scss */
 #instructionsModal ol {
   padding-left: 1.8em;
 }
 
-/* line 110, ../sass/_change4Charity.scss */
+/* line 141, ../sass/_change4Charity.scss */
 #charities #charityCards {
   display: block;
   padding: 0;
@@ -10772,14 +10823,14 @@ nav.top-bar form input {
 #charities #charityCards > li:nth-of-type(1n+1) {
   clear: both;
 }
-/* line 113, ../sass/_change4Charity.scss */
+/* line 144, ../sass/_change4Charity.scss */
 #charities #charityCards li.front, #charities #charityCards li.back {
   border: 3px dotted lavender !important;
   height: 275px;
   min-width: 9.375em;
 }
 @media screen and (min-width: 20.0625em) {
-  /* line 110, ../sass/_change4Charity.scss */
+  /* line 141, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10815,13 +10866,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(2n+1) {
     clear: both;
   }
-  /* line 121, ../sass/_change4Charity.scss */
+  /* line 152, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 300px;
   }
 }
 @media screen and (min-width: 31.3125em) {
-  /* line 110, ../sass/_change4Charity.scss */
+  /* line 141, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10857,13 +10908,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(3n+1) {
     clear: both;
   }
-  /* line 127, ../sass/_change4Charity.scss */
+  /* line 158, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 300px;
   }
 }
 @media screen and (min-width: 48em) {
-  /* line 110, ../sass/_change4Charity.scss */
+  /* line 141, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10899,13 +10950,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(4n+1) {
     clear: both;
   }
-  /* line 133, ../sass/_change4Charity.scss */
+  /* line 164, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 300px;
   }
 }
 @media screen and (min-width: 58.75em) {
-  /* line 110, ../sass/_change4Charity.scss */
+  /* line 141, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10941,13 +10992,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(5n+1) {
     clear: both;
   }
-  /* line 139, ../sass/_change4Charity.scss */
+  /* line 170, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 315px;
   }
 }
 @media screen and (min-width: 80em) {
-  /* line 110, ../sass/_change4Charity.scss */
+  /* line 141, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10983,12 +11034,12 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(5n+1) {
     clear: both;
   }
-  /* line 145, ../sass/_change4Charity.scss */
+  /* line 176, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 315px;
   }
 }
-/* line 150, ../sass/_change4Charity.scss */
+/* line 181, ../sass/_change4Charity.scss */
 #charities .pricing-table {
   -webkit-transform: rotateY(90deg);
   -moz-transform: rotateY(90deg);
@@ -10996,31 +11047,41 @@ nav.top-bar form input {
   -o-transform: rotateY(90deg);
   transform: rotateY(90deg);
 }
-/* line 153, ../sass/_change4Charity.scss */
+/* line 184, ../sass/_change4Charity.scss */
 #charities .pricing-table .donateMoreInfo {
+  border-bottom-left-radius: 7px !important;
+  border-bottom-right-radius: 7px !important;
+  padding-top: 12px;
   width: 100% !important;
   position: absolute;
   bottom: 0px;
   z-index: top;
 }
-/* line 155, ../sass/_change4Charity.scss */
+/* line 191, ../sass/_change4Charity.scss */
 #charities .pricing-table .donateMoreInfo .button-group, #charities .pricing-table .donateMoreInfo nav.top-bar .row, nav.top-bar #charities .pricing-table .donateMoreInfo .row {
   display: block;
   width: 9.375em;
   margin: 0px auto;
 }
-/* line 166, ../sass/_change4Charity.scss */
+/* line 200, ../sass/_change4Charity.scss */
 #charities .pricing-table .description {
+  background-color: rgba(224, 227, 227, 0.8);
+  border-bottom-right-radius: 7px !important;
+  border-bottom-left-radius: 7px !important;
   font-size: 90%;
   height: 254px;
   overflow-y: auto;
   overflow-x: hidden;
 }
-/* line 173, ../sass/_change4Charity.scss */
+/* line 209, ../sass/_change4Charity.scss */
+#charities .pricing-table .title {
+  border-top-left-radius: 7px !important;
+}
+/* line 211, ../sass/_change4Charity.scss */
 #charities .pricing-table .title img {
   width: 100px;
 }
-/* line 178, ../sass/_change4Charity.scss */
+/* line 218, ../sass/_change4Charity.scss */
 #charities .flip-container {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -11034,11 +11095,11 @@ nav.top-bar form input {
   perspective: 250;
   height: 300px;
 }
-/* line 182, ../sass/_change4Charity.scss */
+/* line 222, ../sass/_change4Charity.scss */
 #charities .flip-container.flip {
   position: relative;
 }
-/* line 185, ../sass/_change4Charity.scss */
+/* line 225, ../sass/_change4Charity.scss */
 #charities .flip-container .front, #charities .flip-container .back {
   position: absolute;
   top: 0;
@@ -11046,7 +11107,7 @@ nav.top-bar form input {
   height: 300px;
   width: 100%;
 }
-/* line 197, ../sass/_change4Charity.scss */
+/* line 235, ../sass/_change4Charity.scss */
 #charities .flip-container .stripe {
   position: absolute;
   height: 100%;
@@ -11056,11 +11117,12 @@ nav.top-bar form input {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
-/* line 206, ../sass/_change4Charity.scss */
+/* line 244, ../sass/_change4Charity.scss */
 #charities .flip-container .front {
+  cursor: pointer;
   z-index: 2;
 }
-/* line 209, ../sass/_change4Charity.scss */
+/* line 247, ../sass/_change4Charity.scss */
 #charities .flip-container .front .charityLogo {
   z-index: 11;
   position: absolute;
@@ -11069,7 +11131,7 @@ nav.top-bar form input {
   height: 100%;
   width: 100%;
 }
-/* line 218, ../sass/_change4Charity.scss */
+/* line 256, ../sass/_change4Charity.scss */
 #charities .flip-container .front:after {
   content: '';
   position: absolute;
@@ -11081,17 +11143,17 @@ nav.top-bar form input {
   border-right: 25px solid #e0e3e3;
   width: 0;
 }
-/* line 231, ../sass/_change4Charity.scss */
+/* line 269, ../sass/_change4Charity.scss */
 #charities .flip-container .back:after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
   border-top: 25px solid white;
-  border-left: 25px solid #ff7f2f;
+  border-left: 25px solid #ffdec9;
   width: 0;
 }
-/* line 243, ../sass/_change4Charity.scss */
+/* line 281, ../sass/_change4Charity.scss */
 #charities .flip-container.flip .flipper {
   -webkit-transform-origin: center center;
   -moz-transform-origin: center center;
@@ -11104,7 +11166,7 @@ nav.top-bar form input {
   -o-transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
   transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
 }
-/* line 251, ../sass/_change4Charity.scss */
+/* line 289, ../sass/_change4Charity.scss */
 #charities .front.flipped {
   transform: rotateY(180deg);
   -webkit-transform: translateZ(0);
@@ -11113,7 +11175,7 @@ nav.top-bar form input {
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 256, ../sass/_change4Charity.scss */
+/* line 294, ../sass/_change4Charity.scss */
 #charities .flipper {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -11123,11 +11185,11 @@ nav.top-bar form input {
   transition: 0.6s;
   position: relative;
 }
-/* line 262, ../sass/_change4Charity.scss */
+/* line 300, ../sass/_change4Charity.scss */
 #charities .front {
   z-index: 2;
 }
-/* line 265, ../sass/_change4Charity.scss */
+/* line 303, ../sass/_change4Charity.scss */
 #charities .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -11140,7 +11202,7 @@ nav.top-bar form input {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 270, ../sass/_change4Charity.scss */
+/* line 308, ../sass/_change4Charity.scss */
 #charities .front, #charities .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;

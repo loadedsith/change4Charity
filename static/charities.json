@@ -1,26 +1,31 @@
 [
     {
       "name": "AM",
+      "link": "http://AM.com",
       "logo": "AM.png",
       "shortDescription": "defeated Red dragonfly loves deep Indigo eider duck"
     },
     {
       "name": "Augies Quest",
+      "link": "http://Augies.com",
       "logo": "augiesQuest.png",
       "shortDescription": "shaky Green Lear's Macaw vs magnificent Greenish Grass-dart frog"
     },
     {
       "name": "Give For Girls",
+      "link": "http://Give.com",
       "logo": "giveForGirls.png",
       "shortDescription": "Polar Bear has a Mongolian wild ass"
     },
     {
       "name": "Red Cross",
+      "link": "http://Red.com",
       "logo": "redCross.png",
       "shortDescription": "New Zealand Falcon eats a defiant Red Southern Dart frog"
     },
     {
       "name": "Ronald",
+      "link": "http://Ronald.com",
       "logo": "ronald.png",
       "shortDescription": "determined Blue Lear's Macaw takes a Sea Otter for a walk"
     }

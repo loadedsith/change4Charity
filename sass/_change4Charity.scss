@@ -44,8 +44,17 @@ html,body{
 nav {
   &.top-bar{
 
-    
+    .right{
+      @media screen and (min-width: $topbar-breakpoint){
+        width:30%;
+      }
+      form{
+       
+      }
+    }
     .has-form{
+      width:100%;
+      margin-left:-2px;
       padding:emCalc(3px);
       @media screen and (min-width: $topbar-breakpoint){
 //         @include debug(Lime);
@@ -63,9 +72,27 @@ nav {
       width: 51px;
       height: 59px;/* set to $topbar-height to avoid black bar under .small  top bar*/
     }
-    .small-3,.small-6{
+    .smallButton{
+      @include grid-column(2);
+       padding-left:0em;
+       padding-right:0em;      
+       @media screen and (min-width: $topbar-breakpoint){
+          @include grid-column(1);             
+           padding-left:0em;
+           padding-right:0em;
+         z-index:0;
+       }
+    }
+    .smallInput{
+      @include grid-column(8);
        padding-left:0em;
        padding-right:0em;
+      @media screen and (min-width: $topbar-breakpoint){
+         @include grid-column(10);             
+         padding-left:0em;
+         padding-right:0em;
+         z-index:1;
+      }
     }
     a.button,#camera{
        text-indent:-3000px!important;
@@ -78,7 +105,8 @@ nav {
        margin-left:-2px;
        @media screen and (min-width: $topbar-breakpoint){
          margin-top:-5px;
-
+         padding-left:35px;
+         padding-right:35px;
        }
     }
     #camera{ 
@@ -105,7 +133,10 @@ nav {
   }
 }
 
-
+#selectedCharity{
+  
+  
+}
 #charities{
   #charityCards{
     @include block-grid(1, 10px, true);
@@ -151,10 +182,13 @@ nav {
 
     @include rotateY(90deg);
     .donateMoreInfo{
+//       background-color:$price-title-bg;
+        border-bottom-left-radius:$global-radius !important;
+        border-bottom-right-radius:$global-radius !important;
+        padding-top:12px;
         width:100%!important;
-      .button-group{
         
-//         @include debug(Maroon);
+      .button-group{
         display:block;
         width:emCalc(150px);
         margin:0px auto;
@@ -164,16 +198,22 @@ nav {
       z-index:top;
     }
    .description{
-     font-size:90%;
-     height:254px;
-     overflow-y:auto;
-     overflow-x:hidden;
+     background-color:rgba($panel-bg,.8);
+      border-bottom-right-radius:$global-radius !important;
+      border-bottom-left-radius:$global-radius !important;
+      font-size:90%;
+      height:254px;
+      overflow-y:auto;
+      overflow-x:hidden;
    }
    .title{
+     border-top-left-radius:$global-radius !important;
       img{
         width:100px;
       }  
+     
     }
+    
   }
   .flip-container{
     @include transform-style(preserve-3d);
@@ -183,8 +223,6 @@ nav {
       position:relative;
     }
     .front, .back{
-
-      
       position:absolute;
       top:0;
       left:0;
@@ -204,7 +242,7 @@ nav {
         background-color:rgba(#000, .3)!important;
       }
     .front{
-      
+      cursor:pointer;
       z-index:2;
       .charityLogo{
         z-index: 11;

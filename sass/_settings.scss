@@ -47,7 +47,7 @@ $em-base: 16px !default;
 
 //// Make sure border radius matches unless we want it different.
 
-// $global-radius: 3px;
+ $global-radius: 7px;
 // $global-rounded: 1000px;
 
 //// Inset shadow shiny edges and depressions.
@@ -831,7 +831,7 @@ $shiny-edge-size: 0 0px 3px 0px;
 
 //// Border color
 
- $price-table-border: solid 1px dotted (#ddd,.8);
+ $price-table-border: solid 1px dotted (#ddd,80%);
 
 //// Bottom margin of the pricing table
 
@@ -839,7 +839,7 @@ $shiny-edge-size: 0 0px 3px 0px;
 
 //// Control the title styles
 
- $price-title-bg: darken($primary-color,.2);
+ $price-title-bg: lighten($primary-color,30%);
 // $price-title-padding: emCalc(15px) emCalc(20px);
 // $price-title-align: center;
  $price-title-color: #000;
@@ -877,7 +877,7 @@ $price-money-bg: $panel-bg;
 
 //// CTA area styles
 
- $price-cta-bg: $price-title-bg;
+ $price-cta-bg:  lighten($primary-color,30%);
 // $price-cta-align: center;
 // $price-cta-padding: emCalc(20px) emCalc(20px) 0;
 

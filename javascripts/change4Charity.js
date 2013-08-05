@@ -19,12 +19,40 @@ $(document).ready(function($) {
   }
 });
 change4Charity.app = angular.module( 'change4Charity', [] );
-change4Charity.app.controller( 'MainController', function( $scope, $http ) {
+change4Charity.app.controller( 'MainController', function( $scope, $http, $q ) {
   // we control our app from here
-  $http.get('/static/charities.json' ).then( function ( response ) {
-    $scope.charities = response.data;
-  });
-  
+
+  $q.all([
+    $http.get('/static/charities.json'),
+    $http.get('/static/strings.json')
+  ]).then(function(results) {
+     /* your logic here */
+
+     $scope.charities = results[0].data;
+     $scope.strings = results[1].data;
+
+  });  // $http.get('/static/charities.json' ).then( function ( response ) {
+  //   $scope.charities = response.data;
+  // });
+
+  $scope.card = {};
+
+  $scope.findCard = function(){
+    $http.get('/static/fakeCard.json' ).then( function ( response ) {
+        $scope.cardReply = response.data;
+      });
+
+  };
+  $scope.donate = function(charity){
+    $scope.showSelectedCharity = true;
+    $scope.selectedCharity = charity;
+    $scope.selectedCharity.charitySelected = $scope.strings.charitySelected;
+    
+    // console.log("Donate to ",charity);
+  };
+
+
+
   $scope.showCharityInfo = function(charity){
     $scope.selected = charity;
   };
@@ -34,6 +62,9 @@ change4Charity.app.controller( 'MainController', function( $scope, $http ) {
   
   $scope.showCharities = true;
 });
+
+
+
 change4Charity.app.directive('backImg', function(){
     return function(scope, element, attrs){
         var url = attrs.backImg;
