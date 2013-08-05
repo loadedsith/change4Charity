@@ -1,7 +1,17 @@
+@mixin debug($color){
+  border:3px dotted $color !important;
+}
 html,body{
   height:100%;
   overflow-y:auto;
   overflow-x:hidden;
+
+//   @include background-image(linear-gradient(left top, white, #dddddd)); }
+
+}
+
+.fixed{
+  height:56px;
 }
 .view-enter, .view-leave {
   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
@@ -33,23 +43,25 @@ html,body{
 }
 nav {
   &.top-bar{
+
+    
     .has-form{
       padding:emCalc(3px);
-      @media screen and (min-width: $medium-screen){
+      @media screen and (min-width: $topbar-breakpoint){
 //         @include debug(Lime);
         padding:emCalc(0px);
       }
     }
     .row{
       @extend .button-group;
-  lastRowtend .round;
+      @extend .round;
       padding-left:0em;
       padding-right:0em;
     }
     .name {
       background: url('../images/bwLogo.png') no-repeat scroll 3px 3px;
       width: 51px;
-      height: 59px;/* set to $topbar-height to avoid black balastRow small top bar*/
+      height: 59px;/* set to $topbar-height to avoid black bar under .small  top bar*/
     }
     .small-3,.small-6{
        padding-left:0em;
@@ -59,12 +71,12 @@ nav {
        text-indent:-3000px!important;
        background: url('../images/maginfi3WhiteOptim.png') no-repeat scroll center center;
        width: 48px;
-       display:lastRowblock;
+       display:block;
        vertical-align:middle!important;
        height: 48px;
        font-size:$h4-font-size;
        margin-left:-2px;
-       @media screen and (min-width: $medium-screen){
+       @media screen and (min-width: $topbar-breakpoint){
          margin-top:-5px;
 
        }
@@ -75,6 +87,9 @@ nav {
     }
     form input{
        height: 48px;
+      @media screen and (min-width: $topbar-breakpoint){
+           margin-top:-5px;
+       }
     }
   }  
 }
@@ -90,9 +105,60 @@ nav {
   }
 }
 
+
 #charities{
+  #charityCards{
+    @include block-grid(1, 10px, true);
+    li{
+      &.front, &.back{
+        @include debug(Lavender);
+          height:275px;
+          min-width:emCalc(150px);
+      }
+    }
+    @media screen and (min-width: emCalc(321px)){
+         @include block-grid(2, 10px, true);
+         &.front, &.back{
+           height:300px;
+          }
+      } 
+    @media screen and (min-width: emCalc(501px)){
+         @include block-grid(3, 10px, true);
+         &.front, &.back{
+           height:300px;
+          }
+      }    
+    @media screen and (min-width: $small-screen){
+         @include block-grid(4, 10px, true);
+         &.front, &.back{
+           height:300px;
+          }
+      }    
+    @media screen and (min-width: $topbar-breakpoint){
+         @include block-grid(5, 10px, true);
+         &.front, &.back{
+           height:315px;
+          }
+      }    
+    @media screen and (min-width: $medium-screen){
+         @include block-grid(5, 10px, true);
+         &.front, &.back{
+           height:315px;
+          }
+      }    
+  }
   .pricing-table{
-    .cta-button{
+
+    @include rotateY(90deg);
+    .donateMoreInfo{
+        width:100%!important;
+      .button-group{
+        
+//         @include debug(Maroon);
+        display:block;
+        width:emCalc(150px);
+        margin:0px auto;
+      }
       position:absolute;
       bottom:0px;
       z-index:top;
@@ -111,12 +177,14 @@ nav {
   }
   .flip-container{
     @include transform-style(preserve-3d);
-	  @include perspective(1000);
+	  @include perspective(250);
   	height: 300px;
     &.flip{
       position:relative;
     }
     .front, .back{
+
+      
       position:absolute;
       top:0;
       left:0;
@@ -126,35 +194,57 @@ nav {
       }
       width:100%;
     }
-    .front{
-      z-index:2;
-      img{
-        position:absolute;
-        top:0px;
-        right:0px;
-        margin-top:-1px;
-        margin-right:-1px;
+    .stripe{
+        position: absolute;
+        height:100%;
+        width:28px;
+        top: 0px;
+        right: 15px;
+        z-index: 1;
+        background-color:rgba(#000, .3)!important;
       }
-    }
-    .back{
-      img{
+    .front{
+      
+      z-index:2;
+      .charityLogo{
+        z-index: 11;
         position:absolute;
         top:0px;
         left:0px;
-         @include rotateZ(270deg);
-         @include translateZ(180deg);
-      }
-      .stripe{
-        position: absolute;
-        top: 0px;
-        right: 15px;
-        z-index: -10;
-        border-right:25px solid rgba(#333,.7);
-      }
+        height:100%;
+        width:100%;
+//         width:10;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          margin-top:-1px;
+          margin-left:-1px;
+
+          border-top: 25px solid $body-bg;
+          border-right: 25px solid $panel-bg;
+          width: 0;
+        };
     }
+    .back{
+        &:after{
+          content: '';
+          position: absolute;
+          top: 0; right: 0;
+
+          border-top: 25px solid $body-bg;
+          border-left: 25px solid  $price-title-bg;
+          width: 0;
+
+        };
+    }
+      
     &.flip .flipper {
-      @include translateZ(0);
-      @include rotateY(180deg);
+//       @include translateZ(0);
+//       @include rotateY(180deg);
+      @include transform-origin( center, center );
+      @include create-transform(1000,1,1,1,0deg,180deg,0deg);
     }
   }
   .front{

@@ -69,5 +69,5 @@ line_comments = false
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
 
-output_style = :nested # by Fire.app 
 line_comments = true # by Fire.app 
+output_style = :expanded # by Fire.app 

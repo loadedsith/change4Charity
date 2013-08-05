@@ -40,8 +40,8 @@ $em-base: 16px !default;
 
 //// Colors
 
- $primary-color: #212424;
- $secondary-color: #FF8000;
+ $primary-color: #FF8030;
+ $secondary-color: #212424;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -53,6 +53,7 @@ $em-base: 16px !default;
 //// Inset shadow shiny edges and depressions.
 
 // $shiny-edge-size: 0 1px 0;
+$shiny-edge-size: 0 0px 3px 0px;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
@@ -804,9 +805,10 @@ $em-base: 16px !default;
 
 //// Background and border styles
 
-// $panel-bg: darken(#fff, 5%);
+ $panel-bg:  lighten($secondary-color, 75%);
+//  $panel-bg: darken(#fff, 5%);
 // $panel-border-style: solid;
-// $panel-border-size: 1px;
+ $panel-border-size: 0px;
 
 //// Control how much we darken things on hover
 
@@ -837,7 +839,7 @@ $em-base: 16px !default;
 
 //// Control the title styles
 
- $price-title-bg: rgba(#ddd,.95);
+ $price-title-bg: darken($primary-color,.2);
 // $price-title-padding: emCalc(15px) emCalc(20px);
 // $price-title-align: center;
  $price-title-color: #000;
@@ -846,7 +848,7 @@ $em-base: 16px !default;
 
 //// Control the price styles
 
-$price-money-bg: rgba(#eee,.8);
+$price-money-bg: $panel-bg;
 // $price-money-padding: emCalc(15px) emCalc(20px);
 // $price-money-align: center;
  $price-money-color: #000;
@@ -855,7 +857,7 @@ $price-money-bg: rgba(#eee,.8);
 
 //// Description styles
 
- $price-bg: rgba(#fff,.8);
+ $price-bg: $panel-bg;
  $price-desc-color: #000;
 // $price-desc-padding: emCalc(15px);
  $price-desc-align: left;
@@ -866,7 +868,7 @@ $price-money-bg: rgba(#eee,.8);
 
 //// List item styles
 
- $price-item-color: rgba(#333,.8);
+ $price-item-color: $panel-bg;
 // $price-item-padding: emCalc(15px);
 // $price-item-align: center;
 // $price-item-font-size: emCalc(14px);
@@ -875,7 +877,7 @@ $price-money-bg: rgba(#eee,.8);
 
 //// CTA area styles
 
- $price-cta-bg: transparent;
+ $price-cta-bg: $price-title-bg;
 // $price-cta-align: center;
 // $price-cta-padding: emCalc(20px) emCalc(20px) 0;
 
@@ -1144,11 +1146,11 @@ $price-money-bg: rgba(#eee,.8);
 
 //// Background color for the top bar
 
- $topbar-bg: $secondary-color;
+ $topbar-bg: $primary-color;
 
 //// Height and margin
 
- $topbar-height: 61px;
+ $topbar-height: 62px;
 // $topbar-margin-bottom: emCalc(30px);
 
 //// Input height for top bar

@@ -1,7 +1,5 @@
-@mixin debug($color){
-  border:3px dotted $color !important;
-}
 @import "compass/css3/transform";
+@import "compass/css3";
 @import "normalize";
 // Global Foundation Settings
 @import "settings";
