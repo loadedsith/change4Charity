@@ -18,31 +18,30 @@ $(document).ready(function($) {
     //time() + (10 * 365 * 24 * 60 * 60)
   }
 });
-change4Charity.app = angular.module( 'change4Charity', [] );
+change4Charity.app = angular.module( 'change4Charity', ['ngResource'] );
+
 change4Charity.app.controller( 'MainController', function( $scope, $http, $q ) {
-  // we control our app from here
 
-  $q.all([
-    $http.get('/static/charities.json'),
-    $http.get('/static/strings.json')
-  ]).then(function(results) {
-     /* your logic here */
-
-     $scope.charities = results[0].data;
-     $scope.strings = results[1].data;
-
-  });  // $http.get('/static/charities.json' ).then( function ( response ) {
-  //   $scope.charities = response.data;
-  // });
-
-  $scope.card = {};
-
+  $http.get('/static/strings.json' ).then( function ( response ) {
+    $scope.strings = response.data;
+  });
   $scope.findCard = function(){
     $http.get('/static/fakeCard.json' ).then( function ( response ) {
         $scope.cardReply = response.data;
       });
 
   };
+});
+change4Charity.app.factory('Charities',function($resource){
+  var char = $resource('/static/charities.json', {});
+  return char;
+  });
+change4Charity.app.controller( 'CharitiesController', function( $scope, $http, Charities) {
+  $scope.card = {};
+
+  console.log(Charities.get());
+  console.log("Charities");
+  
   $scope.donate = function(charity){
     $scope.showSelectedCharity = true;
     $scope.selectedCharity = charity;
@@ -50,8 +49,6 @@ change4Charity.app.controller( 'MainController', function( $scope, $http, $q ) {
     
     // console.log("Donate to ",charity);
   };
-
-
 
   $scope.showCharityInfo = function(charity){
     $scope.selected = charity;

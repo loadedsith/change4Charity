@@ -10,6 +10,8 @@
   <script src="javascripts/vendor/custom.modernizr.js"></script>
   <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
   <script src="javascripts/vendor/angular/angular.js"></script>
+  <script src="javascripts/vendor/angular/angular-resource.js" type="text/javascript" charset="utf-8"></script>
+  
 </head>
 <body ng-app="change4Charity" ng-controller="MainController">
   <div id="instructionsModal" class="reveal-modal">
@@ -37,7 +39,7 @@
           <ul class="right">
             <li class="divider"></li>
             <li class="has-form search">
-              <form ng-submit="findCard()" ng-controller="MainController">
+              <form ng-submit="findCard()">
                 <div class="row">
                   <div class="smallButton">
                       <input accept="image/*" ng-change="findCard()" ng-model="card.resource" class="button" id="camera" capture="camera" type="file">                      
@@ -58,18 +60,18 @@
   </div>
   <div id="wrapper">
     <div id="content">
-      <div id="selectedCharity"  ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="row" ng-cloak ng-show="showSelectedCharity" ng-model="selectedCharity">
-        <ul class="inline-list" back-img="/images/charityLogo/{{selectedCharity.logo}}">
-          <li>You've Selected:</li>
-          <li class="title">  
-            {{ selectedCharity.name }}
-          </li>
-          <li class="description"> 
-            {{ selectedCharity.shortDescription }}
-          </li>
-        </ul>
-      </div>
-      <div id="charities" class="row" ng-show="showCharities">
+      <div id="charities" ng-controller="CharitiesController" class="row" ng-show="showCharities" ng-cloak>
+        <div id="selectedCharity"  ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="row" ng-cloak ng-show="showSelectedCharity" ng-model="selectedCharity">
+          <ul class="inline-list" back-img="/images/charityLogo/{{selectedCharity.logo}}">
+            <li>You've Selected:</li>
+            <li class="title">  
+              {{ selectedCharity.name }}
+            </li>
+            <li class="description"> 
+              {{ selectedCharity.shortDescription }}
+            </li>
+          </ul>
+        </div>
         <div class="columns small-11 small-centered large-12 large-centered">
           <h3>Charities</h3>
             <ul id="charityCards">
