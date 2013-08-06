@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -76,13 +75,13 @@
             <ul id="charityCards">
               <li class="charity" ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
                                             ng-cloak ng-repeat="charity in charities|filter:search" >
-                <div class="flip-container"  ng-class="{'flip' : isShowingCharityInfo(charity)}" ng-click="showCharityInfo(charity)">
-                  <div class="flipper"  >
+                <div class="flip-container" ng-cloak ng-class="{'flip' : isShowingCharityInfo(charity)}" ng-click="showCharityInfo(charity)">
+                  <div class="flipper">
                     <div class="panel radius front" ng-cloak>
                       <span class="stripe"></span>
                       <div class="charityLogo" back-img="/images/charityLogo/{{charity.logo}}">&nbsp;</div>
                     </div>
-                    <ul class="pricing-table radius back" back-img="/images/charityLogo/{{charity.logo}}">
+                    <ul class="pricing-table radius back" ng-cloak back-img="/images/charityLogo/{{charity.logo}}">
                       <li class="title">{{ charity.name }}</li>
                       <li class="description">
                         <p>{{ charity.shortDescription }}</p>
@@ -90,10 +89,10 @@
                       <li class="donateMoreInfo">
                         <ul class="button-group round">
                           <li>
-                            <a class=" small  button" href="#" ng-click="donate(charity)">Donate Now</a>
+                            <a class="small button" href="#" ng-click="donate(charity)">Donate Now</a>
                           </li>
                           <li>                                  
-                            <a class=" small  button" href="{{ charity.link }}" title="More about {{ charity.name}}">?</a>
+                            <a class="small button" ng-href="{{ charity.link }}" title="More about {{ charity.name}}">?</a>
                           </li>
                         </ul>
                       </li>
@@ -107,7 +106,12 @@
       </div>
     </div>
   </div>
-  <div id="templates"></div>
+  
+  <div class="example-date">
+    <span class="day">31</span> 
+    <span class="month">July</span> 
+    <span class="year">2009</span>
+  </div>
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +

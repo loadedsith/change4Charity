@@ -10665,34 +10665,35 @@ html, body {
 @media screen and (min-width: 58.75em) {
   /* line 47, ../sass/_change4Charity.scss */
   nav.top-bar .right {
-    width: 30%;
+    width: 50%;
+    margin-left: 4.5em;
   }
 }
-/* line 55, ../sass/_change4Charity.scss */
+/* line 56, ../sass/_change4Charity.scss */
 nav.top-bar .has-form {
   width: 100%;
   margin-left: -2px;
   padding: 0.1875em;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 55, ../sass/_change4Charity.scss */
+  /* line 56, ../sass/_change4Charity.scss */
   nav.top-bar .has-form {
     padding: 0em;
   }
 }
-/* line 64, ../sass/_change4Charity.scss */
+/* line 65, ../sass/_change4Charity.scss */
 nav.top-bar .row {
-  padding-left: 0em;
-  padding-right: 0em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
-/* line 70, ../sass/_change4Charity.scss */
+/* line 71, ../sass/_change4Charity.scss */
 nav.top-bar .name {
   background: url("../images/bwLogo.png") no-repeat scroll 3px 3px;
   width: 51px;
   height: 59px;
   /* set to $topbar-height to avoid black bar under .small  top bar*/
 }
-/* line 75, ../sass/_change4Charity.scss */
+/* line 76, ../sass/_change4Charity.scss */
 nav.top-bar .smallButton {
   position: relative;
   padding-left: 0.9375em;
@@ -10701,9 +10702,10 @@ nav.top-bar .smallButton {
   float: left;
   padding-left: 0em;
   padding-right: 0em;
+  z-index: 0;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 75, ../sass/_change4Charity.scss */
+  /* line 76, ../sass/_change4Charity.scss */
   nav.top-bar .smallButton {
     position: relative;
     padding-left: 0.9375em;
@@ -10712,10 +10714,9 @@ nav.top-bar .smallButton {
     float: left;
     padding-left: 0em;
     padding-right: 0em;
-    z-index: 0;
   }
 }
-/* line 86, ../sass/_change4Charity.scss */
+/* line 87, ../sass/_change4Charity.scss */
 nav.top-bar .smallInput {
   position: relative;
   padding-left: 0.9375em;
@@ -10724,9 +10725,15 @@ nav.top-bar .smallInput {
   float: left;
   padding-left: 0em;
   padding-right: 0em;
+  z-index: 1;
+}
+/* line 88, ../sass/_change4Charity.scss */
+nav.top-bar .smallInput input {
+  border-top: 1px solid #ff8030;
+  border-bottom: 1px solid #ff8030;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 86, ../sass/_change4Charity.scss */
+  /* line 87, ../sass/_change4Charity.scss */
   nav.top-bar .smallInput {
     position: relative;
     padding-left: 0.9375em;
@@ -10735,10 +10742,9 @@ nav.top-bar .smallInput {
     float: left;
     padding-left: 0em;
     padding-right: 0em;
-    z-index: 1;
   }
 }
-/* line 97, ../sass/_change4Charity.scss */
+/* line 106, ../sass/_change4Charity.scss */
 nav.top-bar a.button, nav.top-bar #camera {
   text-indent: -3000px !important;
   background: url("../images/maginfi3WhiteOptim.png") no-repeat scroll center center;
@@ -10750,44 +10756,48 @@ nav.top-bar a.button, nav.top-bar #camera {
   margin-left: -2px;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 97, ../sass/_change4Charity.scss */
+  /* line 106, ../sass/_change4Charity.scss */
   nav.top-bar a.button, nav.top-bar #camera {
     margin-top: -5px;
     padding-left: 35px;
     padding-right: 35px;
   }
 }
-/* line 112, ../sass/_change4Charity.scss */
+/* line 121, ../sass/_change4Charity.scss */
 nav.top-bar #camera {
   float: right;
   background: url("../images/camera_icon_1.png") no-repeat scroll center center;
 }
-/* line 116, ../sass/_change4Charity.scss */
+/* line 125, ../sass/_change4Charity.scss */
 nav.top-bar form input {
   height: 48px;
 }
 @media screen and (min-width: 58.75em) {
-  /* line 116, ../sass/_change4Charity.scss */
+  /* line 125, ../sass/_change4Charity.scss */
   nav.top-bar form input {
     margin-top: -5px;
   }
 }
 
-/* line 124, ../sass/_change4Charity.scss */
+/* line 133, ../sass/_change4Charity.scss */
 #wrapper {
   padding-top: 55px;
 }
 
-/* line 128, ../sass/_change4Charity.scss */
+/* line 137, ../sass/_change4Charity.scss */
 #instructionsModal.reveal-modal, #instructionsModal.reveal-modal h4, #instructionsModal.reveal-modal p.lead {
   color: #fff;
 }
-/* line 131, ../sass/_change4Charity.scss */
+/* line 140, ../sass/_change4Charity.scss */
 #instructionsModal ol {
   padding-left: 1.8em;
 }
 
-/* line 141, ../sass/_change4Charity.scss */
+/* line 150, ../sass/_change4Charity.scss */
+#charities #charities, #charities li {
+  display: block;
+}
+/* line 153, ../sass/_change4Charity.scss */
 #charities #charityCards {
   display: block;
   padding: 0;
@@ -10823,14 +10833,17 @@ nav.top-bar form input {
 #charities #charityCards > li:nth-of-type(1n+1) {
   clear: both;
 }
-/* line 144, ../sass/_change4Charity.scss */
+/* line 155, ../sass/_change4Charity.scss */
+#charities #charityCards li {
+  display: block;
+}
+/* line 157, ../sass/_change4Charity.scss */
 #charities #charityCards li.front, #charities #charityCards li.back {
-  border: 3px dotted lavender !important;
   height: 275px;
   min-width: 9.375em;
 }
 @media screen and (min-width: 20.0625em) {
-  /* line 141, ../sass/_change4Charity.scss */
+  /* line 153, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10866,13 +10879,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(2n+1) {
     clear: both;
   }
-  /* line 152, ../sass/_change4Charity.scss */
+  /* line 164, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 300px;
   }
 }
 @media screen and (min-width: 31.3125em) {
-  /* line 141, ../sass/_change4Charity.scss */
+  /* line 153, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10908,13 +10921,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(3n+1) {
     clear: both;
   }
-  /* line 158, ../sass/_change4Charity.scss */
+  /* line 170, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 300px;
   }
 }
 @media screen and (min-width: 48em) {
-  /* line 141, ../sass/_change4Charity.scss */
+  /* line 153, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10950,13 +10963,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(4n+1) {
     clear: both;
   }
-  /* line 164, ../sass/_change4Charity.scss */
+  /* line 176, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 300px;
   }
 }
 @media screen and (min-width: 58.75em) {
-  /* line 141, ../sass/_change4Charity.scss */
+  /* line 153, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -10992,13 +11005,13 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(5n+1) {
     clear: both;
   }
-  /* line 170, ../sass/_change4Charity.scss */
+  /* line 182, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 315px;
   }
 }
 @media screen and (min-width: 80em) {
-  /* line 141, ../sass/_change4Charity.scss */
+  /* line 153, ../sass/_change4Charity.scss */
   #charities #charityCards {
     display: block;
     padding: 0;
@@ -11034,12 +11047,12 @@ nav.top-bar form input {
   #charities #charityCards > li:nth-of-type(5n+1) {
     clear: both;
   }
-  /* line 176, ../sass/_change4Charity.scss */
+  /* line 188, ../sass/_change4Charity.scss */
   #charities #charityCards.front, #charities #charityCards.back {
     height: 315px;
   }
 }
-/* line 181, ../sass/_change4Charity.scss */
+/* line 193, ../sass/_change4Charity.scss */
 #charities .pricing-table {
   -webkit-transform: rotateY(90deg);
   -moz-transform: rotateY(90deg);
@@ -11047,7 +11060,7 @@ nav.top-bar form input {
   -o-transform: rotateY(90deg);
   transform: rotateY(90deg);
 }
-/* line 184, ../sass/_change4Charity.scss */
+/* line 196, ../sass/_change4Charity.scss */
 #charities .pricing-table .donateMoreInfo {
   border-bottom-left-radius: 7px !important;
   border-bottom-right-radius: 7px !important;
@@ -11057,13 +11070,13 @@ nav.top-bar form input {
   bottom: 0px;
   z-index: top;
 }
-/* line 191, ../sass/_change4Charity.scss */
+/* line 203, ../sass/_change4Charity.scss */
 #charities .pricing-table .donateMoreInfo .button-group, #charities .pricing-table .donateMoreInfo nav.top-bar .row, nav.top-bar #charities .pricing-table .donateMoreInfo .row {
   display: block;
   width: 9.375em;
   margin: 0px auto;
 }
-/* line 200, ../sass/_change4Charity.scss */
+/* line 212, ../sass/_change4Charity.scss */
 #charities .pricing-table .description {
   background-color: rgba(224, 227, 227, 0.8);
   border-bottom-right-radius: 7px !important;
@@ -11073,16 +11086,17 @@ nav.top-bar form input {
   overflow-y: auto;
   overflow-x: hidden;
 }
-/* line 209, ../sass/_change4Charity.scss */
+/* line 221, ../sass/_change4Charity.scss */
 #charities .pricing-table .title {
   border-top-left-radius: 7px !important;
 }
-/* line 211, ../sass/_change4Charity.scss */
+/* line 223, ../sass/_change4Charity.scss */
 #charities .pricing-table .title img {
   width: 100px;
 }
-/* line 218, ../sass/_change4Charity.scss */
+/* line 230, ../sass/_change4Charity.scss */
 #charities .flip-container {
+  display: block;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -11093,22 +11107,28 @@ nav.top-bar form input {
   -ms-perspective: 250;
   -o-perspective: 250;
   perspective: 250;
+  -webkit-transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  -o-transition-duration: 3s;
+  transition-duration: 3s;
   height: 300px;
 }
-/* line 222, ../sass/_change4Charity.scss */
+/* line 236, ../sass/_change4Charity.scss */
 #charities .flip-container.flip {
   position: relative;
 }
-/* line 225, ../sass/_change4Charity.scss */
+/* line 239, ../sass/_change4Charity.scss */
 #charities .flip-container .front, #charities .flip-container .back {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   height: 300px;
   width: 100%;
 }
-/* line 235, ../sass/_change4Charity.scss */
+/* line 250, ../sass/_change4Charity.scss */
 #charities .flip-container .stripe {
+  display: block;
   position: absolute;
   height: 100%;
   width: 28px;
@@ -11117,12 +11137,12 @@ nav.top-bar form input {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
-/* line 244, ../sass/_change4Charity.scss */
+/* line 260, ../sass/_change4Charity.scss */
 #charities .flip-container .front {
   cursor: pointer;
   z-index: 2;
 }
-/* line 247, ../sass/_change4Charity.scss */
+/* line 263, ../sass/_change4Charity.scss */
 #charities .flip-container .front .charityLogo {
   z-index: 11;
   position: absolute;
@@ -11131,19 +11151,17 @@ nav.top-bar form input {
   height: 100%;
   width: 100%;
 }
-/* line 256, ../sass/_change4Charity.scss */
+/* line 272, ../sass/_change4Charity.scss */
 #charities .flip-container .front:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: -1px;
-  margin-left: -1px;
   border-top: 25px solid white;
   border-right: 25px solid #e0e3e3;
   width: 0;
 }
-/* line 269, ../sass/_change4Charity.scss */
+/* line 282, ../sass/_change4Charity.scss */
 #charities .flip-container .back:after {
   content: '';
   position: absolute;
@@ -11153,7 +11171,11 @@ nav.top-bar form input {
   border-left: 25px solid #ffdec9;
   width: 0;
 }
-/* line 281, ../sass/_change4Charity.scss */
+/* line 292, ../sass/_change4Charity.scss */
+#charities .flip-container li, #charities .flip-container ul {
+  display: block;
+}
+/* line 295, ../sass/_change4Charity.scss */
 #charities .flip-container.flip .flipper {
   -webkit-transform-origin: center center;
   -moz-transform-origin: center center;
@@ -11166,7 +11188,7 @@ nav.top-bar form input {
   -o-transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
   transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
 }
-/* line 289, ../sass/_change4Charity.scss */
+/* line 304, ../sass/_change4Charity.scss */
 #charities .front.flipped {
   transform: rotateY(180deg);
   -webkit-transform: translateZ(0);
@@ -11175,21 +11197,24 @@ nav.top-bar form input {
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 294, ../sass/_change4Charity.scss */
+/* line 309, ../sass/_change4Charity.scss */
 #charities .flipper {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
   position: relative;
 }
-/* line 300, ../sass/_change4Charity.scss */
+/* line 315, ../sass/_change4Charity.scss */
 #charities .front {
   z-index: 2;
 }
-/* line 303, ../sass/_change4Charity.scss */
+/* line 318, ../sass/_change4Charity.scss */
 #charities .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -11202,7 +11227,7 @@ nav.top-bar form input {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 308, ../sass/_change4Charity.scss */
+/* line 323, ../sass/_change4Charity.scss */
 #charities .front, #charities .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;

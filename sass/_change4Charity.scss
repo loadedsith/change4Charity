@@ -43,10 +43,11 @@ html,body{
 }
 nav {
   &.top-bar{
-
+    
     .right{
       @media screen and (min-width: $topbar-breakpoint){
-        width:30%;
+        width:50%;
+        margin-left:emCalc(72px);
       }
       form{
        
@@ -64,8 +65,8 @@ nav {
     .row{
       @extend .button-group;
       @extend .round;
-      padding-left:0em;
-      padding-right:0em;
+      padding-left:1em;
+      padding-right:1em;
     }
     .name {
       background: url('../images/bwLogo.png') no-repeat scroll 3px 3px;
@@ -80,19 +81,27 @@ nav {
           @include grid-column(1);             
            padding-left:0em;
            padding-right:0em;
-         z-index:0;
        }
+         z-index:0;
     }
     .smallInput{
+      input{
+               border-top:1px solid $primary-color;
+               border-bottom:1px solid $primary-color;
+        @media screen and (min-width: $topbar-breakpoint){
+        
+        }
+      }
       @include grid-column(8);
        padding-left:0em;
        padding-right:0em;
+
       @media screen and (min-width: $topbar-breakpoint){
          @include grid-column(10);             
          padding-left:0em;
          padding-right:0em;
-         z-index:1;
       }
+         z-index:1;
     }
     a.button,#camera{
        text-indent:-3000px!important;
@@ -138,11 +147,14 @@ nav {
   
 }
 #charities{
+  #charities, li{
+    display:block;
+  }
   #charityCards{
     @include block-grid(1, 10px, true);
     li{
+      display:block;
       &.front, &.back{
-        @include debug(Lavender);
           height:275px;
           min-width:emCalc(150px);
       }
@@ -216,13 +228,16 @@ nav {
     
   }
   .flip-container{
+    display: block;
     @include transform-style(preserve-3d);
 	  @include perspective(250);
+     @include transition-duration( 3s);
   	height: 300px;
     &.flip{
       position:relative;
     }
     .front, .back{
+       display: block;
       position:absolute;
       top:0;
       left:0;
@@ -233,6 +248,7 @@ nav {
       width:100%;
     }
     .stripe{
+        display:block;
         position: absolute;
         height:100%;
         width:28px;
@@ -257,9 +273,6 @@ nav {
           content: '';
           position: absolute;
           top: 0; left: 0;
-          margin-top:-1px;
-          margin-left:-1px;
-
           border-top: 25px solid $body-bg;
           border-right: 25px solid $panel-bg;
           width: 0;
@@ -270,17 +283,19 @@ nav {
           content: '';
           position: absolute;
           top: 0; right: 0;
-
           border-top: 25px solid $body-bg;
           border-left: 25px solid  $price-title-bg;
           width: 0;
 
         };
     }
-      
+    li,ul{
+      display:block;
+    }
     &.flip .flipper {
 //       @include translateZ(0);
 //       @include rotateY(180deg);
+
       @include transform-origin( center, center );
       @include create-transform(1000,1,1,1,0deg,180deg,0deg);
     }
@@ -288,12 +303,12 @@ nav {
   .front{
     &.flipped{
       transform: rotateY(180deg);
-      @include translateZ(0);
+        @include translateZ(0);
       }
   }
   .flipper {
     @include transform-style(preserve-3d);
-    transition: 0.6s;
+    @include transition-duration(0.6s);
   	position: relative;
 
   }
