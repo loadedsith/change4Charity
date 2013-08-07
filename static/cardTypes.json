@@ -1,0 +1,27 @@
+[
+  {
+    "typeID": 1,
+    "type": "Refillable Fare Card",
+    "value": "1.35"
+  },{
+    "typeID": 2,
+    "type": "disgusted California Condor Card",
+    "value": "2.35"
+  },{
+    "typeID": 3,
+    "type": "magnificent Spur-winged Goose Card",
+    "value": "3.35"
+  },{
+    "typeID": 4,
+    "type": "Smarty six-lined race runner Card",
+    "value": "4.35"
+  },{
+    "typeID": 5,
+    "type": "Smarty Prong Buck Card",
+    "value": "5.35"
+  },{
+    "typeID": 6,
+    "type": "lively striped marlin Card",
+    "value": "6.35"
+  }
+]

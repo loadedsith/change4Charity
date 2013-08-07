@@ -11102,15 +11102,15 @@ nav.top-bar form input {
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-perspective: 250;
-  -moz-perspective: 250;
-  -ms-perspective: 250;
-  -o-perspective: 250;
-  perspective: 250;
-  -webkit-transition-duration: 3s;
-  -moz-transition-duration: 3s;
-  -o-transition-duration: 3s;
-  transition-duration: 3s;
+  -webkit-perspective: 500;
+  -moz-perspective: 500;
+  -ms-perspective: 500;
+  -o-perspective: 500;
+  perspective: 500;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
   height: 300px;
 }
 /* line 236, ../sass/_change4Charity.scss */
@@ -11139,10 +11139,11 @@ nav.top-bar form input {
 }
 /* line 260, ../sass/_change4Charity.scss */
 #charities .flip-container .front {
+  z-index: 100;
   cursor: pointer;
   z-index: 2;
 }
-/* line 263, ../sass/_change4Charity.scss */
+/* line 264, ../sass/_change4Charity.scss */
 #charities .flip-container .front .charityLogo {
   z-index: 11;
   position: absolute;
@@ -11151,7 +11152,7 @@ nav.top-bar form input {
   height: 100%;
   width: 100%;
 }
-/* line 272, ../sass/_change4Charity.scss */
+/* line 273, ../sass/_change4Charity.scss */
 #charities .flip-container .front:after {
   content: '';
   position: absolute;
@@ -11161,7 +11162,7 @@ nav.top-bar form input {
   border-right: 25px solid #e0e3e3;
   width: 0;
 }
-/* line 282, ../sass/_change4Charity.scss */
+/* line 283, ../sass/_change4Charity.scss */
 #charities .flip-container .back:after {
   content: '';
   position: absolute;
@@ -11171,24 +11172,30 @@ nav.top-bar form input {
   border-left: 25px solid #ffdec9;
   width: 0;
 }
-/* line 292, ../sass/_change4Charity.scss */
+/* line 293, ../sass/_change4Charity.scss */
 #charities .flip-container li, #charities .flip-container ul {
   display: block;
 }
-/* line 295, ../sass/_change4Charity.scss */
+/* line 296, ../sass/_change4Charity.scss */
 #charities .flip-container.flip .flipper {
-  -webkit-transform-origin: center center;
-  -moz-transform-origin: center center;
-  -ms-transform-origin: center center;
-  -o-transform-origin: center center;
-  transform-origin: center center;
-  -webkit-transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-  -moz-transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-  -ms-transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-  -o-transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-  transform: perspective(1000) scale3d(1, 1, 1) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  z-index: 1000000;
+  -webkit-perspective: 750px;
+  -moz-perspective: 750px;
+  -ms-perspective: 750px;
+  -o-perspective: 750px;
+  perspective: 750px;
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  -o-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transform: rotateY(-180deg) translateX(100%);
+  -moz-transform: rotateY(-180deg) translateX(100%);
+  -ms-transform: rotateY(-180deg) translateX(100%);
+  -o-transform: rotateY(-180deg) translateX(100%);
+  transform: rotateY(-180deg) translateX(100%);
 }
-/* line 304, ../sass/_change4Charity.scss */
+/* line 306, ../sass/_change4Charity.scss */
 #charities .front.flipped {
   transform: rotateY(180deg);
   -webkit-transform: translateZ(0);
@@ -11197,24 +11204,25 @@ nav.top-bar form input {
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 309, ../sass/_change4Charity.scss */
+/* line 311, ../sass/_change4Charity.scss */
 #charities .flipper {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition-duration: 0.6s;
-  -moz-transition-duration: 0.6s;
-  -o-transition-duration: 0.6s;
-  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.75s;
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  transition-duration: 0.75s;
   position: relative;
+  z-index: 1000000;
 }
-/* line 315, ../sass/_change4Charity.scss */
+/* line 318, ../sass/_change4Charity.scss */
 #charities .front {
   z-index: 2;
 }
-/* line 318, ../sass/_change4Charity.scss */
+/* line 321, ../sass/_change4Charity.scss */
 #charities .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -11227,7 +11235,7 @@ nav.top-bar form input {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 323, ../sass/_change4Charity.scss */
+/* line 326, ../sass/_change4Charity.scss */
 #charities .front, #charities .back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;

@@ -18,36 +18,47 @@ $(document).ready(function($) {
     //time() + (10 * 365 * 24 * 60 * 60)
   }
 });
-change4Charity.app = angular.module( 'change4Charity', ['ngResource'] );
+change4Charity.app = angular.module( 'change4Charity',['charitiesServices','stringServices','fareCardServices'] );
 
-change4Charity.app.controller( 'MainController', function( $scope, $http, $q ) {
+angular.module('change4Charity').directive('fileChange', fileChange);
+angular.module('change4Charity').directive('backImg', backImgDirective);
 
-  $http.get('/static/strings.json' ).then( function ( response ) {
-    $scope.strings = response.data;
+change4Charity.app.controller( 'MainController', function( $scope, Strings ) {
+
+  Strings.query(function(response){
+      $scope.strings = response
   });
-  $scope.findCard = function(){
-    $http.get('/static/fakeCard.json' ).then( function ( response ) {
-        $scope.cardReply = response.data;
-      });
-
-  };
+  
 });
-change4Charity.app.factory('Charities',function($resource){
-  var char = $resource('/static/charities.json', {});
-  return char;
-  });
-change4Charity.app.controller( 'CharitiesController', function( $scope, $http, Charities) {
-  $scope.card = {};
 
-  console.log(Charities.get());
-  console.log("Charities");
+change4Charity.app.controller( 'fareCardController', function( $scope, FareCards ) {
+  $scope.findCard = function(input){
+    FareCards.query(function(response){
+      var fareCards = response;
+      console.log("fare Cards",input);
+      $scope.fareCard = fareCards[0];
+      $scope.showCardResults = true;
+      // $scope.fareCardResult
+    });
+  };
+  $scope.setFile = function(element) {
+    $scope.$apply(function() {
+      $scope.findCard(element.files[0]);
+    })
+  };  
+});
+
+
+change4Charity.app.controller( 'CharitiesController', function( $scope, Charities ) {
+  $scope.card = {};
+  Charities.query(function(response){
+      $scope.charities = response
+  });
   
   $scope.donate = function(charity){
     $scope.showSelectedCharity = true;
     $scope.selectedCharity = charity;
     $scope.selectedCharity.charitySelected = $scope.strings.charitySelected;
-    
-    // console.log("Donate to ",charity);
   };
 
   $scope.showCharityInfo = function(charity){
@@ -61,16 +72,4 @@ change4Charity.app.controller( 'CharitiesController', function( $scope, $http, C
 });
 
 
-
-change4Charity.app.directive('backImg', function(){
-    return function(scope, element, attrs){
-        var url = attrs.backImg;
-        element.css({
-            'background-image': 'url(' + url +')',
-            'background-repeat': 'no-repeat',
-            'background-position': 'center center',
-            'background-size' : '100%'
-        });
-    };
-});
 

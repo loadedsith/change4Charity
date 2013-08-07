@@ -8,7 +8,7 @@
   <title>Change 4 Charity - CTA</title>
   <link rel="stylesheet" media="screen, projector, print" href="stylesheets/app.css" />
   <script src="javascripts/vendor/custom.modernizr.js"></script>
-  <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
+  <!-- <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" /> -->
   <script src="javascripts/vendor/angular/angular.js"></script>
   <script src="javascripts/vendor/angular/angular-resource.js" type="text/javascript" charset="utf-8"></script>
   
@@ -39,19 +39,30 @@
           <ul class="right">
             <li class="divider"></li>
             <li class="has-form search">
-              <form ng-submit="findCard()">
+              <form ng-controller="fareCardController" ng-submit="findCard()">
                 <div class="row">
-                  <div class="smallButton">
-                      <input accept="image/*" ng-change="findCard()" ng-model="card.resource" class="button" id="camera" capture="camera" type="file">                      
+                  <div class="smallButton">                                                                                          
+                      <input accept="image/*" type="file" file-change="setFile" multiple class="button" id="camera" capture="camera">                      
                   </div>
                   <div class="smallInput">
                     <input type="text" placeholder="Find Card By Number/Search Site" ng-model="card.number">
                   </div>
-                  <div class="smallButton">
-                    <a href="#" class="button" >Go
+                  <div class="smallButton" >
+                    <a href="#" class="button" ng-click="findCard()">Go
                     </a>
                   </div>
                 </div>
+                <div id="resultsModal" class="reveal-modal" class="results" ng-cloak ng-show="showCardResults">
+                  <h4>Search Results</h4>
+                  <ol>
+                    <li>{{fareCard.typeID}}</li>
+                    <li>{{fareCard.type}}</li>
+                    <li>{{fareCard.value|currency}}</li>
+                    <li>{{card.number}}</li>
+                  </ol>
+                  <a class="close-reveal-modal">&#215;</a>
+                </div>
+
               </form>
             </li>
           </ul>
@@ -74,7 +85,7 @@
         </div>
         <div class="columns small-11 small-centered large-12 large-centered">
           <h3>Charities</h3>
-            <ul id="charityCards">
+            <ul id="charityCards" class="card">
               <li class="charity" ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
                                             ng-cloak ng-repeat="charity in charities|filter:search" >
                 <div class="flip-container" ng-cloak ng-class="{'flip' : isShowingCharityInfo(charity)}" ng-click="showCharityInfo(charity)">
@@ -135,6 +146,8 @@
 	<script src="javascripts/foundation/foundation.section.js"></script>
 	<script src="javascripts/foundation/foundation.tooltips.js"></script>
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
+	<script src="javascripts/services.js"></script>
+	<script src="javascripts/directives.js"></script>
 	<script src="javascripts/change4Charity.js"></script>
 
 </body>
