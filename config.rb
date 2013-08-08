@@ -70,4 +70,5 @@ line_comments = false
 preferred_syntax = :scss
 
 line_comments = true # by Fire.app 
-output_style = :expanded # by Fire.app 
+
+output_style = :compact # by Fire.app 

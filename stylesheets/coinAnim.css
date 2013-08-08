@@ -1,0 +1,107 @@
+/* line 13, ../sass/coinAnim.scss */
+html, body { height: 100%; overflow-x: hidden; background-color: #999; }
+
+/* line 18, ../sass/coinAnim.scss */
+.container { overflow: hidden; height: 80%; width: 40%; margin: 5% auto; background-color: #fff; }
+/* line 24, ../sass/coinAnim.scss */
+.container .card { background-color: #FF8000; -webkit-animation-name: insertCard; -webkit-animation-duration: 6s; -webkit-animation-iteration-count: 1; -webkit-animation-direction: forwards; -webkit-animation-delay: .25s; -webkit-animation-play-state: running; -webkit-animation-fill-mode: forwards; z-index: 100; border-radius: 20px; padding: 15px; position: relative; width: 200px; height: 300px; margin: 5% auto; }
+/* line 43, ../sass/coinAnim.scss */
+.container .slotContainer { width: 100%; height: 5%; bottom: 400px; left: 0px; }
+/* line 52, ../sass/coinAnim.scss */
+.container .slot { position: relative; top: 0; width: 250px; height: 50px; margin: -10px auto 0 auto; background-color: #999; z-index: 10; }
+/* line 62, ../sass/coinAnim.scss */
+.container .slotMask { border-top: 3px solid #400; z-index: 1000; position: relative; top: -25px; width: 230px; height: 20px; margin: 0 auto -25px auto; background-color: #999; }
+/* line 73, ../sass/coinAnim.scss */
+.container .mask { width: 100%; height: 100%; position: relative; bottom: 0px; left: 0px; z-index: 1000; background-color: #fff; }
+/* line 81, ../sass/coinAnim.scss */
+.container .mask .coins { overflow: hidden; position: relative; top: 0; left: 0; height: 32%; width: 300px; margin: -25px auto; -webkit-perspective: 500; -moz-perspective: 500; -ms-perspective: 500; -o-perspective: 500; perspective: 500; }
+/* line 93, ../sass/coinAnim.scss */
+.container .mask .coins .coin { -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -o-transform-style: preserve-3d; transform-style: preserve-3d; z-index: 10; position: relative; display: inline-block; height: 30px; width: 30px; bottom: -20%; opacity: 0; margin: -25px auto; -webkit-animation-iteration-count: 1; -webkit-animation-direction: forwards; -webkit-animation-play-state: running; -webkit-animation-fill-mode: none; -webkit-animation-timing-function: linear; -webkit-animation-duration: 2.3s; }
+/* line 111, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+0) { left: 5%; -webkit-animation-name: flipCoin1; -webkit-animation-delay: .8s; }
+/* line 117, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+1) { left: 7%; -webkit-animation-name: flipCoin2; -webkit-animation-delay: .6s; }
+/* line 123, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+2) { left: 12%; -webkit-animation-name: flipCoin3; -webkit-animation-delay: 3s; }
+/* line 128, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+3) { left: 0%; -webkit-animation-name: flipCoin4; -webkit-animation-delay: 2.8s; }
+/* line 133, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+4) { left: 12%; -webkit-animation-name: flipCoin5; -webkit-animation-delay: 1.8s; }
+/* line 139, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+5) { left: 13%; -webkit-animation-name: flipCoin6; -webkit-animation-delay: 1.6s; }
+/* line 145, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+6) { left: 14%; -webkit-animation-name: flipCoin7; -webkit-animation-delay: 4.6s; }
+/* line 151, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+7) { left: 5%; -webkit-animation-name: flipCoin1; -webkit-animation-delay: 1.1s; }
+/* line 157, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+8) { left: 7%; -webkit-animation-name: flipCoin2; -webkit-animation-delay: 1.4s; }
+/* line 163, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+9) { left: 12%; -webkit-animation-name: flipCoin3; -webkit-animation-delay: 3s; }
+/* line 168, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+10) { left: 0%; -webkit-animation-name: flipCoin4; -webkit-animation-delay: 2.2s; }
+/* line 173, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+11) { left: 12%; -webkit-animation-name: flipCoin5; -webkit-animation-delay: 1.5s; }
+/* line 179, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+12) { left: 13%; -webkit-animation-name: flipCoin6; -webkit-animation-delay: 1.2s; }
+/* line 185, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+13) { left: 14%; -webkit-animation-name: flipCoin7; -webkit-animation-delay: 2.6s; }
+/* line 190, ../sass/coinAnim.scss */
+.container .mask .coins .coin:nth-of-type(3n+14) { left: 14%; -webkit-animation-name: flipCoin7; -webkit-animation-delay: 1.6s; }
+/* line 195, ../sass/coinAnim.scss */
+.container .mask .coins .coin .front { font-size: 28px; color: #FF8000; text-align: center; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; -webkit-transition-duration: 1s; -moz-transition-duration: 1s; -o-transition-duration: 1s; transition-duration: 1s; display: block; position: absolute; top: 0; left: 0; height: 30px; width: 30px; background-color: #FC6; border-radius: 30px; border: 3px dotted papayawhip !important; -webkit-transform: translateZ(-5px); -moz-transform: translateZ(-5px); -ms-transform: translateZ(-5px); -o-transform: translateZ(-5px); transform: translateZ(-5px); }
+/* line 214, ../sass/coinAnim.scss */
+.container .mask .coins .coin .back { -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: rotateY(-180deg); -moz-transform: rotateY(-180deg); -ms-transform: rotateY(-180deg); -o-transform: rotateY(-180deg); transform: rotateY(-180deg); -webkit-transition-duration: 1s; -moz-transition-duration: 1s; -o-transition-duration: 1s; transition-duration: 1s; display: block; position: absolute; top: 0; left: 0; height: 30px; width: 30px; background-color: #FC6; border-radius: 30px; border: 3px dotted papayawhip !important; }
+
+@-webkit-keyframes insertCard { /* line 237, ../sass/coinAnim.scss */
+  0% { bottom: 15%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 242, ../sass/coinAnim.scss */
+  100% { bottom: -100%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); } }
+
+@-webkit-keyframes flipCoin1 { /* line 251, ../sass/coinAnim.scss */
+  0% { opacity: 0; bottom: 15%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 256, ../sass/coinAnim.scss */
+  15% { opacity: 1; }
+  /* line 259, ../sass/coinAnim.scss */
+  100% { left: 10%; opacity: 1; bottom: -100%; -webkit-transform: rotateY(180deg) rotateX(180deg); -moz-transform: rotateY(180deg) rotateX(180deg); -ms-transform: rotateY(180deg) rotateX(180deg); -o-transform: rotateY(180deg) rotateX(180deg); transform: rotateY(180deg) rotateX(180deg); } }
+
+@-webkit-keyframes flipCoin2 { /* line 267, ../sass/coinAnim.scss */
+  0% { opacity: 0; bottom: 15%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 271, ../sass/coinAnim.scss */
+  15% { opacity: 1; }
+  /* line 274, ../sass/coinAnim.scss */
+  100% { left: 10%; opacity: 1; bottom: -100%; -webkit-transform: rotateY(360deg) rotateX(-180deg); -moz-transform: rotateY(360deg) rotateX(-180deg); -ms-transform: rotateY(360deg) rotateX(-180deg); -o-transform: rotateY(360deg) rotateX(-180deg); transform: rotateY(360deg) rotateX(-180deg); } }
+
+@-webkit-keyframes flipCoin3 { /* line 282, ../sass/coinAnim.scss */
+  0% { opacity: 0; bottom: 15%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 286, ../sass/coinAnim.scss */
+  15% { opacity: 1; }
+  /* line 289, ../sass/coinAnim.scss */
+  100% { left: 10%; opacity: 1; bottom: -100%; -webkit-transform: rotateY(-180deg) rotateX(180deg); -moz-transform: rotateY(-180deg) rotateX(180deg); -ms-transform: rotateY(-180deg) rotateX(180deg); -o-transform: rotateY(-180deg) rotateX(180deg); transform: rotateY(-180deg) rotateX(180deg); } }
+
+@-webkit-keyframes flipCoin4 { /* line 297, ../sass/coinAnim.scss */
+  0% { opacity: 0; bottom: 15%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 302, ../sass/coinAnim.scss */
+  15% { opacity: 1; }
+  /* line 305, ../sass/coinAnim.scss */
+  100% { left: 10%; opacity: 1; bottom: -100%; -webkit-transform: rotateY(180deg) rotateX(180deg); -moz-transform: rotateY(180deg) rotateX(180deg); -ms-transform: rotateY(180deg) rotateX(180deg); -o-transform: rotateY(180deg) rotateX(180deg); transform: rotateY(180deg) rotateX(180deg); } }
+
+@-webkit-keyframes flipCoin5 { /* line 313, ../sass/coinAnim.scss */
+  0% { opacity: 0; bottom: 15%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 318, ../sass/coinAnim.scss */
+  15% { opacity: 1; }
+  /* line 321, ../sass/coinAnim.scss */
+  100% { left: 10%; opacity: 1; bottom: -100%; -webkit-transform: rotateY(-360deg) rotateX(360deg); -moz-transform: rotateY(-360deg) rotateX(360deg); -ms-transform: rotateY(-360deg) rotateX(360deg); -o-transform: rotateY(-360deg) rotateX(360deg); transform: rotateY(-360deg) rotateX(360deg); } }
+
+@-webkit-keyframes flipCoin6 { /* line 329, ../sass/coinAnim.scss */
+  0% { opacity: 0; bottom: 15%; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 334, ../sass/coinAnim.scss */
+  15% { opacity: 1; }
+  /* line 337, ../sass/coinAnim.scss */
+  100% { left: 10%; opacity: 1; bottom: -100%; -webkit-transform: rotateY(180deg) rotateX(-180deg); -moz-transform: rotateY(180deg) rotateX(-180deg); -ms-transform: rotateY(180deg) rotateX(-180deg); -o-transform: rotateY(180deg) rotateX(-180deg); transform: rotateY(180deg) rotateX(-180deg); } }
+
+@-webkit-keyframes flipCoin7 { /* line 345, ../sass/coinAnim.scss */
+  0% { opacity: 0; bottom: 0px; -webkit-transform: rotateY(0deg) rotateX(0deg); -moz-transform: rotateY(0deg) rotateX(0deg); -ms-transform: rotateY(0deg) rotateX(0deg); -o-transform: rotateY(0deg) rotateX(0deg); transform: rotateY(0deg) rotateX(0deg); }
+  /* line 349, ../sass/coinAnim.scss */
+  15% { opacity: 1; }
+  /* line 353, ../sass/coinAnim.scss */
+  100% { left: 10%; opacity: 1; bottom: -100%; -webkit-transform: rotateY(180deg) rotateX(180deg); -moz-transform: rotateY(180deg) rotateX(180deg); -ms-transform: rotateY(180deg) rotateX(180deg); -o-transform: rotateY(180deg) rotateX(180deg); transform: rotateY(180deg) rotateX(180deg); } }

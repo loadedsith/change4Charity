@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+  <script src="javascripts/vendor/photon.js" type="text/javascript" charset="utf-8"></script>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="stylesheets/coinAnim.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <script src="javascripts/vendor/photon.js" type="text/javascript" charset="utf-8"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+  <title>animation</title>
+</head>
+<body>
+<div class="container">
+  <div class="card"> &nbsp;
+  </div>
+    <div class="slot">&nbsp;</div>
+    <div class="slotMask">&nbsp;</div>
+    <div class="mask">
+      <div class="coins">
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+        <div class="coin">
+          <div class="front">$</div>
+          <div class="back">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var light = new Photon.Light(10,  -10,  100 );
+var aFace = new Photon.Face( $('.card')[0],1,1,false);
+// console.log(aFace)
+aFace.setMaxShade( 1 );
+aFace.render(light, true, true);
+// var faces = [];
+ $('.coins .coin').children('.front, .back').each(function(){
+   var face = new Photon.Face( $(this)[0],1,1,false);
+   face.render(light, true, true);
+   // faces.push(face);
+ });
+ // console.log(faces);
+// var faces = new Photon.FaceGroup($('.coins .coin'),$('.front, .back'), .5, .5, false );
+// console.log(faces);
+// faces.render(light, true);
+</script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 @mixin debug($color){
   border:3px dotted $color !important;
 }
+
 html,body{
   height:100%;
   overflow-y:auto;
@@ -220,6 +221,7 @@ nav {
    }
    .title{
      border-top-left-radius:$global-radius !important;
+     border-top-right-radius:$global-radius !important;
       img{
         width:100px;
       }  
@@ -268,27 +270,11 @@ nav {
         left:0px;
         height:100%;
         width:100%;
-//         width:10;
+
         }
-        &:after{
-          content: '';
-          position: absolute;
-          top: 0; left: 0;
-          border-top: 25px solid $body-bg;
-          border-right: 25px solid $panel-bg;
-          width: 0;
-        };
+
     }
     .back{
-        &:after{
-          content: '';
-          position: absolute;
-          top: 0; right: 0;
-          border-top: 25px solid $body-bg;
-          border-left: 25px solid  $price-title-bg;
-          width: 0;
-
-        };
     }
     li,ul{
       display:block;

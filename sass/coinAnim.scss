@@ -1,0 +1,359 @@
+@import "compass/css3/transform";
+@import "compass/css3";
+
+
+@mixin debug($color){
+  border:3px dotted $color !important;
+}
+@mixin debugBackground($color){
+  background: $color !important;
+}
+
+
+html,body{
+  height:100%;
+  overflow-x:hidden;
+  background-color:#999;
+}
+.container{
+  overflow:hidden;
+  height:80%;
+  width:40%;
+  margin:5% auto;
+  background-color:#fff;
+  .card{
+    background-color:#FF8000;
+    -webkit-animation-name: insertCard;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: forwards;
+    -webkit-animation-delay: .25s;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    z-index:100;
+    border-radius:20px;
+    padding:15px;
+    position:relative;
+    width:200px;
+    height:300px;
+    margin:5% auto;
+    
+
+  }
+  .slotContainer{
+
+    width:100%;
+    height:5%;
+    bottom:400px;
+    left:0px;
+
+  }
+
+  .slot{
+    position:relative;
+    top:0;
+      width:250px;
+      height:50px;
+      margin:-10px auto 0 auto;
+
+    background-color:#999;
+      z-index:10;
+  }
+  .slotMask{
+    border-top:3px solid #400;
+      z-index:1000;
+    position:relative;
+    top:-25px;
+    width:230px;
+    height:20px;
+    margin:0 auto -25px auto;
+    background-color:#999;
+
+  }
+  .mask{
+    width:100%;
+    height:100%;
+    position:relative;
+    bottom:0px;
+    left:0px;
+    z-index:1000;
+    background-color:#fff;
+    .coins{
+      overflow:hidden;
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 32%;
+      width: 300px;
+        margin:-25px auto;
+
+        @include perspective(500);
+
+
+      .coin{
+        @include transform-style( preserve-3d);
+        
+        z-index:10;
+        position:relative;
+        display:inline-block;
+        height:30px;
+        width:30px;
+        bottom:-20%;
+        opacity:0;
+        margin:-25px auto;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: forwards;
+        -webkit-animation-play-state: running;
+        -webkit-animation-fill-mode: none;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-duration: 2.3s;
+        
+        &:nth-of-type(3n+0){
+              left: 5%;
+              -webkit-animation-name: flipCoin1;
+              -webkit-animation-delay: .8s;
+
+        };
+        &:nth-of-type(3n+1){
+              left: 7%;
+              -webkit-animation-name: flipCoin2;
+              -webkit-animation-delay: .6s;
+
+        };
+        &:nth-of-type(3n+2){
+              left: 12%;
+              -webkit-animation-name: flipCoin3;
+              -webkit-animation-delay: 3s;
+        };
+        &:nth-of-type(3n+3){
+            left: 0%;
+            -webkit-animation-name: flipCoin4;
+            -webkit-animation-delay: 2.8s;
+        };
+        &:nth-of-type(3n+4){
+            left: 12%;
+            -webkit-animation-name: flipCoin5;
+            -webkit-animation-delay: 1.8s;
+            
+        };  
+        &:nth-of-type(3n+5){
+            left: 13%;
+            -webkit-animation-name: flipCoin6;
+            -webkit-animation-delay: 1.6s;
+            
+            };                
+        &:nth-of-type(3n+6){
+            left: 14%;
+            -webkit-animation-name: flipCoin7;
+            -webkit-animation-delay: 4.6s;
+
+        };
+        &:nth-of-type(3n+7){
+              left: 5%;
+              -webkit-animation-name: flipCoin1;
+              -webkit-animation-delay: 1.1s;
+
+        };
+        &:nth-of-type(3n+8){
+              left: 7%;
+              -webkit-animation-name: flipCoin2;
+              -webkit-animation-delay: 1.4s;
+
+        };
+        &:nth-of-type(3n+9){
+              left: 12%;
+              -webkit-animation-name: flipCoin3;
+              -webkit-animation-delay: 3s;
+        };
+        &:nth-of-type(3n+10){
+            left: 0%;
+            -webkit-animation-name: flipCoin4;
+            -webkit-animation-delay: 2.2s;
+        };
+        &:nth-of-type(3n+11){
+            left: 12%;
+            -webkit-animation-name: flipCoin5;
+            -webkit-animation-delay: 1.5s;
+            
+        };  
+        &:nth-of-type(3n+12){
+            left: 13%;
+            -webkit-animation-name: flipCoin6;
+            -webkit-animation-delay: 1.2s;
+            
+            };                
+        &:nth-of-type(3n+13){
+            left: 14%;
+            -webkit-animation-name: flipCoin7;
+            -webkit-animation-delay: 2.6s;
+        };
+        &:nth-of-type(3n+14){
+            left: 14%;
+            -webkit-animation-name: flipCoin7;
+            -webkit-animation-delay: 1.6s;
+        };
+        .front{
+          font-size:28px;
+          color:#FF8000;
+          text-align:center;
+          @include backface-visibility(hidden);
+          @include transition-duration( 1s);
+          display: block;
+          position:absolute;
+          top:0;
+          left:0;
+          height:30px;
+          width:30px;
+          background-color:#FC6;
+          border-radius:30px;
+         
+          @include debug(PapayaWhip);
+          @include transform(translateZ(-5px));
+        }
+
+         .back{
+           @include backface-visibility(hidden);
+           @include transform(rotateY(-180deg) );
+           @include transition-duration( 1s);
+           display: block;
+           position:absolute;
+           top:0;
+           left:0;
+           height:30px;
+           width:30px;      
+           background-color:#FC6;
+           border-radius:30px;
+
+           @include debug(PapayaWhip);
+         }
+               
+      }
+    }
+  }  
+}
+
+@-webkit-keyframes insertCard {
+
+    0% {  
+      bottom: 15%;
+      @include transform(rotateY(0deg) rotateX(0deg));
+    }
+
+    100%{
+        bottom: -100%;
+      @include transform(rotateY(0deg) rotateX(0deg));
+
+    }
+
+}
+
+@-webkit-keyframes flipCoin1 {
+    0% {
+      opacity:0;
+      bottom:15%;
+      @include transform(rotateY(0deg) rotateX(0deg));
+    }
+    15%{
+      opacity:1;
+    }
+    100% {
+      left:10%;
+      opacity:1;
+      bottom:-100%;
+      @include transform(rotateY(180deg) rotateX(180deg) );
+    }
+}
+@-webkit-keyframes flipCoin2 {
+    0% {
+        opacity:0;
+      bottom:15%;
+      @include transform(rotateY(0deg) rotateX(0deg));}
+    15%{
+      opacity:1;
+    }
+    100% {
+      left:10%;
+      opacity:1;
+      bottom:-100%;
+      @include transform(rotateY(360deg) rotateX(-180deg) );
+    }
+}
+@-webkit-keyframes flipCoin3 {
+    0% {
+        opacity:0;
+      bottom:15%;
+      @include transform(rotateY(0deg) rotateX(0deg));}
+    15%{
+      opacity:1;
+    }
+    100% {
+      left:10%;
+      opacity:1;
+      bottom:-100%;
+      @include transform(rotateY(-180deg) rotateX(180deg) );
+    }
+}
+@-webkit-keyframes flipCoin4 {
+    0% {
+        opacity:0;
+      bottom:15%;
+      @include transform(rotateY(0deg) rotateX(0deg));
+    }
+    15%{
+      opacity:1;
+    }
+    100% {
+      left:10%;
+      opacity:1;
+      bottom:-100%;
+      @include transform(rotateY(180deg) rotateX(180deg) );
+    }
+}
+@-webkit-keyframes flipCoin5 {
+    0% {
+        opacity:0;
+      bottom:15%;
+      @include transform(rotateY(0deg) rotateX(0deg));
+    }
+    15%{
+      opacity:1;
+    }
+    100% {
+      left:10%;
+      opacity:1;
+      bottom:-100%;
+      @include transform(rotateY(-360deg) rotateX(360deg) );
+    }
+}
+@-webkit-keyframes flipCoin6 {
+    0% {
+        opacity:0;
+      bottom: 15%;
+      @include transform(rotateY(0deg) rotateX(0deg));
+    }
+    15%{
+      opacity:1;
+    }
+    100% {
+      left:10%;
+      opacity:1;
+      bottom:-100%;
+      @include transform(rotateY(180deg) rotateX(-180deg) );
+    }
+}
+@-webkit-keyframes flipCoin7 {
+    0% {
+      opacity:0;
+      bottom: 0px;
+      @include transform(rotateY(0deg) rotateX(0deg));}
+    15%{
+      opacity:1;
+      }
+    100% 
+    {
+      left:10%;
+      opacity:1;
+      bottom:-100%;
+      @include transform(rotateY(180deg) rotateX(180deg) );
+    }
+}
