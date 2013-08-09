@@ -70,7 +70,7 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     // console.log(timeScale,Date.parse(nextDeadline)-now);
     $scope.countdown = ( Date.parse($scope.adjacentDeadlines .next) - $scope.now ) / times[$scope.timeScale];
     
-    $scope.updateCountdown($scope.adjacentDeadlines .last, $scope.adjacentDeadlines .next);
+    $scope.updateCountdown($scope.adjacentDeadlines.last, $scope.adjacentDeadlines.next);
   });
 
   
@@ -102,7 +102,7 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     context.strokeStyle = 'grey';
     context.stroke();
     
-    endAngle = (percent*2) * Math.PI;
+    endAngle = (percent*2)+1.5 * Math.PI;
     
     context.beginPath();
     context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
