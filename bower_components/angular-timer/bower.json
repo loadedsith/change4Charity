@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Siddique Hameed"
+  },
+  "name": "angular-timer",
+  "version": "1.0.0",
+  "homepage": "https://github.com/siddii/angular-timer",
+  "description": "Angular-Timer : A simple AngularJS directive demonstrating re-usability & interoperability",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/siddii/angular-timer.git"
+  },
+  "dependencies": {
+    "angular": ">= 1.0.7"
+  },
+  "main": "./release/angular-timer.min.js",
+  "gitHead": "e07f856bca348ead364931dfefde01b9a6b7bfb4",
+  "readme": "# angular-timer — A simple AngularJS directive demonstrating re-usability & interoperability\n\nSample AngularJS directive\n\nThis fork:\n\nCreate the bower support to deploy a package on Bower\n\nInstructions: \nbower bump > to increase the version of the tag. Current: v1.0.0\n\nCreate the first tag v1.0.0 for this project and deploy the package to bower:\nbower register angular-timer-bower git://github.com/siddii/angular-timer.git\n\nOr:\nbower register angular-timer git://github.com/siddii/angular-timer.git\n\nSince I've created the angular-bower to my endpoint, this package name will be unavaliable until the bower team remove manually this package.\nI create a request to remove this package at https://github.com/bower/bower/issues/120\n\n",
+  "readmeFilename": "README.md",
+  "_id": "angular-timer@1.0.0"
+}

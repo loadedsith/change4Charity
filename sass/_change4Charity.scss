@@ -134,17 +134,35 @@ nav {
 #wrapper{
   padding-top:55px;
 }
-#instructionsModal{
-  &.reveal-modal, &.reveal-modal h4,&.reveal-modal p.lead{
+.reveal-modal-bg{
+  cursor:pointer;  
+}
+#introduction{
+  cursor:pointer;
+  text-align: center;
+  *{
     color:#fff;
+
   }
-  ol{
-    padding-left: 1.8em;
+  ul{
+    list-style:none;
+    margin:1em auto;
+  }
+  .footer{
+    color:#7F7F7F;
+    padding-top:1em;
+  }
+  img, .close-reveal-modal{
+    padding-top:0;
+  }
+  h1{
+    padding-top:.3em;
+    font-weight: 0;
+    font-size:350%;
   }
 }
 
 #selectedCharity{
-  
   
 }
 #charities{

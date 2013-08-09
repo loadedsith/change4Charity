@@ -14,16 +14,14 @@
   
 </head>
 <body ng-app="change4Charity" ng-controller="MainController">
-  <div id="instructionsModal" class="reveal-modal">
-    <h4>Welcome to</h4>
-    <h2><img src="images/bwLogo.png" width="49" height="56" alt="BwLogo">
-    <p class="lead">Change 4 Charity.</p></h2>
-    <ol>
-      <li>Scan your CTA card</li>
-      <li>Choose your favorite charity</li>
-      <li>Donate a partial or full amount from your card</li>
-    </ol>
-    <p>Feel great, no more wasted money on left-over cards!</p>
+  <div id="introduction" ng-click="closeModal();" class="reveal-modal" ng-model="welcome">
+
+    <img ng-src="{{welcome.logoSrc && 'images/' + welcome.logoSrc || ''}} " alt="{{wecome.header}}">
+    <h1>{{welcome.header}}</h1>
+    <ul>
+      <li ng-repeat="line in welcome.lines"><h4>{{line}}</h4></li>
+    </ul>
+    <footer class="footer">{{welcome.footer}}</footer>
     <a class="close-reveal-modal">&#215;</a>
   </div>
   <div class="sticky contain-to-grid" >
@@ -71,6 +69,11 @@
   </div>
   <div id="wrapper">
     <div id="content">
+      <div ng-controller="CountDownController" ng-cloak>
+        <canvas id='clock' width="125" height="125"></canvas>
+        <p>{{countdown | number : 0 }}</p>
+        <p>{{timeScale}} left</p>
+      </div>
       <div id="charities" ng-controller="CharitiesController" class="row" ng-show="showCharities" ng-cloak>
         <div id="selectedCharity"  ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="row" ng-cloak ng-show="showSelectedCharity" ng-model="selectedCharity">
           <ul class="inline-list" back-img="/images/charityLogo/{{selectedCharity.logo}}">
@@ -118,12 +121,6 @@
         </div>
       </div>
     </div>
-  </div>
-  
-  <div class="example-date">
-    <span class="day">31</span> 
-    <span class="month">July</span> 
-    <span class="year">2009</span>
   </div>
   <script>
   document.write('<script src=' +

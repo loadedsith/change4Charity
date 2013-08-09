@@ -1,3 +1,13 @@
 {
-    "charitySelected": "You've selected"
+    "charitySelected": "You've selected",
+    "welcome" : {
+      "logoSrc":"bwLogo4x.png",
+      "header":"C4C",
+      "footer":"(click anywhere to close)",
+      "lines" : [
+        "Play The C4C Lottery",
+        "Win weekly passes",
+        "Give back to your community"
+      ]
+    }
 }
