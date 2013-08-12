@@ -7,6 +7,7 @@
 var change4Charity = {};
 $(document).ready(function() {
   $(document).foundation();
+   $('#login').foundation('reveal', 'open');
   // $('#introduction').foundation('reveal', 'open');
 
   var date = new Date();
@@ -23,17 +24,19 @@ $(document).ready(function() {
 
 
 
-
 change4Charity.app = angular.module( 'change4Charity',['charitiesServices','stringServices','fareCardServices'] );
 
 angular.module('change4Charity').directive('fileChange', fileChange);
 angular.module('change4Charity').directive('backImg', backImgDirective);
 
 change4Charity.app.controller( 'MainController', function( $scope, Strings ) {
-
+  $scope.stats = {};
+  $scope.stats.charityDonations = 2134;
+  $scope.stats.rideDonations = 213;
   Strings.query(function(response){
     $scope.strings = response
     $scope.welcome = $scope.strings.welcome;
+    $scope.login = $scope.strings.login;
   });
   $scope.closeModal = function(){
     $('#introduction').foundation('reveal', 'close');
@@ -73,16 +76,9 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     $scope.updateCountdown($scope.adjacentDeadlines.last, $scope.adjacentDeadlines.next);
   });
 
-  
-  // console.log($scope);
- 
-  // var timeout=1000;
-  // $timeout(function() {
-  //   
-  //         }, timeout);
   $scope.updateCountdown = function(from, to){
     console.log(from,to);
-    var percent = ((Date.parse(to) - Date.parse(from))/times[$scope.timeScale])/100;
+    var percent = ((Date.parse(from) - Date.parse(to))/times[$scope.timeScale])/100;
     console.log("percent",percent);
     var canvas = document.getElementById('clock');
     var context = canvas.getContext('2d');

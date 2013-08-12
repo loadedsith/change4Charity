@@ -1,5 +1,8 @@
 {
     "charitySelected": "You've selected",
+    "skipOne": {
+      "lines":["No Thanks,", "Let Me Browse"]
+    },
     "welcome" : {
       "logoSrc":"bwLogo4x.png",
       "header":"C4C",
@@ -9,5 +12,37 @@
         "Win weekly passes",
         "Give back to your community"
       ]
+    },
+    "login" : {
+      "inputs":[
+        {
+          "name":"username",
+          "type":"text"
+        },
+        {
+          "name":"password",
+          "type":"text"
+        }
+      ],
+      "links":[
+        {"name":"forgot username?",
+          "type":"text",
+          "url":"#"
+        },
+        {"name":"forgot password?",
+          "type":"text",
+          "url":"#"
+        }
+      ],
+      "loginButton":"Login",
+      "header":"Ventra Login",
+      "headerImage":"bwLogo4x.png",
+      "footer":"(click anywhere to close)",
+      "skip": {
+        "lines":[
+          "No Thanks,",
+          "Let Me Explore!"
+         ]
+      }
     }
 }

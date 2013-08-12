@@ -53,7 +53,7 @@ function getAdjacentDeadlines(deadlines, now){
           return {"last":deadlines[di-1],"next":deadline};          
         }else{
           console.log("this should not happen, it was gracefully handled by setting the last deadline to (now minus one day), but is not a good idea.")
-          return {"last":now-times.Days,"next":deadline};          
+          return {"last":(now - times.Days),"next":deadline};          
         }
 
       }

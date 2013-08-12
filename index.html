@@ -8,22 +8,11 @@
   <title>Change 4 Charity - CTA</title>
   <link rel="stylesheet" media="screen, projector, print" href="stylesheets/app.css" />
   <script src="javascripts/vendor/custom.modernizr.js"></script>
-  <!-- <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" /> -->
   <script src="javascripts/vendor/angular/angular.js"></script>
   <script src="javascripts/vendor/angular/angular-resource.js" type="text/javascript" charset="utf-8"></script>
-  
 </head>
 <body ng-app="change4Charity" ng-controller="MainController">
-  <div id="introduction" ng-click="closeModal();" class="reveal-modal" ng-model="welcome">
 
-    <img ng-src="{{welcome.logoSrc && 'images/' + welcome.logoSrc || ''}} " alt="{{wecome.header}}">
-    <h1>{{welcome.header}}</h1>
-    <ul>
-      <li ng-repeat="line in welcome.lines"><h4>{{line}}</h4></li>
-    </ul>
-    <footer class="footer">{{welcome.footer}}</footer>
-    <a class="close-reveal-modal">&#215;</a>
-  </div>
   <div class="sticky contain-to-grid" >
       <nav class="top-bar" data-options="is_hover:false">
         <ul class="title-area">
@@ -40,7 +29,7 @@
               <form ng-controller="fareCardController" ng-submit="findCard()">
                 <div class="row">
                   <div class="smallButton">                                                                                          
-                      <input accept="image/*" type="file" file-change="setFile" multiple class="button" id="camera" capture="camera">                      
+                      <input accept="image/*" type="file" file-change="setFile" multiple class="button" id="camera" capture="camera">
                   </div>
                   <div class="smallInput">
                     <input type="text" placeholder="Find Card By Number/Search Site" ng-model="card.number">
@@ -69,11 +58,27 @@
   </div>
   <div id="wrapper">
     <div id="content">
-      <div ng-controller="CountDownController" ng-cloak>
+      <div class="row">
+        <div class="small-4 columns charityDonations" ng-model="stats">
+          $<span ng-bind="stats.charityDonations | number:0"></span>
+          <p>Charity Donations</p>
+        </div>
+        <div class="small-4 columns"><div ng-controller="CountDownController" ng-cloak>
         <canvas id='clock' width="125" height="125"></canvas>
-        <p>{{countdown | number : 0 }}</p>
-        <p>{{timeScale}} left</p>
+        <p ng-bind="countdown | number : 0"></p>
+        <p ng-bind="timeScale + 'left'"></p>
+      </div></div>
+      <div class="small-4 columns charityDonations" ng-model="stats">
+        <span ng-bind="stats.rideDonations | number:0"></span>
+        <p>Free Ride Winners</p>
       </div>
+    </div>
+    <div class="row">
+      <div class="small-12 small-centered large-6 large-centered columns" ng-model="strings.skipOne">
+        <a class="button expand"><span ng-repeat="line in strings.skipOne.lines"><span ng-bind-html-unsafe="line+'<br/>'"></span></a>
+      </div>
+    </div>
+      
       <div id="charities" ng-controller="CharitiesController" class="row" ng-show="showCharities" ng-cloak>
         <div id="selectedCharity"  ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="row" ng-cloak ng-show="showSelectedCharity" ng-model="selectedCharity">
           <ul class="inline-list" back-img="/images/charityLogo/{{selectedCharity.logo}}">
@@ -122,6 +127,34 @@
       </div>
     </div>
   </div>
+  <div id="login" ng-click="closeModal();" class="reveal-modal" ng-model="login">
+    <div class="row">
+      <div class="small-8 small-centered columns"> 
+        <img ng-src="{{'images/' + login.headerImage||''}} " alt="{{login.header}}">
+        <h1>{{login.header}}</h1>
+          <form>
+            <ul>
+              <li ng-repeat="input in login.inputs"><label for="input{{input.name}}" ng-bind="input.name"></label><input type="{{input.type}}">{{line}}</li>
+            </ul>
+          </form>
+          <div class="button" ng-model="login.skip">
+            <span ng-repeat="line in login.skip.lines"><span ng-bind-html-unsafe="line+'<br/>'"></span>
+          </div>
+          <footer class="footer">{{login.footer}}</footer>
+      </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <!-- <div id="introduction" ng-click="closeModal();" class="reveal-modal" ng-model="welcome">
+
+    <img ng-src="{{welcome.logoSrc && 'images/' + welcome.logoSrc || ''}} " alt="{{wecome.header}}">
+    <h1>{{welcome.header}}</h1>
+    <ul>
+      <li ng-repeat="line in welcome.lines"><h4>{{line}}</h4></li>
+    </ul>
+    <footer class="footer">{{welcome.footer}}</footer>
+    <a class="close-reveal-modal">&#215;</a>
+  </div> -->
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
