@@ -1,0 +1,12 @@
+<a href="/app" ng-animate="{enter: 'view-enter', leave: 'view-leave'}">
+  <div class="welcomeWrapper">
+    <div class="welcomeContent">
+      <img ng-src="{{welcome.logoSrc && 'images/' + welcome.logoSrc || ''}} " alt="{{wecome.header}}">
+      <h1>{{welcome.header}}</h1>
+      <ul>
+        <li ng-repeat="line in welcome.lines"><h4>{{line}}</h4></li>
+      </ul>
+      <footer class="footer">{{welcome.footer}}</footer>
+    </div>
+  </div>
+</a>

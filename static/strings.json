@@ -1,6 +1,7 @@
 {
     "charitySelected": "You've selected",
     "skipOne": {
+      "url":"/next",
       "lines":["No Thanks,", "Let Me Browse"]
     },
     "welcome" : {
@@ -17,11 +18,13 @@
       "inputs":[
         {
           "name":"username",
-          "type":"text"
+          "type":"text",
+          "value":""
         },
         {
           "name":"password",
-          "type":"text"
+          "type":"password",
+          "value":""
         }
       ],
       "links":[
@@ -36,8 +39,8 @@
       ],
       "loginButton":"Login",
       "header":"Ventra Login",
-      "headerImage":"bwLogo4x.png",
-      "footer":"(click anywhere to close)",
+      "headerImage":"ventra.png",
+      "footer":"You can always login later",
       "skip": {
         "lines":[
           "No Thanks,",

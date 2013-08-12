@@ -1,0 +1,150 @@
+<div class="sticky contain-to-grid" >
+    <nav class="top-bar" data-options="is_hover:false">
+      <ul class="title-area">
+        <a href="#">
+          <li class="name">
+          </li>
+        </a>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li class="has-form search">
+            <form ng-controller="fareCardController" ng-submit="findCard()">
+              <div class="row">
+                <div class="smallButton">                                                                                          
+                    <input accept="image/*" type="file" file-change="setFile" multiple class="button" id="camera" capture="camera">
+                </div>
+                <div class="smallInput">
+                  <input type="text" placeholder="Find Card By Number/Search Site" ng-model="card.number">
+                </div>
+                <div class="smallButton" >
+                  <a href="#" class="button" ng-click="findCard()">Go
+                  </a>
+                </div>
+              </div>
+              <div id="resultsModal" class="reveal-modal" class="results" ng-cloak ng-show="showCardResults">
+                <h4>Search Results</h4>
+                <ol>
+                  <li>{{fareCard.typeID}}</li>
+                  <li>{{fareCard.type}}</li>
+                  <li>{{fareCard.value|currency}}</li>
+                  <li>{{card.number}}</li>
+                </ol>
+                <a class="close-reveal-modal">&#215;</a>
+              </div>
+
+            </form>
+          </li>
+        </ul>
+      </section>
+    </nav>
+</div>
+<div id="wrapper">
+  <div id="content">
+    <div class="row">
+      <div class="small-4 columns charityDonations" ng-model="stats">
+        $<span ng-bind="stats.charityDonations | number:0"></span>
+        <p>Charity Donations</p>
+      </div>
+      <div class="small-4 columns"><div ng-controller="CountDownController" ng-cloak>
+      <canvas id='clock' width="125" height="125"></canvas>
+      <p ng-bind="countdown | number : 0"></p>
+      <p ng-bind="timeScale + 'left'"></p>
+    </div></div>
+    <div class="small-4 columns charityDonations" ng-model="stats">
+      <span ng-bind="stats.rideDonations | number:0"></span>
+      <p>Free Ride Winners</p>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="small-12 small-centered large-6 large-centered columns" >
+      <a class="button expand" ng-model="strings.skipOne">
+        <span ng-repeat="line in strings.skipOne.lines" ng-bind-html-unsafe="line+'<br/>'"></span>
+      </a>
+    </div>
+  </div>
+    
+    <div id="charities" ng-controller="CharitiesController" class="row" ng-show="showCharities" ng-cloak>
+      <div id="selectedCharity"  ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="row" ng-cloak ng-show="showSelectedCharity" ng-model="selectedCharity">
+        <ul class="inline-list" back-img="/images/charityLogo/{{selectedCharity.logo}}">
+          <li>You've Selected:</li>
+          <li class="title">  
+            {{ selectedCharity.name }}
+          </li>
+          <li class="description"> 
+            {{ selectedCharity.shortDescription }}
+          </li>
+        </ul>
+      </div>
+      <div class="columns small-11 small-centered large-12 large-centered">
+        <h3>Charities</h3>
+          <ul id="charityCards" class="card">
+            <li class="charity" ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
+                                          ng-cloak ng-repeat="charity in charities|filter:search" >
+              <div class="flip-container" ng-cloak ng-class="{'flip' : isShowingCharityInfo(charity)}" ng-click="showCharityInfo(charity)">
+                <div class="flipper">
+                  <div class="panel radius front" ng-cloak>
+                    <span class="stripe"></span>
+                    <div class="charityLogo" back-img="/images/charityLogo/{{charity.logo}}">&nbsp;</div>
+                  </div>
+                  <ul class="pricing-table radius back" ng-cloak back-img="/images/charityLogo/{{charity.logo}}">
+                    <li class="title">{{ charity.name }}</li>
+                    <li class="description">
+                      <p>{{ charity.shortDescription }}</p>
+                    </li>
+                    <li class="donateMoreInfo">
+                      <ul class="button-group round">
+                        <li>
+                          <a class="small button" href="#" ng-click="donate(charity)">Donate Now</a>
+                        </li>
+                        <li>                                  
+                          <a class="small button" ng-href="{{ charity.link }}" title="More about {{ charity.name}}">?</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="login" ng-click="closeModal();" class="reveal-modal" ng-model="login" ng-init="login.loginInit()">
+  <div class="row">
+    <div class="small-12 small-centered columns"> 
+      <img ng-src="{{'images/' + login.headerImage||''}} " alt="{{login.header}}">
+      <h1>{{login.header}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 small-centered columns"> 
+        <form>
+          <ul>
+            <li ng-repeat="input in login.inputs" class="row">
+              <label class="small-4 columns radius" for="input{{input.name}}" ng-bind="input.name"></label>
+              <input class="small-8 columns radius" id="input{{input.name}}" type="{{input.type}}" placeholder="{{input.name}}" ng-model="input.value"></input>
+            </li>
+            <li class="row">
+              <div class="radius small-1 small-offset-8 columns">
+                <div class="button radius" ng-click="loginInfo()">Login</div>
+              </div>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 small-centered columns"> 
+        <div class="button expand radius" ng-model="login.skip">
+          <span ng-repeat="line in login.skip.lines"><span ng-bind-html-unsafe="line+'<br/>'"></span>
+        </div>
+        <footer class="footer">{{login.footer}}</footer>
+      </div>
+    </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

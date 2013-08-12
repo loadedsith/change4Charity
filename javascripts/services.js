@@ -27,6 +27,7 @@ angular.module('stringServices', ['ngResource']).factory('Strings', function($re
       query:{method:'GET', isArray:false}
     });
 });
+
 angular.module('deadlinesServices', ['ngResource']).factory('Deadlines', function($resource) {
   
   return $resource('/static/deadlines.json',{}, {
