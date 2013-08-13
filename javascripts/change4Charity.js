@@ -4,26 +4,10 @@
 /*global angular:false */
 /*global console:false */
 
-var change4Charity = {};
 $(document).ready(function() {
   $(document).foundation();
-   // $('#login').foundation('reveal', 'open');
- //  // $('#introduction').foundation('reveal', 'open');
- // 
- //  var date = new Date();
- //  $(document).ready(function($) {
- //    if (!$.cookie("login")) {
- //      var minutes = 30;
- //      date.setTime(date.getTime() + (minutes * 60 * 1000));
- //      $('#login').foundation('reveal', 'open');
- //      $.cookie("login",true, {expires:date});
- //      //time() + (10 * 365 * 24 * 60 * 60)
- //    }
- //  });
 });
-
-
-
+var change4Charity = {};
 
 change4Charity.app = angular.module( 'change4Charity',['charitiesServices','stringServices','fareCardServices'] ).
         config(function($routeProvider, $locationProvider){
@@ -35,7 +19,6 @@ change4Charity.app = angular.module( 'change4Charity',['charitiesServices','stri
 
 
 angular.module('change4Charity').directive('fileChange', fileChange);
-angular.module('change4Charity').directive('backImg', backImgDirective);
 
 
 
@@ -46,8 +29,11 @@ change4Charity.app.controller( 'WelcomeController', function( $scope, Strings ) 
 
 });
 change4Charity.app.controller( 'MainController', function( $scope, Strings ) {
-  $scope.stats = {};
-  $scope.login = {};
+  $scope.stats = $scope.stats || {};
+  $scope.login = $scope.login || {};
+  $scope.user = $scope.user || {};
+  $scope.user.showInfo = false;
+  $scope.user.showLogin = true;
   $scope.stats.charityDonations = 2134;
   $scope.stats.rideDonations = 213;
   Strings.query(function(response){
@@ -57,17 +43,25 @@ change4Charity.app.controller( 'MainController', function( $scope, Strings ) {
   });
   $scope.closeModal = function(){
     $('#introduction').foundation('reveal', 'close');
+    $('#login').foundation('reveal', 'close');
   }
-
+  $scope.revealLogin = function(){
+    $('#login').foundation('reveal', 'open');
+  }
+  $scope.menuClick = function(){
+    $(".top-bar").toggleClass("expanded");
+    // $(document).foundation();
+  }
   $scope.loginInfo = function(){
 
-    $scope.user = {};
     $($scope.login.inputs).each(function(){
       if(this.name === "username"||this.name === "Username"){
         $scope.user.username = this.value;
+        $scope.user.showInfo = true;
+        $scope.user.showLogin = false;
       }
     });
-    
+    $('#login').foundation('reveal', 'close');
   }
   $scope.login.loginInit = function(){
     var date = new Date();
@@ -114,8 +108,12 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
   });
 
   $scope.updateCountdown = function(from, to){
-    console.log(from,to,$scope.now);
-    var percent = ((Date.parse(from) - Date.parse(to))/times[$scope.timeScale])/100;
+    console.log(Date.parse(from),Date.parse(to),$scope.now);
+    var timeLeft = Date.parse(to) - Date.parse(from);
+    var timeNowLeft = $scope.now -  Date.parse(from); 
+    console.log("tl",timeLeft);
+    console.log("tnl",timeNowLeft);
+    var percent = timeLeft / timeNowLeft /10;
     console.log("percent",percent);
     var canvas = document.getElementById('clock');
     var context = canvas.getContext('2d');

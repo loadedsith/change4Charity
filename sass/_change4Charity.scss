@@ -131,7 +131,14 @@ nav {
     }
   }  
 }
+.center{
+  margin:0 auto;
+}
 #login{
+  text-align:center;
+  .logoWrapper{
+    max-width:680px;
+  }
   label{
     color:#fff;
     text-align:right;
@@ -139,7 +146,7 @@ nav {
   }                  
   h1{                
     color:#fff;
-    text-align:center;
+
   }
   input{
     width:50%;
@@ -149,12 +156,20 @@ nav {
     list-style:none;
   }
   footer{
-    @include debug(SandyBrown);
+
     color:#cfcfcf;
   }
 }
+
+.loginWelcome{
+  @include debug(RoyalBlue);
+
+}
 #wrapper{
-  padding-top:55px;
+
+  margin-top: -25px;
+  padding-top:5px;
+  
 }
 .reveal-modal-bg{
   cursor:pointer;  
@@ -201,9 +216,15 @@ nav {
 }
 
 #selectedCharity{
-  
+  .inline-list{
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+    background-size : 90%!important;
+    
+  }
 }
 #charities{
+ 
   #charities, li{
     display:block;
   }
@@ -248,14 +269,12 @@ nav {
       }    
   }
   .pricing-table{
-
-    @include rotateY(90deg);
-    .donateMoreInfo{
-//       background-color:$price-title-bg;
+    .action{
         border-bottom-left-radius:$global-radius !important;
         border-bottom-right-radius:$global-radius !important;
+
         padding-top:12px;
-        width:100%!important;
+        margin:0;
         
       .button-group{
         display:block;
@@ -280,10 +299,8 @@ nav {
      border-top-right-radius:$global-radius !important;
       img{
         width:100px;
-      }  
-     
+      }
     }
-    
   }
   .flip-container{
     display: block;
@@ -316,10 +333,22 @@ nav {
         background-color:rgba(#000, .3)!important;
       }
     .front{
+      ul{
+        margin:0;padding:0;
+      }
+          .action{
+            position: relative;
+            top: 230px;
+            width: 130px;
+
+          }
           z-index:100;
       cursor:pointer;
       z-index:2;
       .charityLogo{
+        background-repeat: no-repeat!important;
+        background-position: center center!important;
+        background-size : 90%!important;
         z-index: 11;
         position:absolute;
         top:0px;
@@ -331,6 +360,19 @@ nav {
 
     }
     .back{
+      &.charityLogo{
+        background-repeat: no-repeat!important;
+        background-position: center center!important;
+        background-size : 90%!important;
+
+      }
+      .active{
+        width: 120px;
+        margin: 0px auto;
+        display: block;
+        bottom: 21px;
+        left: 23%;
+      }
     }
     li,ul{
       display:block;

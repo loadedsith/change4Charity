@@ -5,7 +5,7 @@
           <li class="name">
           </li>
         </a>
-        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        <li class="toggle-topbar menu-icon"><a ng-click="menuClick()" ><span></span></a></li>
       </ul>
       <section class="top-bar-section">
         <ul class="right">
@@ -13,8 +13,8 @@
           <li class="has-form search">
             <form ng-controller="fareCardController" ng-submit="findCard()">
               <div class="row">
-                <div class="smallButton">                                                                                          
-                    <input accept="image/*" type="file" file-change="setFile" multiple class="button" id="camera" capture="camera">
+                <div class="smallButton">      
+                  <input accept="image/*" type="file" file-change="setFile" multiple class="button" id="camera" capture="camera">
                 </div>
                 <div class="smallInput">
                   <input type="text" placeholder="Find Card By Number/Search Site" ng-model="card.number">
@@ -34,8 +34,16 @@
                 </ol>
                 <a class="close-reveal-modal">&#215;</a>
               </div>
-
             </form>
+
+          </li>
+          <li class="loginWelcome">
+            <span class="userInfo"  ng-show="user.showInfo">
+              <p class="username" ng-bind="'Welcome: '+user.username"></p>
+            </span>
+            <span ng-show="user.showLogin" >
+              <a ng-click="revealLogin()" class="small secondary button">login</a>
+            </span>
           </li>
         </ul>
       </section>
@@ -68,7 +76,7 @@
     
     <div id="charities" ng-controller="CharitiesController" class="row" ng-show="showCharities" ng-cloak>
       <div id="selectedCharity"  ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="row" ng-cloak ng-show="showSelectedCharity" ng-model="selectedCharity">
-        <ul class="inline-list" back-img="/images/charityLogo/{{selectedCharity.logo}}">
+        <ul class="inline-list" ng-style="{'background':'url(/images/charityLogo/'+selectedCharity.logo+')'}">
           <li>You've Selected:</li>
           <li class="title">  
             {{ selectedCharity.name }}
@@ -79,30 +87,31 @@
         </ul>
       </div>
       <div class="columns small-11 small-centered large-12 large-centered">
-        <h3>Charities</h3>
+        <h3>Our Charities</h3>
           <ul id="charityCards" class="card">
             <li class="charity" ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
                                           ng-cloak ng-repeat="charity in charities|filter:search" >
               <div class="flip-container" ng-cloak ng-class="{'flip' : isShowingCharityInfo(charity)}" ng-click="showCharityInfo(charity)">
                 <div class="flipper">
                   <div class="panel radius front" ng-cloak>
-                    <span class="stripe"></span>
-                    <div class="charityLogo" back-img="/images/charityLogo/{{charity.logo}}">&nbsp;</div>
+                    <!-- <span class="stripe"></span> -->
+                    <div class="charityLogo" ng-style="{'background':'url(/images/charityLogo/'+charity.logo+')'}">&nbsp;</div>
+                    <ul>
+                      <li class="action">
+                            <a class="small expand button" href="#" ng-click="donate(charity)">Enter Lottery</a>
+                      </li>
+                    </ul>
                   </div>
-                  <ul class="pricing-table radius back" ng-cloak back-img="/images/charityLogo/{{charity.logo}}">
-                    <li class="title">{{ charity.name }}</li>
+                  <ul class="pricing-table charityLogo radius back" ng-cloak ng-style="{'background':'url(/images/charityLogo/'+charity.logo+')'}">
+                    <li class="title" ng-bind="charity.name"></li>
                     <li class="description">
-                      <p>{{ charity.shortDescription }}</p>
+                      <p ng-bind="charity.shortDescription"></p>
                     </li>
-                    <li class="donateMoreInfo">
-                      <ul class="button-group round">
-                        <li>
-                          <a class="small button" href="#" ng-click="donate(charity)">Donate Now</a>
-                        </li>
-                        <li>                                  
+                    <li class="action">
+                          <a class="small expand button" href="#" ng-click="donate(charity)">Enter Lottery</a>
+                        <!-- <li>                                  
                           <a class="small button" ng-href="{{ charity.link }}" title="More about {{ charity.name}}">?</a>
-                        </li>
-                      </ul>
+                        </li> -->
                     </li>
                   </ul>
                 </div>
@@ -114,10 +123,12 @@
     </div>
   </div>
 </div>
-<div id="login" ng-click="closeModal();" class="reveal-modal" ng-model="login" ng-init="login.loginInit()">
+<div id="login" class="reveal-modal" ng-model="login" ng-init="login.loginInit()">
   <div class="row">
     <div class="small-12 small-centered columns"> 
-      <img ng-src="{{'images/' + login.headerImage||''}} " alt="{{login.header}}">
+      <div class="logoWrapper center">
+        <img ng-src="{{'images/' + login.headerImage||''}} " alt="{{login.header}}">
+      </div>
       <h1>{{login.header}}</h1>
     </div>
   </div>
@@ -140,7 +151,7 @@
     </div>
     <div class="row">
       <div class="small-12 small-centered columns"> 
-        <div class="button expand radius" ng-model="login.skip">
+        <div class="button expand radius" ng-click="closeModal()" ng-model="login.skip">
           <span ng-repeat="line in login.skip.lines"><span ng-bind-html-unsafe="line+'<br/>'"></span>
         </div>
         <footer class="footer">{{login.footer}}</footer>
