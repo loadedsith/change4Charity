@@ -108,13 +108,19 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
   });
 
   $scope.updateCountdown = function(from, to){
-    console.log(Date.parse(from),Date.parse(to),$scope.now);
-    var timeLeft = Date.parse(to) - Date.parse(from);
-    var timeNowLeft = $scope.now -  Date.parse(from); 
-    console.log("tl",timeLeft);
-    console.log("tnl",timeNowLeft);
-    var percent = timeLeft / timeNowLeft /10;
+    var end = Date.parse(to)
+    var begin = Date.parse(from)
+    var now = $scope.now;
+    
+    console.log(begin,end,now);
+    
+    var duration = end - begin;
+    var left = now - begin;
+
+    var percent = (left / duration) ;
+    
     console.log("percent",percent);
+    
     var canvas = document.getElementById('clock');
     var context = canvas.getContext('2d');
   
@@ -133,7 +139,8 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     context.strokeStyle = 'grey';
     context.stroke();
     
-    endAngle = (percent*2)+1.5 * Math.PI;
+    // endAngle = (percent*2)+1.5 * Math.PI;
+    endAngle = (3.5-(3.5*percent)) * Math.PI;
     
     context.beginPath();
     context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
