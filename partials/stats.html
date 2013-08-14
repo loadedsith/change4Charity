@@ -8,34 +8,7 @@
         <li class="toggle-topbar menu-icon"><a ng-click="menuClick()" ><span></span></a></li>
       </ul>
       <section class="top-bar-section">
-        <ul class="right">
-          <li class="divider"></li>
-          <li class="has-form search">
-            <!-- <form ng-controller="fareCardController" ng-submit="findCard()">
-              <div class="row">
-                <div class="smallButton">      
-                  <input accept="image/*" type="file" file-change="setFile" multiple class="button" id="camera" capture="camera">
-                </div>
-                <div class="smallInput">
-                  <input type="text" placeholder="Find Card By Number/Search Site" ng-model="card.number">
-                </div>
-                <div class="smallButton" >
-                  <a href="#" class="button" ng-click="findCard()">Go
-                  </a>
-                </div>
-              </div>
-              <div id="resultsModal" class="reveal-modal" class="results" ng-cloak ng-show="showCardResults">
-                <h4>Search Results</h4>
-                <ol>
-                  <li>{{fareCard.typeID}}</li>
-                  <li>{{fareCard.type}}</li>
-                  <li>{{fareCard.value|currency}}</li>
-                  <li>{{card.number}}</li>
-                </ol>
-                <a class="close-reveal-modal">&#215;</a>
-              </div>
-            </form> -->
-          </li>
+        <ul class="right" ng-cloak ng-show="false">
           <li class="loginWelcome">
             <span class="userInfo"  ng-show="user.showInfo">
               <p class="username" ng-bind="'Welcome: '+user.username"></p>
@@ -65,58 +38,51 @@
       <p>Free Ride Winners</p>
     </div>
   </div>
-  <div class="row" >
-    <div class="small-12 small-centered large-6 large-centered columns" >
-      <a class="button expand" ng-bind="strings.playNow">
-
-      </a>
-    </div>
-  </div>
-    
     <div id="charities" ng-controller="CharitiesController" class="row" ng-show="showCharities" ng-cloak>
-      <!-- <div id="selectedCharity"  ng-animate="{enter: 'view-enter', leave: 'view-leave'}" class="row" ng-cloak ng-show="showSelectedCharity" ng-model="selectedCharity">
-        <ul class="inline-list" ng-style="{'background':'url(/images/charityLogo/'+selectedCharity.logo+')'}">
-          <li>You've Selected:</li>
-          <li class="title">  
-            {{ selectedCharity.name }}
-          </li>
-          <li class="description"> 
-            {{ selectedCharity.shortDescription }}
-          </li>
-        </ul>
-      </div> -->
-      <div class="columns small-11 small-centered large-12 large-centered">
+      <div class="columns small-12 small-centered large-12 large-centered">
         <h3>Our Charities</h3>
-          <ul id="charityCards" class="card">
-            <li class="charity" ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
-                                          ng-cloak ng-repeat="charity in charities|filter:search" >
-              <div class="flip-container" ng-cloak ng-class="{'flip' : isShowingCharityInfo(charity)}" ng-click="showCharityInfo(charity)">
-                <div class="flipper">
-                  <div class="panel radius front" ng-cloak>
-                    <!-- <span class="stripe"></span> -->
-                    <div class="charityLogo" ng-style="{'background':'url(/images/charityLogo/'+charity.logo+')'}">&nbsp;</div>
-                    <ul>
-                      <li class="action">
-                            <a class="small expand button" href="#" ng-click="donate(charity)">{{strings.cta}}<br/>{{strings.ctaValue|currency}}</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="pricing-table charityLogo radius back" ng-cloak ng-style="{'background':'url(/images/charityLogo/'+charity.logo+')'}">
+          <ul id="charityCards">
+            <li class="charity row panel radius charityLogo" ng-animate="{enter: 'view-enter', leave: 'view-leave'}" ng-cloak ng-repeat="charity in charities">
+              <ul class="charityLogo" ng-style="{'background':'url(/images/charityLogo/'+charity.logo+')'}" >
+                <li class="action small-9 columns ">
+                  <h6>{{charity.name}}</h6>
+                  <h6 class="subheader">{{charity.shortDescription}}</h6>
+                </li>
+                <li class="action small-3 columns">
+                  <button class="small expand button center" ng-click="donate(charity)">{{strings.cta}}<br/>{{strings.ctaValue|currency}}</button>
+                </li>
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="selectedCharity" class="reveal-modal" ng-init="selectedCharityInit()" ng-style="{'background':'url(/images/charityLogo/'+selectedCharity.logo+')'}" >
+          <div class="row">
+            <div class="small-12 small-centered columns"> 
+              <!-- selectedCharity: charitySelected, link, logo, name, shortDescription -->
+<!--          <ul class="pricing-table charityLogo radius back" ng-cloak ng-style="{'background':'url(/images/charityLogo/'+charity.logo+')'}">
                     <li class="title" ng-bind="charity.name"></li>
                     <li class="description">
                       <p ng-bind="charity.shortDescription"></p>
                     </li>
                     <li class="action">
                           <a class="small expand button" href="#" ng-click="donate(charity)">{{strings.cta}}<br/>{{strings.ctaValue|currency}}</a>
-                        <!-- <li>                                  
-                          <a class="small button" ng-href="{{ charity.link }}" title="More about {{ charity.name}}">?</a>
-                        </li> -->
                     </li>
                   </ul>
-                </div>
-              </div>
+ -->
+            </div>
+          </div>
+          <ul class="pricing-table">
+            <li class="subheader title"><h5 class="subheader">{{selectedCharity.charitySelected}}: {{selectedCharity.name}}</h5></li>
+            <li class="description">
+              <h5 class="subheader" ng-bind="selectedCharity.shortDescription"></h5>
             </li>
-          </ul>
+            <li class="action">
+                  <a class="small expand button success" href="#" ng-click="donate(charity)">{{strings.cta}}<br/>{{strings.ctaValue|currency}}</a>
+                  <a class="small right button alert" href="#" ng-click="donate(charity)">Nah</a>
+            </li>
+
+          <a class="close-reveal-modal">&#215;</a>
         </div>
       </div>
     </div>

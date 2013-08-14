@@ -105,7 +105,6 @@ nav {
       margin-left:-2px;
       padding:emCalc(3px);
       @media screen and (min-width: $topbar-breakpoint){
-//         @include debug(Lime);
         padding:emCalc(0px);
       }
     }
@@ -209,7 +208,6 @@ nav {
 
 .loginWelcome{
   background-color:$body-bg;
-  @include debug(RoyalBlue);
   p{
     padding-top:.2em;
     padding-bottom:.2em;
@@ -264,209 +262,78 @@ nav {
     font-size:350%;
   }
 }
+.reveal-modal{
+    padding-top:emCalc(40px);
+  .price-table{
+    opacity:.4;
 
+  }
+  .close-reveal-modal{
+    
+  }
+  opacity:.4;
+  background-repeat: no-repeat!important;
+  background-position: center center!important;
+  background-size : 90%!important;
+
+}
 #selectedCharity{
   .inline-list{
-    background-repeat: no-repeat!important;
-    background-position: center center!important;
-    background-size : 90%!important;
-    
+   @include debug(LightSalmon);
+ 
+  }
+  .logoWrapper{
+   @include debug(SlateBlue);
+   img{
+     @include debug(Teal);
+     min-width:200px;
+     margin:0 auto;
+   }
   }
 }
 #charities{
- 
   #charities, li{
     display:block;
+    margin:0 auto;
   }
   #charityCards{
+
+    ul{
+      padding:0;
+      margin:0;
+    }
+    .panel{
+      padding:.4em;
+      display:block;
+      margin-bottom:1em;
+      min-width:emCalc(150px);
+    }
+    .charityLogo{
+      background-repeat: no-repeat!important;
+      background-position: center center!important;
+      background-size : 90%!important;
+      z-index: 11;
+      }
+
+    ////*[@id="charityCards"]/li[3]/div
     @include block-grid(1, 10px, true);
-    li{
-      display:block;
-      &.front, &.back{
-          height:275px;
-          min-width:emCalc(150px);
-      }
-    }
-    @media screen and (min-width: emCalc(321px)){
-         @include block-grid(2, 10px, true);
-         &.front, &.back{
-           height:300px;
-          }
-      } 
+    
     @media screen and (min-width: emCalc(501px)){
-         @include block-grid(3, 10px, true);
-         &.front, &.back{
-           height:300px;
-          }
-      }    
+       @include block-grid(1, 10px, true);
+
+    }    
     @media screen and (min-width: $small-screen){
-         @include block-grid(4, 10px, true);
-         &.front, &.back{
-           height:300px;
-          }
-      }    
+       @include block-grid(2, 10px, true);
+
+    }    
     @media screen and (min-width: $topbar-breakpoint){
-         @include block-grid(5, 10px, true);
-         &.front, &.back{
-           height:315px;
-          }
-      }    
+       @include block-grid(3, 10px, true);
+
+    }    
     @media screen and (min-width: $medium-screen){
-         @include block-grid(5, 10px, true);
-         &.front, &.back{
-           height:315px;
-          }
-      }    
-  }
-  .pricing-table{
-    .action{
-        border-bottom-left-radius:$global-radius !important;
-        border-bottom-right-radius:$global-radius !important;
+       @include block-grid(3, 10px, true);
 
-        padding-top:12px;
-        margin:0;
-        
-      .button-group{
-        display:block;
-        width:emCalc(150px);
-        margin:0px auto;
-      }
-      position:absolute;
-      bottom:0px;
-      z-index:top;
-    }
-   .description{
-     background-color:rgba($panel-bg,.8);
-      border-bottom-right-radius:$global-radius !important;
-      border-bottom-left-radius:$global-radius !important;
-      font-size:90%;
-      height:254px;
-      overflow-y:auto;
-      overflow-x:hidden;
-   }
-   .title{
-     border-top-left-radius:$global-radius !important;
-     border-top-right-radius:$global-radius !important;
-      img{
-        width:100px;
-      }
-    }
-  }
-  .flip-container{
-    display: block;
-    @include transform-style(preserve-3d);
-	  @include perspective(500);
-     @include transition-duration( 1s);
-  	height: 300px;
-    &.flip{
-      position:relative;
-    }
-    .front, .back{
-       display: block;
-      position:absolute;
-      top:0;
-      left:0;
-    	height: 300px;
-      @media (min-width: 768px) {
-       
-      }
-      width:100%;
-    }
-    .stripe{
-        display:block;
-        position: absolute;
-        height:100%;
-        width:28px;
-        top: 0px;
-        right: 15px;
-        z-index: 1;
-        background-color:rgba(#000, .3)!important;
-      }
-    .front{
-      ul{
-        margin:0;padding:0;
-      }
-          .action{
-            position: relative;
-            top: 230px;
-            width: 130px;
-
-          }
-          z-index:100;
-      cursor:pointer;
-      z-index:2;
-      .charityLogo{
-        background-repeat: no-repeat!important;
-        background-position: center center!important;
-        background-size : 90%!important;
-        z-index: 11;
-        position:absolute;
-        top:0px;
-        left:0px;
-        height:100%;
-        width:100%;
-
-        }
-
-    }
-    .back{
-      &.charityLogo{
-        background-repeat: no-repeat!important;
-        background-position: center center!important;
-        background-size : 90%!important;
-
-      }
-      .active{
-        width: 120px;
-        margin: 0px auto;
-        display: block;
-        bottom: 21px;
-        left: 23%;
-      }
-    }
-    li,ul{
-      display:block;
-    }
-    &.flip .flipper {
-      *{
-        
-      z-index:1000000;
-      }
-      z-index:1000000;
-
-  	  @include perspective(750px);
-      @include transform-origin( right center );
-      @include transform(rotateY(-180deg));
-      
-    }
-  }
-  .front{
-    &.flipped{
-      transform: rotateY(180deg);
-        @include translateZ(0);
-      }
-  }
-  .flipper {
-    @include transform-style(preserve-3d);
-    @include transition-duration(.75s);
-  	position: relative;
-      z-index:1000000;
-
-  }
-  .front {
-    z-index: 2;
-  }
-  .back {
-    @include rotateY(180deg);
-    @include backface-visibility(hidden);
-
-   }
-  .front, .back {
-    @include backface-visibility(hidden);
-    position: absolute;
-    top: 0;
-    left: 0;
-    @include translateZ(180deg );
+    }    
   }
 }
 

@@ -62,8 +62,8 @@ change4Charity.app.controller( 'VentraController', function( $scope, $location, 
 change4Charity.app.controller( 'MainController', function( $scope, Strings, Users ) {
   $scope.stats = $scope.stats || {};
   $scope.login = $scope.login || {};
-  $scope.user = $scope.user || {};
-  console.log("MainController",Users.query());
+  $scope.user = Users.query() ;
+
   $scope.user.showInfo = true;
   $scope.stats.charityDonations = 2134;
   $scope.stats.rideDonations = 213;
@@ -72,6 +72,7 @@ change4Charity.app.controller( 'MainController', function( $scope, Strings, User
     $scope.welcome = $scope.strings.welcome;
     $scope.login = $scope.strings.login;
   });
+    
   $scope.closeModal = function(){
     $('#introduction').foundation('reveal', 'close');
     $('#login').foundation('reveal', 'close');
@@ -96,7 +97,7 @@ change4Charity.app.controller( 'MainController', function( $scope, Strings, User
   };
   $scope.login.loginInit = function(){
     var date = new Date();
-    $('#login').foundation('reveal', 'open');
+    // $('#login').foundation('reveal', 'open');
     if ( !$.cookie("login") ) {
       var minutes = 30;
       date.setTime(date.getTime() + (minutes * 60 * 1000));
@@ -181,14 +182,25 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
 
 change4Charity.app.controller( 'CharitiesController', function( $scope, Charities ) {
   $scope.card = {};
+
+  $scope.selectedCharity = {};
   Charities.query(function(response){
       $scope.charities = response
   });
-  
+
+  $scope.selectedCharityInit = function(){
+
+    $('#selectedCharity').foundation('reveal', 'reflow');
+  }
+
   $scope.donate = function(charity){
+    console.log(charity);
+    console.log($scope);
     $scope.showSelectedCharity = true;
     $scope.selectedCharity = charity;
     $scope.selectedCharity.charitySelected = $scope.strings.charitySelected;
+    $('#selectedCharity').foundation('reveal', 'open');
+    
   };
 
   $scope.showCharityInfo = function(charity){
