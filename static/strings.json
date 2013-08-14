@@ -1,5 +1,8 @@
 {
+  "cta":"Donate",
+  "ctaValue":0.50,
     "charitySelected": "You've selected",
+    "playNow":"Play The Lottery",
     "skipOne": {
       "url":"/next",
       "lines":["No Thanks,", "Let Me Browse"]

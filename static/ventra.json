@@ -1,0 +1,21 @@
+[
+  {
+    "fields":{
+      "name":"Sarah Miller",
+      "visa":"4403-3094-1290-0392",
+      "security":"304",
+      "expires":"9/12",
+      "monthly":30    
+    },
+    "lottery":[
+      {
+        "number":"220393",
+        "fun":"happy Painted Hunting Dog"
+      },
+      {
+        "number":"129038",
+        "fun":"tasty horse-fly"
+      }
+    ]
+  }
+]

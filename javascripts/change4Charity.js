@@ -9,10 +9,11 @@ $(document).ready(function() {
 });
 var change4Charity = {};
 
-change4Charity.app = angular.module( 'change4Charity',['charitiesServices','stringServices','fareCardServices'] ).
+change4Charity.app = angular.module( 'change4Charity',['usersServices','charitiesServices','stringServices','ventraServices','fareCardServices'] ).
         config(function($routeProvider, $locationProvider){
-          $locationProvider.html5Mode(true)
-          $routeProvider.when("/",{controller: 'WelcomeController',templateUrl:"/partials/welcome.html",}).
+          $locationProvider.html5Mode(true);
+          $routeProvider.when("/",{controller: 'VentraController',templateUrl:"/partials/ventra.html"}).
+                         when("/welcome",{controller: 'WelcomeController',templateUrl:"/partials/welcome.html"}).
                          when("/app",{controller: 'MainController',templateUrl:"/partials/stats.html"});
         });
 
@@ -20,49 +21,79 @@ change4Charity.app = angular.module( 'change4Charity',['charitiesServices','stri
 
 angular.module('change4Charity').directive('fileChange', fileChange);
 
+angular.module('change4Charity').filter('titleCase', function () {
+  return function (input) {
+    var words = input.split(' ');
+    for (var i = 0; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+    return words.join(' ');
+  };
+});
 
 
 change4Charity.app.controller( 'WelcomeController', function( $scope, Strings ) {
   Strings.query(function(response){
     $scope.welcome = response.welcome;
   });
-
 });
-change4Charity.app.controller( 'MainController', function( $scope, Strings ) {
+change4Charity.app.controller( 'VentraController', function( $scope, $location, Ventra, Strings, Users) {
+  Strings.query(function(response){
+    $scope.strings = response;
+    $scope.login = $scope.strings.login;
+  });
+  Ventra.query(function(response){
+    $scope.ventra = response[0];
+    $scope.ventra.fields.visa = "xxxx-xxxx-xxx-"+response[0].fields.visa.substring(response[0].fields.visa.length-4, response[0].fields.visa.length);
+  });
+  $scope.revealLogin = function(){
+    $('#login').foundation('reveal', 'open');
+  };
+  $scope.submitLogin = function(){
+    if( $scope.login.inputs[0].value!== undefined){
+      $scope.user = $scope.user || {};
+      $scope.user.username = $scope.login.inputs[0].value;  
+      Users.save({"Useh":{"key":"value"}})
+    }
+    $('#login').foundation('reveal', 'close');
+    $location.path( "/app" );
+  };
+});
+change4Charity.app.controller( 'MainController', function( $scope, Strings, Users ) {
   $scope.stats = $scope.stats || {};
   $scope.login = $scope.login || {};
   $scope.user = $scope.user || {};
-  $scope.user.showInfo = false;
-  $scope.user.showLogin = true;
+  console.log("MainController",Users.query());
+  $scope.user.showInfo = true;
   $scope.stats.charityDonations = 2134;
   $scope.stats.rideDonations = 213;
   Strings.query(function(response){
-    $scope.strings = response
+    $scope.strings = response;
     $scope.welcome = $scope.strings.welcome;
     $scope.login = $scope.strings.login;
   });
   $scope.closeModal = function(){
     $('#introduction').foundation('reveal', 'close');
     $('#login').foundation('reveal', 'close');
-  }
+  };
   $scope.revealLogin = function(){
     $('#login').foundation('reveal', 'open');
-  }
+  };
   $scope.menuClick = function(){
     $(".top-bar").toggleClass("expanded");
     // $(document).foundation();
-  }
+  };
   $scope.loginInfo = function(){
-
     $($scope.login.inputs).each(function(){
       if(this.name === "username"||this.name === "Username"){
         $scope.user.username = this.value;
         $scope.user.showInfo = true;
         $scope.user.showLogin = false;
+        $.cookie("login",JSON.stringify({"user":$scope.user.username}));
       }
     });
     $('#login').foundation('reveal', 'close');
-  }
+  };
   $scope.login.loginInit = function(){
     var date = new Date();
     $('#login').foundation('reveal', 'open');
@@ -73,7 +104,7 @@ change4Charity.app.controller( 'MainController', function( $scope, Strings ) {
       $.cookie("login",true, {expires:date});
       //time() + (10 * 365 * 24 * 60 * 60)
     }
-  }
+  };
 });
 
 change4Charity.app.controller( 'fareCardController', function( $scope, FareCards ) {
@@ -89,7 +120,7 @@ change4Charity.app.controller( 'fareCardController', function( $scope, FareCards
   $scope.setFile = function(element) {
     $scope.$apply(function() {
       $scope.findCard(element.files[0]);
-    })
+    });
   };  
 });
 change4Charity.app.controller( 'CountDownController', function( $scope, $http, $timeout ) {
@@ -100,10 +131,10 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     $scope.now = Date.now();
     $scope.adjacentDeadlines = getAdjacentDeadlines($scope.deadlines, $scope.now);
     $scope.timeScale = getTimeScale($scope.adjacentDeadlines .next, $scope.now);
-    // console.log("ts",timeScale);
-    // console.log(timeScale,Date.parse(nextDeadline)-now);
     $scope.countdown = ( Date.parse($scope.adjacentDeadlines .next) - $scope.now ) / times[$scope.timeScale];
-    
+    if( Math.floor($scope.countdown) === 1){
+      $scope.timeScale = $scope.timeScale.substring(0, $scope.timeScale.length - 1);      
+    }
     $scope.updateCountdown($scope.adjacentDeadlines.last, $scope.adjacentDeadlines.next);
   });
 
@@ -112,14 +143,10 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     var begin = Date.parse(from)
     var now = $scope.now;
     
-    console.log(begin,end,now);
-    
     var duration = end - begin;
     var left = now - begin;
 
     var percent = (left / duration) ;
-    
-    console.log("percent",percent);
     
     var canvas = document.getElementById('clock');
     var context = canvas.getContext('2d');
@@ -150,8 +177,6 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     context.strokeStyle = 'black';
     context.stroke();
   }
- 
-  
 });
 
 change4Charity.app.controller( 'CharitiesController', function( $scope, Charities ) {

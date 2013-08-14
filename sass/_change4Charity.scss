@@ -10,10 +10,56 @@ html,body{
 //   @include background-image(linear-gradient(left top, white, #dddddd)); }
 
 }
+.ventra{
+  ul{
+    list-style:none;
+  }
+  &.contain-to-grid{
+    background-color:#004080;
+    
+  }
+  .top-bar{
+    background-color:#004080;
+    border-bottom-color:#000;
+    .title-area{
+      padding-top: 3px;
+    }
+    .name{
+      background:none;
+      width:6em;
+      margin:0 auto; 
+
+      h1{
+        font-size:2em;
+        font-weight:0;
+        color:#fff
+      }
+    }
+    
+  }
+  
+  .ctaRow{
+    .cta .button{
+      background-color:DarkSlateGray;
+      border-color:#004080;
+    }
+  }
+  @media screen and (min-width: $small-screen) {
+    .panel{
+      height:5em;
+      margin-bottom:20px;
+    }
+  }
+}
+
+.center{
+  margin:0 auto; 
+}
 
 .fixed{
   height:56px;
 }
+
 .view-enter, .view-leave {
   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
@@ -142,7 +188,7 @@ nav {
   label{
     color:#fff;
     text-align:right;
-    font-size:130%;
+    font-size:110%;
   }                  
   h1{                
     color:#fff;
@@ -162,8 +208,12 @@ nav {
 }
 
 .loginWelcome{
+  background-color:$body-bg;
   @include debug(RoyalBlue);
-
+  p{
+    padding-top:.2em;
+    padding-bottom:.2em;
+  }
 }
 #wrapper{
 
@@ -378,12 +428,16 @@ nav {
       display:block;
     }
     &.flip .flipper {
+      *{
+        
+      z-index:1000000;
+      }
       z-index:1000000;
 
   	  @include perspective(750px);
-      @include transform-origin( right, center );
-      @include transform(rotateY(-180deg) translateX(100%));
-
+      @include transform-origin( right center );
+      @include transform(rotateY(-180deg));
+      
     }
   }
   .front{

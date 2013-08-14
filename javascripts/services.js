@@ -1,12 +1,18 @@
 /* jshint undef: true, unused: true, white:true, indent: 5 */
 /*global angular:false */
 /*global console:false */
-/*global console:false */
+/*global $http:false */
 
-angular.module('getFareCardFromImageServices', ['ngResource']).factory('FareCards', function($resource) {
-  return $resource('/API/card',{}, {
-      query:{method:'GET', isArray:true}
-    });
+angular.module('usersServices', ['ngResource']).factory('Users', function($http,$resource) {
+  var users = {};
+  $http.get('/static/users.json').success(function(response){
+    users = response;
+    console.log(response);
+  });
+  return {
+      query:function(){return users;},
+      save:function(data){users = data;}
+    };
 });
 
 
@@ -28,6 +34,14 @@ angular.module('stringServices', ['ngResource']).factory('Strings', function($re
     });
 });
 
+angular.module('ventraServices', ['ngResource']).factory('Ventra', function($resource) {
+  
+  return $resource('/static/ventra.json',{}, {
+      query:{method:'GET', isArray:true}
+    });
+});
+
+
 angular.module('deadlinesServices', ['ngResource']).factory('Deadlines', function($resource) {
   
   return $resource('/static/deadlines.json',{}, {
@@ -37,7 +51,7 @@ angular.module('deadlinesServices', ['ngResource']).factory('Deadlines', functio
 
 var times = {
   "Years"     : 1000 * 60 * 60 * 24 * 365,
-  // "week"     : 1000 * 60 * 60 * 24 * 7,
+  "Weeks"     : 1000 * 60 * 60 * 24 * 7,
   "Days"      : 1000 * 60 * 60 * 24,
   "Hours"     : 1000 * 60 * 60,
   "Minutes"   : 1000 * 60,
