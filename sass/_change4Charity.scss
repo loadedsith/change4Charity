@@ -120,7 +120,7 @@ nav {
       height: 59px;/* set to $topbar-height to avoid black bar under .small  top bar*/
     }
     .smallButton{
-      @include grid-column(2);
+
        padding-left:0em;
        padding-right:0em;      
        @media screen and (min-width: $topbar-breakpoint){
@@ -263,10 +263,37 @@ nav {
   }
 }
 .reveal-modal{
+   position: fixed; 
+   
+}
+.statsRow
+{
+
+  p{
+    text-align:center;
+    margin:0 auto;
+    width:100%;
+
+  }
+
+  .countdown{
+
+    p{
+
+    }
+    .center{
+      margin:0 auto;      
+    }
+    canvas{
+      margin:0 auto;
+    }
+  }
+}
+.reveal-modal{
     padding-top:emCalc(40px);
   .price-table{
     opacity:.4;
-
+    max-width:300px;
   }
   .close-reveal-modal{
     
@@ -306,9 +333,15 @@ nav {
       padding:.4em;
       display:block;
       margin-bottom:1em;
+      height:100%;
       min-width:emCalc(150px);
+      margin-left:0px;
+      margin-right:0px;
     }
     .charityLogo{
+      display:block;
+      width:100%;
+      height:100%;
       background-repeat: no-repeat!important;
       background-position: center center!important;
       background-size : 90%!important;
@@ -323,15 +356,15 @@ nav {
 
     }    
     @media screen and (min-width: $small-screen){
-       @include block-grid(2, 10px, true);
+       @include block-grid(2, 20px, true);
 
     }    
     @media screen and (min-width: $topbar-breakpoint){
-       @include block-grid(3, 10px, true);
+       @include block-grid(3, 30px, true);
 
     }    
     @media screen and (min-width: $medium-screen){
-       @include block-grid(3, 10px, true);
+       @include block-grid(3, 30px, true);
 
     }    
   }

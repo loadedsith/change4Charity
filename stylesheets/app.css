@@ -4136,7 +4136,7 @@ nav.top-bar .row { padding-left: 1em; padding-right: 1em; }
 /* line 117, ../sass/_change4Charity.scss */
 nav.top-bar .name { background: url("../images/bwLogo.png") no-repeat scroll 3px 3px; width: 51px; height: 59px; /* set to $topbar-height to avoid black bar under .small  top bar*/ }
 /* line 122, ../sass/_change4Charity.scss */
-nav.top-bar .smallButton { position: relative; padding-left: 0.9375em; padding-right: 0.9375em; width: 16.66667%; float: left; padding-left: 0em; padding-right: 0em; z-index: 0; }
+nav.top-bar .smallButton { padding-left: 0em; padding-right: 0em; z-index: 0; }
 @media screen and (min-width: 58.75em) { /* line 122, ../sass/_change4Charity.scss */
   nav.top-bar .smallButton { position: relative; padding-left: 0.9375em; padding-right: 0.9375em; width: 8.33333%; float: left; padding-left: 0em; padding-right: 0em; } }
 /* line 133, ../sass/_change4Charity.scss */
@@ -4206,27 +4206,37 @@ nav.top-bar form input { height: 48px; }
 #introduction h1 { padding-top: .3em; font-weight: 0; font-size: 350%; }
 
 /* line 265, ../sass/_change4Charity.scss */
-.reveal-modal { padding-top: 2.5em; opacity: .4; background-repeat: no-repeat !important; background-position: center center !important; background-size: 90% !important; }
-/* line 267, ../sass/_change4Charity.scss */
-.reveal-modal .price-table { opacity: .4; }
+.reveal-modal { position: fixed; }
 
-/* line 281, ../sass/_change4Charity.scss */
-#selectedCharity .inline-list { border: 3px dotted lightsalmon !important; }
-/* line 285, ../sass/_change4Charity.scss */
-#selectedCharity .logoWrapper { border: 3px dotted slateblue !important; }
+/* line 272, ../sass/_change4Charity.scss */
+.statsRow p { text-align: center; margin: 0 auto; width: 100%; }
+/* line 284, ../sass/_change4Charity.scss */
+.statsRow .countdown .center { margin: 0 auto; }
 /* line 287, ../sass/_change4Charity.scss */
+.statsRow .countdown canvas { margin: 0 auto; }
+
+/* line 292, ../sass/_change4Charity.scss */
+.reveal-modal { padding-top: 2.5em; opacity: .4; background-repeat: no-repeat !important; background-position: center center !important; background-size: 90% !important; }
+/* line 294, ../sass/_change4Charity.scss */
+.reveal-modal .price-table { opacity: .4; max-width: 300px; }
+
+/* line 308, ../sass/_change4Charity.scss */
+#selectedCharity .inline-list { border: 3px dotted lightsalmon !important; }
+/* line 312, ../sass/_change4Charity.scss */
+#selectedCharity .logoWrapper { border: 3px dotted slateblue !important; }
+/* line 314, ../sass/_change4Charity.scss */
 #selectedCharity .logoWrapper img { border: 3px dotted teal !important; min-width: 200px; margin: 0 auto; }
 
-/* line 295, ../sass/_change4Charity.scss */
+/* line 322, ../sass/_change4Charity.scss */
 #charities #charities, #charities li { display: block; margin: 0 auto; }
-/* line 299, ../sass/_change4Charity.scss */
+/* line 326, ../sass/_change4Charity.scss */
 #charities #charityCards { display: block; padding: 0; margin: 0 -5px; *zoom: 1; }
-/* line 301, ../sass/_change4Charity.scss */
+/* line 328, ../sass/_change4Charity.scss */
 #charities #charityCards ul { padding: 0; margin: 0; }
-/* line 305, ../sass/_change4Charity.scss */
-#charities #charityCards .panel { padding: .4em; display: block; margin-bottom: 1em; min-width: 9.375em; }
-/* line 311, ../sass/_change4Charity.scss */
-#charities #charityCards .charityLogo { background-repeat: no-repeat !important; background-position: center center !important; background-size: 90% !important; z-index: 11; }
+/* line 332, ../sass/_change4Charity.scss */
+#charities #charityCards .panel { padding: .4em; display: block; margin-bottom: 1em; height: 100%; min-width: 9.375em; margin-left: 0px; margin-right: 0px; }
+/* line 341, ../sass/_change4Charity.scss */
+#charities #charityCards .charityLogo { display: block; width: 100%; height: 100%; background-repeat: no-repeat !important; background-position: center center !important; background-size: 90% !important; z-index: 11; }
 /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
 /* line 122, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
@@ -4239,7 +4249,7 @@ nav.top-bar form input { height: 48px; }
 #charities #charityCards > li:nth-of-type(n) { clear: none; }
 /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
 #charities #charityCards > li:nth-of-type(1n+1) { clear: both; }
-@media screen and (min-width: 31.3125em) { /* line 299, ../sass/_change4Charity.scss */
+@media screen and (min-width: 31.3125em) { /* line 326, ../sass/_change4Charity.scss */
   #charities #charityCards { display: block; padding: 0; margin: 0 -5px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
@@ -4253,44 +4263,44 @@ nav.top-bar form input { height: 48px; }
   #charities #charityCards > li:nth-of-type(n) { clear: none; }
   /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(1n+1) { clear: both; } }
-@media screen and (min-width: 48em) { /* line 299, ../sass/_change4Charity.scss */
-  #charities #charityCards { display: block; padding: 0; margin: 0 -5px; *zoom: 1; }
+@media screen and (min-width: 48em) { /* line 326, ../sass/_change4Charity.scss */
+  #charities #charityCards { display: block; padding: 0; margin: 0 -10px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
   /* line 122, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:after { clear: both; }
   /* line 27, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-  #charities #charityCards > li { display: inline; height: auto; float: left; padding: 0 5px 10px; }
+  #charities #charityCards > li { display: inline; height: auto; float: left; padding: 0 10px 20px; }
   /* line 36, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-  #charities #charityCards > li { width: 50%; padding: 0 5px 10px; }
+  #charities #charityCards > li { width: 50%; padding: 0 10px 20px; }
   /* line 40, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(n) { clear: none; }
   /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(2n+1) { clear: both; } }
-@media screen and (min-width: 58.75em) { /* line 299, ../sass/_change4Charity.scss */
-  #charities #charityCards { display: block; padding: 0; margin: 0 -5px; *zoom: 1; }
+@media screen and (min-width: 58.75em) { /* line 326, ../sass/_change4Charity.scss */
+  #charities #charityCards { display: block; padding: 0; margin: 0 -15px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
   /* line 122, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:after { clear: both; }
   /* line 27, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-  #charities #charityCards > li { display: inline; height: auto; float: left; padding: 0 5px 10px; }
+  #charities #charityCards > li { display: inline; height: auto; float: left; padding: 0 15px 30px; }
   /* line 36, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-  #charities #charityCards > li { width: 33.33333%; padding: 0 5px 10px; }
+  #charities #charityCards > li { width: 33.33333%; padding: 0 15px 30px; }
   /* line 40, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(n) { clear: none; }
   /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(3n+1) { clear: both; } }
-@media screen and (min-width: 1280px) { /* line 299, ../sass/_change4Charity.scss */
-  #charities #charityCards { display: block; padding: 0; margin: 0 -5px; *zoom: 1; }
+@media screen and (min-width: 1280px) { /* line 326, ../sass/_change4Charity.scss */
+  #charities #charityCards { display: block; padding: 0; margin: 0 -15px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
   /* line 122, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:after { clear: both; }
   /* line 27, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-  #charities #charityCards > li { display: inline; height: auto; float: left; padding: 0 5px 10px; }
+  #charities #charityCards > li { display: inline; height: auto; float: left; padding: 0 15px 30px; }
   /* line 36, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-  #charities #charityCards > li { width: 33.33333%; padding: 0 5px 10px; }
+  #charities #charityCards > li { width: 33.33333%; padding: 0 15px 30px; }
   /* line 40, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(n) { clear: none; }
   /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */

@@ -99,6 +99,7 @@
         var open_modal = $('.reveal-modal.open');
 
         if (typeof modal.data('css-top') === 'undefined') {
+
           modal.data('css-top', parseInt(modal.css('top'), 10))
             .data('offset', this.cache_offset(modal));
         }

@@ -37,6 +37,7 @@ change4Charity.app.controller( 'WelcomeController', function( $scope, Strings ) 
     $scope.welcome = response.welcome;
   });
 });
+
 change4Charity.app.controller( 'VentraController', function( $scope, $location, Ventra, Strings, Users) {
   Strings.query(function(response){
     $scope.strings = response;
@@ -59,6 +60,7 @@ change4Charity.app.controller( 'VentraController', function( $scope, $location, 
     $location.path( "/app" );
   };
 });
+
 change4Charity.app.controller( 'MainController', function( $scope, Strings, Users ) {
   $scope.stats = $scope.stats || {};
   $scope.login = $scope.login || {};
@@ -66,7 +68,7 @@ change4Charity.app.controller( 'MainController', function( $scope, Strings, User
 
   $scope.user.showInfo = true;
   $scope.stats.charityDonations = 2134;
-  $scope.stats.rideDonations = 213;
+  $scope.stats.totalPasses = 213;
   Strings.query(function(response){
     $scope.strings = response;
     $scope.welcome = $scope.strings.welcome;
@@ -124,6 +126,7 @@ change4Charity.app.controller( 'fareCardController', function( $scope, FareCards
     });
   };  
 });
+
 change4Charity.app.controller( 'CountDownController', function( $scope, $http, $timeout ) {
 
   $http({method: 'GET', url: '/static/deadlines.json'}).success(function(data, status, headers, config){
@@ -152,10 +155,20 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     var canvas = document.getElementById('clock');
     var context = canvas.getContext('2d');
   
+
+
     var x = canvas.width / 2;
     var y = canvas.height / 2;
   
-    var radius = 50;
+    context.font="45px Arial";
+
+    context.strokeStyle = 'orange';
+    context.lineWidth = 2;
+    context.strokeText(Math.floor($scope.countdown),x-12,y+14);
+    context.fillStyle = 'black';
+    context.fillText(Math.floor($scope.countdown),x-12,y+14);
+
+    var radius = 40;
     var startAngle = 1.5 * Math.PI;
     var endAngle = 3.5 * Math.PI;
     var counterClockwise = false;
@@ -164,7 +177,7 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
     context.lineWidth = 12;
     
-    context.strokeStyle = 'grey';
+    context.strokeStyle = 'orange';
     context.stroke();
     
     // endAngle = (percent*2)+1.5 * Math.PI;
@@ -175,8 +188,27 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     context.lineWidth = 7;
 
     // line color
-    context.strokeStyle = 'black';
+    context.strokeStyle = 'grey';
     context.stroke();
+    
+    context.globalAlpha=.7;
+    context.font="14px Arial";
+
+    context.strokeStyle = 'white';
+    context.lineWidth = 2;
+    
+    context.strokeText($scope.timeScale+' till',x/2*.7,y/2*3.1);
+    context.globalAlpha=1;
+    context.fillStyle = 'black';
+
+    context.fillText($scope.timeScale+' till',x/2*.7,y/2*3.1);
+
+    context.font="14px Arial";
+    context.strokeText('drawing',x/2*.9,y/2*3.7);
+    context.fillText('drawing',x/2*.9,y/2*3.7);
+    
+    
+    
   }
 });
 
@@ -194,13 +226,10 @@ change4Charity.app.controller( 'CharitiesController', function( $scope, Charitie
   }
 
   $scope.donate = function(charity){
-    console.log(charity);
-    console.log($scope);
     $scope.showSelectedCharity = true;
     $scope.selectedCharity = charity;
     $scope.selectedCharity.charitySelected = $scope.strings.charitySelected;
     $('#selectedCharity').foundation('reveal', 'open');
-    
   };
 
   $scope.showCharityInfo = function(charity){
