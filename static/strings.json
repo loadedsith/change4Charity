@@ -2,6 +2,7 @@
   "cta":"Donate",
   "ctaValue":0.50,
   "title":"Cause 4 Change",
+  "moreInfo":"learn more",
     "charitySelected": "You've selected",
     "playNow":"Play The Lottery",
     "skipOne": {
@@ -44,6 +45,8 @@
       "loginButton":"Login",
       "header":"Ventra Login",
       "headerImage":"ventra.png",
+      "headerImage2":"ventra.png",
+      "headerImage3":"ventra.png",
       "footer":"You can always login later",
       "skip": {
         "lines":[

@@ -51,7 +51,7 @@ angular.module('deadlinesServices', ['ngResource']).factory('Deadlines', functio
 
 var times = {
   "Years"     : 1000 * 60 * 60 * 24 * 365,
-  "Weeks"     : 1000 * 60 * 60 * 24 * 7,
+  // "Weeks"     : 1000 * 60 * 60 * 24 * 7,
   "Days"      : 1000 * 60 * 60 * 24,
   "Hours"     : 1000 * 60 * 60,
   "Minutes"   : 1000 * 60,

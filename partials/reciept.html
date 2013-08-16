@@ -1,0 +1,40 @@
+<div class="sticky contain-to-grid" >
+    <nav class="top-bar" data-options="is_hover:false">
+      <ul class="title-area">
+          <li class="name" ><h1><a href="/app" ng-bind="strings.title"></a></h1>
+          </li>
+        <li class="toggle-topbar menu-icon"><a ng-click="menuClick()" ><span></span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right" ng-cloak ng-show="false">
+          <li class="loginWelcome">
+            <span class="userInfo"  ng-show="user.showInfo">
+              <p class="username" ng-bind="'Welcome: '+user.username"></p>
+            </span>
+            <span ng-show="user.showLogin" >
+              <a ng-click="revealLogin()" class="small secondary button">login</a>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </nav>
+</div>
+<div id="wrapper">
+  <div id="content">
+    <div class="row">
+      <div class="small-11 small-centered columns">
+        <div class="row">
+          <div class="small-12 columns">
+            
+            <h3 class="subheader center">Lottery #</h3>
+            <div class="panel center">{{user.lotteryNumber||'444333222111 Yellow horse'}}</div>
+            <h5 class="subheader center">You have selected to donate {{(selectedCharity.amount|currency) ||('.5'|currency)}} for</h5>
+            <h4 class="subheader center">{{(selectedCharity.name) ||'Grapefruit Freedom Fighters'}}</h4>
+            <button ng-click="home()" class="button radius expand ucase">Go to Home</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

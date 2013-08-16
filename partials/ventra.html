@@ -7,88 +7,90 @@
 
       <li class="name center">
         <a href="http://www.transitchicago.com/ventra/">
-          <h1 >Ventra</h1>
+          <h1>Ventra</h1>
         </a>
       </li>
       <li class="toggle-topbar"><a ng-click="revealLogin()" >Login<span></span></a></li>
   </ul>
 </nav>
 </div>
-<div class="ventra" ng-model="ventra">
-	<ul>
-  	<li class="row fields" ng-model="ventra.fields">
-      <a>
-        <div class="small-12 large-8 large-centered columns panel radius">
-          <a style="color:#343">
-      			<div class="small-3 large-3 columns key" >Name</div>
-            <div class="small-7 large-4 columns value" ng-bind="ventra.fields.name">
-            </div>
-            <div class="small-1 large-2 columns cta secondary  small round">»</div>
-          </a>
-        </div>
-      </a>
-		</li>
-    
-  	<li class="row fields" ng-model="ventra.fields">
-      <a>
-        <div class="small-12 large-8 large-centered columns panel radius">
-          <a style="color:#343">
-      			<div class="small-3 large-3 columns key" >Visa</div>
-            <div class="small-7 large-4 columns value" ng-bind-html-unsafe="ventra.fields.visa+'<br/><span class=\'expires\'>'+ventra.fields.expires+'</span> <span class=\'security\'>'+ventra.fields.security+'</span>'">
-            </div>
-            <div class="small-1 large-2 columns cta secondary  small round">»</div>
-          </a>
-        </div>
-      </a>
-		</li>
-    
-  	<li class="row fields" ng-model="ventra.fields">
-      <a>
-        <div class="small-12 large-8 large-centered columns panel radius">
-          <a style="color:#343">
-      			<div class="small-3 large-3 columns key" >Mo. Charge</div>
-            <div class="small-7 large-4 columns value" ng-bind="ventra.fields.monthly|number:0 |currency">
-            </div>
-            <div class="small-1 large-2 columns cta secondary  small round">»</div>
-          </a>
-        </div>
-      </a>
-		</li>
-    
-    
-    
-    
-	  <li class="row lottery"  ng-repeat="lottery in ventra.lottery">
-      <a>
-        <div class="small-12 large-8 large-centered columns panel radius">
-          <a style="color:#343">
-            <div class="small-3 large-3 columns key">Lottery Number</div>
-            <div class="small-7 large-4 columns value">
-              {{lottery.number||lottery.play}} / {{lottery.fun | titleCase}}
+<div class=" row ventra" ng-model="ventra">
+<div class="small-11 small-centered large-11 large-centered columns">
+  <ul>
+      <li class="row fields" ng-model="ventra.fields">
+        <a>
+          <div class="small-12 large-8 large-centered columns panel radius">
+            <a style="color:#343">
+              <div class="small-3 large-3 columns key" >Name</div>
+              <div class="small-7 large-4 columns value" ng-bind="ventra.fields.name">
+              </div>
+              <div class="small-1 large-2 columns cta secondary  small round">»</div>
+            </a>
           </div>
-
-          <div class="small-1 large-2 columns cta secondary  small round">»</div>
-          </a>
-        </div>
-      </a>
+        </a>
     </li>
-	  <li class="row lottery ctaRow">
-      <a>
-        <div class="small-12 large-8 large-centered columns panel radius">
-          <a href="/welcome" style="color:#343">
-            <div class="small-9 large-7 columns key">Bet On Chicago</div>
-            <div class="small-3 right columns cta"><a href="/welcome" class="button expand radius">Play</a></div>
-          </a>
-        </div>
-      </a>
+      
+      <li class="row fields" ng-model="ventra.fields">
+        <a>
+          <div class="small-12 large-8 large-centered columns panel radius">
+            <a style="color:#343">
+              <div class="small-3 large-3 columns key" >Visa</div>
+              <div class="small-7 large-4 columns value" ng-bind-html-unsafe="ventra.fields.visa+'<br/><span class=\'expires\'>'+ventra.fields.expires+'</span> <span class=\'security\'>'+ventra.fields.security+'</span>'">
+              </div>
+              <div class="small-1 large-2 columns cta secondary  small round">»</div>
+            </a>
+          </div>
+        </a>
     </li>
-	</ul>
+      
+      <li class="row fields" ng-model="ventra.fields">
+        <a>
+          <div class="small-12 large-8 large-centered columns panel radius">
+            <a style="color:#343">
+              <div class="small-3 large-3 columns key" >Mo. Charge</div>
+              <div class="small-7 large-4 columns value" ng-bind="ventra.fields.monthly|number:0 |currency">
+              </div>
+              <div class="small-1 large-2 columns cta secondary  small round">»</div>
+            </a>
+          </div>
+        </a>
+    </li>
+      
+      
+      
+      
+    <li class="row lottery"  ng-repeat="lottery in ventra.lottery">
+        <a>
+          <div class="small-12 large-8 large-centered columns panel radius">
+            <a style="color:#343">
+              <div class="small-3 large-3 columns key">Lottery Number</div>
+              <div class="small-7 large-4 columns value">
+                {{lottery.number||lottery.play}} / {{lottery.fun | titleCase}}
+            </div>
+  
+            <div class="small-1 large-2 columns cta secondary  small round">»</div>
+            </a>
+          </div>
+        </a>
+      </li>
+    <li class="row lottery ctaRow">
+        <a>
+          <div class="small-12 large-8 large-centered columns panel radius">
+            <a href="/welcome" style="color:#343">
+              <div class="small-9 large-7 columns key">Bet On Chicago</div>
+              <div class="small-3 right columns cta"><a href="/welcome" class="button expand radius">Play</a></div>
+            </a>
+          </div>
+        </a>
+      </li>
+  </ul>
+</div>
 </div>
 <div id="login" class="reveal-modal" ng-model="login" ng-init="login.loginInit()">
   <div class="row">
     <div class="small-12 small-centered columns"> 
       <div class="logoWrapper center">
-        <img ng-src="{{'images/' + login.headerImage||''}} " alt="{{login.header}}">
+        <img ng-src="/images/{{login.headerImage || 'placeholder.gif'}}" alt="{{login.header}}">
       </div>
       <h1>{{login.header}}</h1>
     </div>

@@ -4111,131 +4111,137 @@ html, body { height: 100%; overflow-y: auto; overflow-x: hidden; }
 .fixed { height: 56px; }
 
 /* line 63, ../sass/_change4Charity.scss */
-.view-enter, .view-leave { -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; }
+.ucase { text-transform: uppercase; }
+
+/* line 66, ../sass/_change4Charity.scss */
+.center { text-align: center; margin: 0 auto; }
 
 /* line 70, ../sass/_change4Charity.scss */
+.view-enter, .view-leave { -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; }
+
+/* line 77, ../sass/_change4Charity.scss */
 .view-enter { opacity: 0; left: 100px; width: 100%; position: relative; }
 
-/* line 76, ../sass/_change4Charity.scss */
+/* line 83, ../sass/_change4Charity.scss */
 .view-enter.view-enter-active { left: 0; opacity: 1; }
 
-/* line 81, ../sass/_change4Charity.scss */
+/* line 88, ../sass/_change4Charity.scss */
 .view-leave { position: absolute; left: 0; width: 100%; opacity: 1; }
 
-/* line 87, ../sass/_change4Charity.scss */
+/* line 94, ../sass/_change4Charity.scss */
 .view-leave.view-leave-active { left: -100px; opacity: 0; }
 
-@media screen and (min-width: 58.75em) { /* line 94, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) { /* line 101, ../sass/_change4Charity.scss */
   nav.top-bar .right { width: 50%; margin-left: 4.5em; } }
-/* line 103, ../sass/_change4Charity.scss */
+/* line 110, ../sass/_change4Charity.scss */
 nav.top-bar .has-form { width: 100%; margin-left: -2px; padding: 0.1875em; }
-@media screen and (min-width: 58.75em) { /* line 103, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) { /* line 110, ../sass/_change4Charity.scss */
   nav.top-bar .has-form { padding: 0; } }
-/* line 111, ../sass/_change4Charity.scss */
+/* line 118, ../sass/_change4Charity.scss */
 nav.top-bar .row { padding-left: 1em; padding-right: 1em; }
-/* line 117, ../sass/_change4Charity.scss */
+/* line 124, ../sass/_change4Charity.scss */
 nav.top-bar .name { background: url("../images/bwLogo.png") no-repeat scroll 3px 3px; width: 51px; height: 59px; /* set to $topbar-height to avoid black bar under .small  top bar*/ }
-/* line 122, ../sass/_change4Charity.scss */
+/* line 129, ../sass/_change4Charity.scss */
 nav.top-bar .smallButton { padding-left: 0em; padding-right: 0em; z-index: 0; }
-@media screen and (min-width: 58.75em) { /* line 122, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) { /* line 129, ../sass/_change4Charity.scss */
   nav.top-bar .smallButton { position: relative; padding-left: 0.9375em; padding-right: 0.9375em; width: 8.33333%; float: left; padding-left: 0em; padding-right: 0em; } }
-/* line 133, ../sass/_change4Charity.scss */
+/* line 140, ../sass/_change4Charity.scss */
 nav.top-bar .smallInput { position: relative; padding-left: 0.9375em; padding-right: 0.9375em; width: 66.66667%; float: left; padding-left: 0em; padding-right: 0em; z-index: 1; }
-/* line 134, ../sass/_change4Charity.scss */
+/* line 141, ../sass/_change4Charity.scss */
 nav.top-bar .smallInput input { border-top: 1px solid #ff8030; border-bottom: 1px solid #ff8030; }
-@media screen and (min-width: 58.75em) { /* line 133, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) { /* line 140, ../sass/_change4Charity.scss */
   nav.top-bar .smallInput { position: relative; padding-left: 0.9375em; padding-right: 0.9375em; width: 83.33333%; float: left; padding-left: 0em; padding-right: 0em; } }
-/* line 152, ../sass/_change4Charity.scss */
+/* line 159, ../sass/_change4Charity.scss */
 nav.top-bar a.button, nav.top-bar #camera { text-indent: -3000px !important; background: url("../images/maginfi3WhiteOptim.png") no-repeat scroll center center; width: 48px; display: block; vertical-align: middle !important; height: 48px; font-size: 1.4375em; margin-left: -2px; }
-@media screen and (min-width: 58.75em) { /* line 152, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) { /* line 159, ../sass/_change4Charity.scss */
   nav.top-bar a.button, nav.top-bar #camera { margin-top: -5px; padding-left: 35px; padding-right: 35px; } }
-/* line 167, ../sass/_change4Charity.scss */
+/* line 174, ../sass/_change4Charity.scss */
 nav.top-bar #camera { float: right; background: url("../images/camera_icon_1.png") no-repeat scroll center center; }
-/* line 171, ../sass/_change4Charity.scss */
+/* line 178, ../sass/_change4Charity.scss */
 nav.top-bar form input { height: 48px; }
-@media screen and (min-width: 58.75em) { /* line 171, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) { /* line 178, ../sass/_change4Charity.scss */
   nav.top-bar form input { margin-top: -5px; } }
 
-/* line 179, ../sass/_change4Charity.scss */
+/* line 186, ../sass/_change4Charity.scss */
 .center { margin: 0 auto; }
 
-/* line 182, ../sass/_change4Charity.scss */
+/* line 189, ../sass/_change4Charity.scss */
 #login { text-align: center; }
-/* line 184, ../sass/_change4Charity.scss */
+/* line 191, ../sass/_change4Charity.scss */
 #login .logoWrapper { max-width: 680px; }
-/* line 187, ../sass/_change4Charity.scss */
+/* line 194, ../sass/_change4Charity.scss */
 #login label { color: #fff; text-align: right; font-size: 110%; }
-/* line 192, ../sass/_change4Charity.scss */
+/* line 199, ../sass/_change4Charity.scss */
 #login h1 { color: #fff; }
-/* line 196, ../sass/_change4Charity.scss */
-#login input { width: 50%; float: left; }
-/* line 200, ../sass/_change4Charity.scss */
-#login ul { list-style: none; }
 /* line 203, ../sass/_change4Charity.scss */
+#login input { width: 50%; float: left; }
+/* line 207, ../sass/_change4Charity.scss */
+#login ul { list-style: none; }
+/* line 210, ../sass/_change4Charity.scss */
 #login footer { color: #cfcfcf; }
 
-/* line 209, ../sass/_change4Charity.scss */
+/* line 216, ../sass/_change4Charity.scss */
 .loginWelcome { background-color: white; }
-/* line 211, ../sass/_change4Charity.scss */
+/* line 218, ../sass/_change4Charity.scss */
 .loginWelcome p { padding-top: .2em; padding-bottom: .2em; }
 
-/* line 216, ../sass/_change4Charity.scss */
+/* line 223, ../sass/_change4Charity.scss */
 #wrapper { margin-top: -25px; padding-top: 5px; }
 
-/* line 222, ../sass/_change4Charity.scss */
+/* line 229, ../sass/_change4Charity.scss */
 .reveal-modal-bg { cursor: pointer; }
 
-/* line 225, ../sass/_change4Charity.scss */
+/* line 232, ../sass/_change4Charity.scss */
 .welcomeWrapper { width: 100%; height: 100%; overflow: hidden; }
-/* line 230, ../sass/_change4Charity.scss */
+/* line 237, ../sass/_change4Charity.scss */
 .welcomeWrapper .welcomeContent { width: 440px; margin: 25% auto; text-align: center; }
-/* line 236, ../sass/_change4Charity.scss */
+/* line 243, ../sass/_change4Charity.scss */
 .welcomeWrapper ul { list-style: none; }
 
-/* line 241, ../sass/_change4Charity.scss */
-#introduction { cursor: pointer; text-align: center; }
-/* line 244, ../sass/_change4Charity.scss */
-#introduction * { color: #fff; }
 /* line 248, ../sass/_change4Charity.scss */
+#introduction { cursor: pointer; text-align: center; }
+/* line 251, ../sass/_change4Charity.scss */
+#introduction * { color: #fff; }
+/* line 255, ../sass/_change4Charity.scss */
 #introduction ul { list-style: none; margin: 1em auto; }
-/* line 252, ../sass/_change4Charity.scss */
-#introduction .footer { color: #7F7F7F; padding-top: 1em; }
-/* line 256, ../sass/_change4Charity.scss */
-#introduction img, #introduction .close-reveal-modal { padding-top: 0; }
 /* line 259, ../sass/_change4Charity.scss */
+#introduction .footer { color: #7F7F7F; padding-top: 1em; }
+/* line 263, ../sass/_change4Charity.scss */
+#introduction img, #introduction .close-reveal-modal { padding-top: 0; }
+/* line 266, ../sass/_change4Charity.scss */
 #introduction h1 { padding-top: .3em; font-weight: 0; font-size: 350%; }
 
-/* line 265, ../sass/_change4Charity.scss */
+/* line 272, ../sass/_change4Charity.scss */
 .reveal-modal { position: fixed; }
 
-/* line 272, ../sass/_change4Charity.scss */
+/* line 279, ../sass/_change4Charity.scss */
 .statsRow p { text-align: center; margin: 0 auto; width: 100%; }
-/* line 284, ../sass/_change4Charity.scss */
+/* line 291, ../sass/_change4Charity.scss */
 .statsRow .countdown .center { margin: 0 auto; }
-/* line 287, ../sass/_change4Charity.scss */
+/* line 294, ../sass/_change4Charity.scss */
 .statsRow .countdown canvas { margin: 0 auto; }
 
-/* line 292, ../sass/_change4Charity.scss */
+/* line 299, ../sass/_change4Charity.scss */
 .reveal-modal { padding-top: 2.5em; opacity: .4; background-repeat: no-repeat !important; background-position: center center !important; background-size: 90% !important; }
-/* line 294, ../sass/_change4Charity.scss */
+/* line 301, ../sass/_change4Charity.scss */
 .reveal-modal .price-table { opacity: .4; max-width: 300px; }
 
-/* line 308, ../sass/_change4Charity.scss */
+/* line 315, ../sass/_change4Charity.scss */
 #selectedCharity .inline-list { border: 3px dotted lightsalmon !important; }
-/* line 312, ../sass/_change4Charity.scss */
+/* line 319, ../sass/_change4Charity.scss */
 #selectedCharity .logoWrapper { border: 3px dotted slateblue !important; }
-/* line 314, ../sass/_change4Charity.scss */
+/* line 321, ../sass/_change4Charity.scss */
 #selectedCharity .logoWrapper img { border: 3px dotted teal !important; min-width: 200px; margin: 0 auto; }
 
-/* line 322, ../sass/_change4Charity.scss */
+/* line 329, ../sass/_change4Charity.scss */
 #charities #charities, #charities li { display: block; margin: 0 auto; }
-/* line 326, ../sass/_change4Charity.scss */
+/* line 333, ../sass/_change4Charity.scss */
 #charities #charityCards { display: block; padding: 0; margin: 0 -5px; *zoom: 1; }
-/* line 328, ../sass/_change4Charity.scss */
+/* line 335, ../sass/_change4Charity.scss */
 #charities #charityCards ul { padding: 0; margin: 0; }
-/* line 332, ../sass/_change4Charity.scss */
+/* line 339, ../sass/_change4Charity.scss */
 #charities #charityCards .panel { padding: .4em; display: block; margin-bottom: 1em; height: 100%; min-width: 9.375em; margin-left: 0px; margin-right: 0px; }
-/* line 341, ../sass/_change4Charity.scss */
+/* line 348, ../sass/_change4Charity.scss */
 #charities #charityCards .charityLogo { display: block; width: 100%; height: 100%; background-repeat: no-repeat !important; background-position: center center !important; background-size: 90% !important; z-index: 11; }
 /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
@@ -4249,7 +4255,7 @@ nav.top-bar form input { height: 48px; }
 #charities #charityCards > li:nth-of-type(n) { clear: none; }
 /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
 #charities #charityCards > li:nth-of-type(1n+1) { clear: both; }
-@media screen and (min-width: 31.3125em) { /* line 326, ../sass/_change4Charity.scss */
+@media screen and (min-width: 31.3125em) { /* line 333, ../sass/_change4Charity.scss */
   #charities #charityCards { display: block; padding: 0; margin: 0 -5px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
@@ -4263,7 +4269,7 @@ nav.top-bar form input { height: 48px; }
   #charities #charityCards > li:nth-of-type(n) { clear: none; }
   /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(1n+1) { clear: both; } }
-@media screen and (min-width: 48em) { /* line 326, ../sass/_change4Charity.scss */
+@media screen and (min-width: 48em) { /* line 333, ../sass/_change4Charity.scss */
   #charities #charityCards { display: block; padding: 0; margin: 0 -10px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
@@ -4277,7 +4283,7 @@ nav.top-bar form input { height: 48px; }
   #charities #charityCards > li:nth-of-type(n) { clear: none; }
   /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(2n+1) { clear: both; } }
-@media screen and (min-width: 58.75em) { /* line 326, ../sass/_change4Charity.scss */
+@media screen and (min-width: 58.75em) { /* line 333, ../sass/_change4Charity.scss */
   #charities #charityCards { display: block; padding: 0; margin: 0 -15px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }
@@ -4291,7 +4297,7 @@ nav.top-bar form input { height: 48px; }
   #charities #charityCards > li:nth-of-type(n) { clear: none; }
   /* line 41, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   #charities #charityCards > li:nth-of-type(3n+1) { clear: both; } }
-@media screen and (min-width: 1280px) { /* line 326, ../sass/_change4Charity.scss */
+@media screen and (min-width: 1280px) { /* line 333, ../sass/_change4Charity.scss */
   #charities #charityCards { display: block; padding: 0; margin: 0 -15px; *zoom: 1; }
   /* line 121, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
   #charities #charityCards:before, #charities #charityCards:after { content: " "; display: table; }

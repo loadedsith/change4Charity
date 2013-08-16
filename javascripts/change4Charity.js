@@ -14,7 +14,9 @@ change4Charity.app = angular.module( 'change4Charity',['usersServices','charitie
           $locationProvider.html5Mode(true);
           $routeProvider.when("/",{controller: 'VentraController',templateUrl:"/partials/ventra.html"}).
                          when("/welcome",{controller: 'WelcomeController',templateUrl:"/partials/welcome.html"}).
-                         when("/app",{controller: 'MainController',templateUrl:"/partials/stats.html"});
+                         when("/app",{controller: 'MainController',templateUrl:"/partials/landing.html"}).
+                         when("/confirm",{controller: 'ConfirmController',templateUrl:"/partials/confirm.html"}).
+                         when("/reciept",{controller: 'RecieptController',templateUrl:"/partials/reciept.html"});
         });
 
 
@@ -32,13 +34,27 @@ angular.module('change4Charity').filter('titleCase', function () {
 });
 
 
-change4Charity.app.controller( 'WelcomeController', function( $scope, Strings ) {
+function WelcomeController( $scope, Strings ) {
   Strings.query(function(response){
     $scope.welcome = response.welcome;
   });
-});
+};
 
-change4Charity.app.controller( 'VentraController', function( $scope, $location, Ventra, Strings, Users) {
+function ConfirmController ($scope, $location, Ventra, Strings, Users ){
+  $scope.donate = function(){
+    $location.path("/reciept");
+    
+  }
+}
+
+function RecieptController ($scope, $location, Ventra, Strings, Users ){
+  $scope.home = function(){
+    $location.path("/app");
+    
+  }
+}
+
+function VentraController ( $scope, $location, Ventra, Strings, Users) {
   Strings.query(function(response){
     $scope.strings = response;
     $scope.login = $scope.strings.login;
@@ -59,9 +75,9 @@ change4Charity.app.controller( 'VentraController', function( $scope, $location, 
     $('#login').foundation('reveal', 'close');
     $location.path( "/app" );
   };
-});
+};
 
-change4Charity.app.controller( 'MainController', function( $scope, Strings, Users ) {
+function MainController( $scope, Strings, Users ) {
   $scope.stats = $scope.stats || {};
   $scope.login = $scope.login || {};
   $scope.user = Users.query() ;
@@ -108,7 +124,7 @@ change4Charity.app.controller( 'MainController', function( $scope, Strings, User
       //time() + (10 * 365 * 24 * 60 * 60)
     }
   };
-});
+};
 
 change4Charity.app.controller( 'fareCardController', function( $scope, FareCards ) {
   $scope.findCard = function(input){
@@ -160,13 +176,17 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     var x = canvas.width / 2;
     var y = canvas.height / 2;
   
-    context.font="45px Arial";
+    context.font="35pt Arial";
+    context.textAlign = 'center';
 
     context.strokeStyle = 'orange';
-    context.lineWidth = 2;
-    context.strokeText(Math.floor($scope.countdown),x-12,y+14);
+    context.lineWidth = 1;
+    var metrics = context.measureText($scope.countdown)
+    var textX = x;
+    var textY = y+14;
+    context.strokeText(Math.floor($scope.countdown),textX,textY);
     context.fillStyle = 'black';
-    context.fillText(Math.floor($scope.countdown),x-12,y+14);
+    context.fillText(Math.floor($scope.countdown),textX,textY);
 
     var radius = 40;
     var startAngle = 1.5 * Math.PI;
@@ -185,34 +205,34 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     
     context.beginPath();
     context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
-    context.lineWidth = 7;
+    context.lineWidth = 11;
 
     // line color
     context.strokeStyle = 'grey';
     context.stroke();
     
     context.globalAlpha=.7;
-    context.font="14px Arial";
+    context.font="18px Arial";
 
     context.strokeStyle = 'white';
-    context.lineWidth = 2;
+    context.lineWidth = .75;
     
-    context.strokeText($scope.timeScale+' till',x/2*.7,y/2*3.1);
+    context.strokeText($scope.timeScale+' until',x,y/2*3.1);
     context.globalAlpha=1;
     context.fillStyle = 'black';
 
-    context.fillText($scope.timeScale+' till',x/2*.7,y/2*3.1);
+    context.fillText($scope.timeScale+' until',x,y/2*3.1);
 
-    context.font="14px Arial";
-    context.strokeText('drawing',x/2*.9,y/2*3.7);
-    context.fillText('drawing',x/2*.9,y/2*3.7);
+    context.font="17px Arial";
+    context.strokeText('drawing',x,y/2*3.7);
+    context.fillText('drawing',x,y/2*3.7);
     
     
     
   }
 });
 
-change4Charity.app.controller( 'CharitiesController', function( $scope, Charities ) {
+change4Charity.app.controller( 'CharitiesController', function( $scope, $location, Charities ) {
   $scope.card = {};
 
   $scope.selectedCharity = {};
@@ -224,12 +244,21 @@ change4Charity.app.controller( 'CharitiesController', function( $scope, Charitie
 
     $('#selectedCharity').foundation('reveal', 'reflow');
   }
-
-  $scope.donate = function(charity){
+  $scope.charityMoreInfo = function(charity){
     $scope.showSelectedCharity = true;
     $scope.selectedCharity = charity;
     $scope.selectedCharity.charitySelected = $scope.strings.charitySelected;
+
     $('#selectedCharity').foundation('reveal', 'open');
+  }
+  $scope.closeModal = function(){
+
+    $('#selectedCharity').foundation('reveal', 'close');
+  }
+
+  $scope.confirmDonate = function(charity){
+    $('#selectedCharity').foundation('reveal', 'close');
+    $location.path( "/confirm" );
   };
 
   $scope.showCharityInfo = function(charity){
