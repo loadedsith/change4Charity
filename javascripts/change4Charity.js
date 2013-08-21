@@ -80,8 +80,8 @@ function ReceiptController ($scope, $location, Ventra, Strings, Users ){
   $scope.user = Users.query();
 
 angular.element(document).ready(function () {
-      console.log('strange Man of War bird');
-    console.log($('#chartContainer'));
+
+
         $('#chartContainer').highcharts({
             chart: {
                 backgroundColor: 'transparent',
@@ -239,7 +239,7 @@ change4Charity.app.controller( 'fareCardController', function( $scope, FareCards
   $scope.findCard = function(input){
     FareCards.query(function(response){
       var fareCards = response;
-      // console.log("fare Cards",input);
+
       $scope.fareCard = fareCards[0];
       $scope.showCardResults = true;
       // $scope.fareCardResult

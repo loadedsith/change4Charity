@@ -54,12 +54,11 @@ hr{
       border: 0;
       @media screen and (min-width: '400px') {
         max-width:300px;
-        @include debug(DarkViolet);
 
       }
       @media screen and (min-width: $small-screen) {
         max-width:375px;
-@include debug(MediumSeaGreen);
+
 
       }
       @media screen and (min-width: $medium-screen) {
