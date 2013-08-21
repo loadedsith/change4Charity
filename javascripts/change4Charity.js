@@ -202,10 +202,8 @@ function MainController( $scope, Strings, Users ) {
     
   $scope.closeModal = function(){
     $('#introduction').foundation('reveal', 'close');
-    $('#login').foundation('reveal', 'close');
   };
   $scope.revealLogin = function(){
-    $('#login').foundation('reveal', 'open');
   };
   $scope.menuClick = function(){
     $(".top-bar").toggleClass("expanded");

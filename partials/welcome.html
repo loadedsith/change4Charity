@@ -1,7 +1,7 @@
 <a href="/app">
   <div class="welcomeWrapper">
     <div class="welcomeContent">
-      <img ng-src="{{welcome.logoSrc && 'images/' + welcome.logoSrc || ''}} " alt="{{wecome.header}}">
+      <img style="max-width:30%" ng-src="{{welcome.logoSrc && 'images/' + welcome.logoSrc || ''}} " alt="{{wecome.header}}">
       <h1>{{welcome.header}}</h1>
       <ul>
         <li ng-repeat="line in welcome.lines"><h4>{{line}}</h4></li>

@@ -64,7 +64,7 @@
               </div>
             </li>
           </ul>
-          <div id="selectedCharity" class="reveal-modal" ng-init="selectedCharityInit()" ng-style="{'background':'url(/images/charityLogo/'+(selectedCharity.logo||'../placeholder.gif')+')'}" >
+          <div id="selectedCharity" class="reveal-modal" ng-init="selectedCharityInit()" >
             <div class="row selectedCharity">
               <div class="small-3 large-3 columns small-centered">
                 <img src="/images/charityLogo/{{selectedCharity.logo||'../placeholder.gif'}}" class="ucase">
@@ -90,6 +90,8 @@
                   {{strings.cta}}
                   {{strings.ctaValue|currency}}
                 </a>
+              </div>
+              <div class="small-12 small-centered">                
                 <a class="small right round button " href="" ng-click="closeModal()">Nah</a>
               </div>
               <div class="small-4 small-centered columns charityDonations" ng-model="stats">

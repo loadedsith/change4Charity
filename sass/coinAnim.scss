@@ -1,6 +1,6 @@
 @import "compass/css3/transform";
 @import "compass/css3";
-
+ $small-screen: emCalc(768px);
 
 @mixin debug($color){
   border:3px dotted $color !important;
@@ -24,7 +24,9 @@ html,body{
   
 }
 .container{
-  overflow:hidden;
+  overflow-x:hidden;
+  overflow-y:auto;
+  
   height:100%;
   width:80%;
   margin:0 auto 5%;
@@ -56,29 +58,43 @@ html,body{
     height:5%;
     bottom:400px;
     left:0px;
+      @include debug(DarkSeaGreen);
+    @media screen and (max-width:  $small-screen){
+
+      bottom:40%;
+    }
 
   }
 
   .slot{
     position:relative;
     top:0;
-      width:250px;
-      height:50px;
-      margin:-10px auto 0 auto;
-
+    width:250px;
+    height:50px;
+    margin:-10px auto 0 auto;
     background-color:#999;
-      z-index:10;
+    z-index:10;
+    @media screen and (max-width:  $small-screen){
+      width:50%;
+      height:5%;
+
+    }
   }
   .slotMask{
     border-top:3px solid #400;
-      z-index:1000;
+    z-index:1000;
     position:relative;
     top:-25px;
     width:230px;
     height:20px;
     margin:0 auto -25px auto;
     background-color:#999;
-
+    
+    @media screen and (max-width:  $small-screen){
+      width:45%;
+      height:2%;
+      top:-1%;
+    }
   }
   .mask{
     width:100%;
@@ -97,7 +113,9 @@ html,body{
       height: 60%;
       width: 300px;
       margin:-25px auto;
-      
+      @media screen and (max-width:  $small-screen){
+        width:30%;
+      }
       .coin{
         @include transform-style( preserve-3d);
         z-index:10;
