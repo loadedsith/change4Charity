@@ -27,8 +27,8 @@
               
               <h3 class="subheader center">Confirmation</h3>
               <h5 class="subheader center">You have selected to donate {{(selectedCharity.amount|currency) ||('.5'|currency)}} for</h5>
-              <h4 class="subheader center">{{(selectedCharity.name) ||'Grapefruit Freedom Fighters'}}</h4>
-              <div class="panel round radius" ng-bind-html-unsafe="confirmationLegalise||'By clicking the submit button you are confirming that the CTA is authorized to transfer the amount above from your account.<br/>This will enter you in a lottery for a chance to win a CTA pass valued at $100 (USD)'"></div>
+              <h4 class="subheader center">{{(selectedCharity.name) ||'The Red Cross'}}</h4>
+              <p class="panel round radius" ng-bind-html-unsafe="confirmationLegalise||'By clicking the submit button you are confirming that the CTA is authorized to transfer the amount above from your account.<br/>This will enter you in a lottery for a chance to win a CTA pass valued at $100 (USD)'"></p>
               <button ng-click="donate()" class="button radius expand success ucase">Submit</button>
               
             </div>

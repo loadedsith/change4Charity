@@ -921,10 +921,10 @@ $price-money-bg: $panel-bg;
 //// Modal itself.
 
  $reveal-modal-bg: rgba(#000, .75);
- $reveal-position-top: 50px;
+ $reveal-position-top: 10%;
  $reveal-default-width: 90%;
-// $reveal-modal-padding: emCalc(20px);
-// $reveal-box-shadow: 0 0 10px rgba(#000,.4);
+// $reveal-modal-padding: emCalc(10px);
+$reveal-box-shadow: 0 0 15px rgba($body-bg,1);
 
 //// Reveal close button
 

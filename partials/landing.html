@@ -66,30 +66,33 @@
           </ul>
           <div id="selectedCharity" class="reveal-modal" ng-init="selectedCharityInit()" ng-style="{'background':'url(/images/charityLogo/'+(selectedCharity.logo||'../placeholder.gif')+')'}" >
             <div class="row selectedCharity">
-              <div class="small-5 large-3 columns small-centered">
+              <div class="small-3 large-3 columns small-centered">
                 <img src="/images/charityLogo/{{selectedCharity.logo||'../placeholder.gif'}}" class="ucase">
               </div>
               <div class="small-12 small-centered">
                 <h2 class="ucase center">
                   {{selectedCharity.name}}
+                  
                 </h2>
+                <p class="subheader center">$225 Total Donated </p>
               </div>
               <div class="small-12 small-centered">
             
                   <h3>Mission:</h3>
-                  <h5 class="subheader" ng-bind="selectedCharity.shortDescription"></h5>
+                  <p class="subheader" ng-bind="selectedCharity.shortDescription"></p>
                   <hr/>
                   <h3>Vision:</h3>
-                  <h5 class="subheader" ng-bind="selectedCharity.vision"></h5>
-                  <br/>
+                  <p class="subheader" ng-bind="selectedCharity.vision"></p>
                   <br/>
               </div>
               <div class="small-12 small-centered">                
-                <a class="small expand button success" href="" ng-click="confirmDonate(charity)">
-                  {{strings.cta}}<br/>
+                <a class=" expand round button secondary" href="" ng-click="confirmDonate(charity)">
+                  {{strings.cta}}
                   {{strings.ctaValue|currency}}
                 </a>
-                <a class="small right button alert" href="" ng-click="closeModal()">Nah</a>
+                <a class="small right round button " href="" ng-click="closeModal()">Nah</a>
+              </div>
+              <div class="small-4 small-centered columns charityDonations" ng-model="stats">
               </div>
             <a class="close-reveal-modal">&#215;</a>
           </div>

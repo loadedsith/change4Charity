@@ -12,7 +12,7 @@
     "welcome" : {
       "logoSrc":"bwLogo4x.png",
       "header":"Bet On Chicago",
-      "footer":"(click anywhere to close)",
+      "footer":"(click anywhere to continue)",
       "lines" : [
         "Play",
         "Win weekly passes",

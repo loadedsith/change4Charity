@@ -2,21 +2,21 @@
   <div class="sticky contain-to-grid ventra" >
   <nav class="top-bar" data-options="is_hover:false">
     <ul class="title-area">
-        <li class="name center">
-          <a href="http://www.transitchicago.com/ventra/">
-            <h1>Ventra</h1>
-          </a>
-        </li>
-        <li class="toggle-topbar"><a ng-click="revealLogin()" >Login<span></span></a></li>
+      <li class="name center">
+        <a href="http://www.transitchicago.com/ventra/">
+          <h2 class="ucase">Ventra</h2>
+        </a>
+      </li>
+      <li class="toggle-topbar"><a ng-click="revealLogin()" >Login<span></span></a></li>
     </ul>
   </nav>
   </div>
   <div class=" row ventra" ng-model="ventra">
   <div class="small-11 small-centered large-11 large-centered columns">
     <ul>
-        <li class="row fields" ng-model="ventra.fields">
+        <li  class="row fields" ng-model="ventra.fields">
           <a>
-            <div class="small-12 large-8 large-centered columns panel radius">
+            <div style="background-color:#E6E6E6" class="small-12 large-8 large-centered columns panel radius">
               <a style="color:#343">
                 <div class="small-3 large-3 columns key" >Name</div>
                 <div class="small-7 large-4 columns value" ng-bind="ventra.fields.name">
@@ -29,7 +29,7 @@
       
         <li class="row fields" ng-model="ventra.fields">
           <a>
-            <div class="small-12 large-8 large-centered columns panel radius">
+            <div style="background-color:#E6E6E6" class="small-12 large-8 large-centered columns panel radius">
               <a style="color:#343">
                 <div class="small-3 large-3 columns key" >Visa</div>
                 <div class="small-7 large-4 columns value" ng-bind-html-unsafe="ventra.fields.visa+'<br/><span class=\'expires\'>'+ventra.fields.expires+'</span> <span class=\'security\'>'+ventra.fields.security+'</span>'">
@@ -38,11 +38,11 @@
               </a>
             </div>
           </a>
-      </li>
+        </li>
       
         <li class="row fields" ng-model="ventra.fields">
           <a>
-            <div class="small-12 large-8 large-centered columns panel radius">
+            <div style="background-color:#E6E6E6" class="small-12 large-8 large-centered columns panel radius">
               <a style="color:#343">
                 <div class="small-3 large-3 columns key" >Mo. Charge</div>
                 <div class="small-7 large-4 columns value" ng-bind="ventra.fields.monthly|number:0 |currency">
@@ -51,31 +51,29 @@
               </a>
             </div>
           </a>
+
       </li>
-      
-      
-      
       
       <li class="row lottery"  ng-repeat="lottery in ventra.lottery">
           <a>
-            <div class="small-12 large-8 large-centered columns panel radius">
+            <div style="background-color:#E6E6E6" class="small-12 large-8 large-centered columns panel radius">
               <a style="color:#343">
-                <div class="small-3 large-3 columns key">Lottery Number</div>
-                <div class="small-7 large-4 columns value">
+                <div class="small-3 large-5 columns key">Lottery Number</div>
+                <div class="small-7 large-3 columns value">
                   {{lottery.number||lottery.play}} / {{lottery.fun | titleCase}}
               </div>
   
-              <div class="small-1 large-2 columns cta secondary  small round">»</div>
+              <div class="small-1 large-1 columns cta secondary center small round">»</div>
               </a>
             </div>
           </a>
         </li>
       <li class="row lottery ctaRow">
           <a>
-            <div class="small-12 large-8 large-centered columns panel radius">
+            <div style="background-color:PapayaWhip " class="small-12 large-8 large-centered columns panel radius">
               <a href="/welcome" style="color:#343">
-                <div class="small-9 large-7 columns key">Bet On Chicago</div>
-                <div class="small-3 right columns cta"><a href="/welcome" class="button expand radius">Play</a></div>
+                <div class="small-7 large-7 columns key">{{strings.title}}</div>
+                <div class="small-5 right columns cta"><a href="/welcome" style="background-color:#FAB815;border:none;color:#000;" class="button secondary expand radius">Play</a></div>
               </a>
             </div>
           </a>

@@ -35,10 +35,19 @@ angular.module('change4Charity').filter('titleCase', function () {
 });
 
 
-function WelcomeController( $scope, Strings ) {
+function WelcomeController( $scope, $location, Strings) {
   document.title="Bet On Chicago - Welcome";
+  if ( !$.cookie("login") ) {
+    var minutes = 30;
+    var date = new Date();
+    date.setTime(date.getTime() + (minutes * 60 * 1000));
+    $('#login').foundation('reveal', 'open');
+    $.cookie("login",true, {expires:date});
+    //time() + (10 * 365 * 24 * 60 * 60)
+    $location.path( "/app" );
+    $scope.$apply();
+  }
   $scope.welcome = function(){
-    console.log('Smarty Southern Dart frog');
 
   };
   Strings.query(function(response){
@@ -57,10 +66,9 @@ function AnimationController ($scope, $location ){
   document.title="Bet On Chicago - Good Luck";
   
   setTimeout(function () {
-       console.log('Green Sea Otter');
         $location.path("/receipt");
         $scope.$apply();
-     }, 6000);
+     }, 7500);
   $scope.continue = function(){
     $location.path("/receipt");
     $scope.$apply();
@@ -70,7 +78,70 @@ function AnimationController ($scope, $location ){
 function ReceiptController ($scope, $location, Ventra, Strings, Users ){
   document.title="Bet On Chicago - Thank You";
   $scope.user = Users.query();
-  // console.log($scope.user);
+
+angular.element(document).ready(function () {
+      console.log('strange Man of War bird');
+    console.log($('#chartContainer'));
+        $('#chartContainer').highcharts({
+            chart: {
+                backgroundColor: 'transparent',
+                type: 'column'
+            },
+            xAxis: {
+                categories: [
+                    ''
+                ]
+            },
+            yAxis: {
+                min: 0,
+                title:{
+                  text:''
+                },
+                labels: {
+                  format: '${value}'
+              }
+            },
+            tooltip: {
+              enabled:false
+              
+            },
+            exporting: {
+                      enabled: false
+                  },
+           
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            title: {
+              text: ''  
+            },
+            series: [{
+                name: 'Augies Quest',
+                data: [544]
+    
+            }, {
+                name: 'Give For Girls',
+                data: [923]
+    
+            }, {
+                name: 'Red Cross',
+                data: [602]
+    
+            }, {
+                name: 'Ronald McDonald Foundation',
+                data: [512]
+    
+            }, {
+                name: 'Anime Midwest',
+                data: [301]
+    
+            }]
+        });
+      });
+  // $scope.charts();
   $scope.user.lotteryNumber = "";
   var cardLength = 19;
   var dashSeperatorMod = 5;
