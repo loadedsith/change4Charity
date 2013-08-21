@@ -7,7 +7,6 @@ angular.module('usersServices', ['ngResource']).factory('Users', function($http,
   var users = {};
   $http.get('/static/users.json').success(function(response){
     users = response;
-    console.log(response);
   });
   return {
       query:function(){return users;},

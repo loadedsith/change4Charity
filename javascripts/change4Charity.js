@@ -16,7 +16,8 @@ change4Charity.app = angular.module( 'change4Charity',['usersServices','charitie
                          when("/welcome",{controller: 'WelcomeController',templateUrl:"/partials/welcome.html"}).
                          when("/app",{controller: 'MainController',templateUrl:"/partials/landing.html"}).
                          when("/confirm",{controller: 'ConfirmController',templateUrl:"/partials/confirm.html"}).
-                         when("/reciept",{controller: 'RecieptController',templateUrl:"/partials/reciept.html"});
+                         when("/goodLuck",{controller: 'AnimationController',templateUrl:"/partials/animation.html"}).
+                         when("/receipt",{controller: 'ReceiptController',templateUrl:"/partials/receipt.html"});
         });
 
 
@@ -35,19 +36,53 @@ angular.module('change4Charity').filter('titleCase', function () {
 
 
 function WelcomeController( $scope, Strings ) {
+  document.title="Bet On Chicago - Welcome";
+  $scope.welcome = function(){
+    console.log('Smarty Southern Dart frog');
+
+  };
   Strings.query(function(response){
     $scope.welcome = response.welcome;
   });
 };
 
 function ConfirmController ($scope, $location, Ventra, Strings, Users ){
+  document.title="Bet On Chicago - Confirm Your Donation";
   $scope.donate = function(){
-    $location.path("/reciept");
+    $location.path("/goodLuck");
     
   }
 }
+function AnimationController ($scope, $location ){
+  document.title="Bet On Chicago - Good Luck";
+  
+  setTimeout(function () {
+       console.log('Green Sea Otter');
+        $location.path("/receipt");
+        $scope.$apply();
+     }, 6000);
+  $scope.continue = function(){
+    $location.path("/receipt");
+    $scope.$apply();
+  }
+}
 
-function RecieptController ($scope, $location, Ventra, Strings, Users ){
+function ReceiptController ($scope, $location, Ventra, Strings, Users ){
+  document.title="Bet On Chicago - Thank You";
+  $scope.user = Users.query();
+  // console.log($scope.user);
+  $scope.user.lotteryNumber = "";
+  var cardLength = 19;
+  var dashSeperatorMod = 5;
+  for (var i = 0; i < cardLength; i++) {
+    
+    if( i % dashSeperatorMod === dashSeperatorMod-1 && i !== cardLength && i !== 0){
+      $scope.user.lotteryNumber +="-";
+      i+=1;
+    }
+    $scope.user.lotteryNumber +=Math.floor(Math.random()*10).toString();
+    
+  }
   $scope.home = function(){
     $location.path("/app");
     
@@ -55,6 +90,8 @@ function RecieptController ($scope, $location, Ventra, Strings, Users ){
 }
 
 function VentraController ( $scope, $location, Ventra, Strings, Users) {
+  document.title="Ventra";
+  $('body').css({"background-color":"#FFF"});
   Strings.query(function(response){
     $scope.strings = response;
     $scope.login = $scope.strings.login;
@@ -78,13 +115,14 @@ function VentraController ( $scope, $location, Ventra, Strings, Users) {
 };
 
 function MainController( $scope, Strings, Users ) {
+  document.title="Bet On Chicago";
   $scope.stats = $scope.stats || {};
   $scope.login = $scope.login || {};
   $scope.user = Users.query() ;
 
   $scope.user.showInfo = true;
-  $scope.stats.charityDonations = 2134;
-  $scope.stats.totalPasses = 213;
+  $scope.stats.charityDonations = 13579;
+  $scope.stats.totalPasses = 1113;
   Strings.query(function(response){
     $scope.strings = response;
     $scope.welcome = $scope.strings.welcome;
@@ -171,21 +209,19 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     var canvas = document.getElementById('clock');
     var context = canvas.getContext('2d');
   
-
-
     var x = canvas.width / 2;
-    var y = canvas.height / 2;
+    var y = canvas.width / 2;
   
-    context.font="35pt Arial";
+    context.font="300 45pt Raleway";
     context.textAlign = 'center';
 
-    context.strokeStyle = 'orange';
     context.lineWidth = 1;
     var metrics = context.measureText($scope.countdown)
     var textX = x;
     var textY = y+14;
+    context.strokeStyle = '#777';
     context.strokeText(Math.floor($scope.countdown),textX,textY);
-    context.fillStyle = 'black';
+    context.fillStyle = '#fff';
     context.fillText(Math.floor($scope.countdown),textX,textY);
 
     var radius = 40;
@@ -195,9 +231,9 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
 
     context.beginPath();
     context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
-    context.lineWidth = 12;
+    context.lineWidth = 2;
     
-    context.strokeStyle = 'orange';
+    context.strokeStyle = '#777';
     context.stroke();
     
     // endAngle = (percent*2)+1.5 * Math.PI;
@@ -208,26 +244,26 @@ change4Charity.app.controller( 'CountDownController', function( $scope, $http, $
     context.lineWidth = 11;
 
     // line color
-    context.strokeStyle = 'grey';
+    context.strokeStyle = '#fff';
     context.stroke();
-    
-    context.globalAlpha=.7;
-    context.font="18px Arial";
-
-    context.strokeStyle = 'white';
-    context.lineWidth = .75;
-    
-    context.strokeText($scope.timeScale+' until',x,y/2*3.1);
-    context.globalAlpha=1;
-    context.fillStyle = 'black';
-
-    context.fillText($scope.timeScale+' until',x,y/2*3.1);
-
-    context.font="17px Arial";
-    context.strokeText('drawing',x,y/2*3.7);
-    context.fillText('drawing',x,y/2*3.7);
-    
-    
+        // 
+    // context.globalAlpha=.7;
+    // context.font="18px Arial";
+    // 
+    // context.strokeStyle = 'white';
+    // context.lineWidth = .75;
+    // 
+    // context.strokeText($scope.timeScale+' until',x,y/2*3.4);
+    // context.globalAlpha=1;
+    // context.fillStyle = '#333333';
+    // 
+    // context.fillText($scope.timeScale+' until',x,y/2*3.4);
+    // 
+    // context.font="17px Arial";
+    // context.strokeText('drawing',x,y/2*3.9);
+    // context.fillText('drawing',x,y/2*3.9);
+    // 
+    // 
     
   }
 });

@@ -1,0 +1,52 @@
+<div class="page">
+  <div class="sticky contain-to-grid" >
+      <nav class="top-bar" data-options="is_hover:false">
+        <ul class="title-area">
+            <li class="name" ><h1><a href="/app" ng-bind="strings.title"></a></h1>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right" ng-cloak ng-show="false">
+            <li class="loginWelcome">
+              <span class="userInfo"  ng-show="user.showInfo">
+                <p class="username" ng-bind="'Welcome: '+user.username"></p>
+              </span>
+              <span ng-show="user.showLogin" >
+                <a ng-click="revealLogin()" class="small secondary button">login</a>
+              </span>
+            </li>
+          </ul>
+        </section>
+      </nav>
+  </div>
+  <div id="wrapper">
+    <div id="content">
+      <div class="row">
+        <div class="small-11 large-6 large-centered small-centered columns">
+          <h3 class="subheader center lotteryHeader">Lottery <sup>no.</sup></h3>
+          <div class="panel radius center">{{user.lotteryNumber||'444333222111'}}</div>
+          <h3 class="center ucase">Thank You!</h3>
+          <p class="subheader center">You have selected to donate {{(selectedCharity.amount|currency) ||('.5'|currency)}} for</p>
+          <h4 class="subheader center">{{(selectedCharity.name) ||'Grapefruit Freedom Fighters'}}</h4>
+          <p class="subheader center">Please check your Ventra email account to see if you've won! Drawings are held each week.</p>
+          </div>
+          <hr/>
+          <div class="small-11 large-6 large-centered small-centered columns">
+
+            <a href="/app" class="button radius expand ucase">Browse Charities</a>
+
+          </div>
+          <div class="small-11 large-6 large-centered small-centered columns">
+            <h3 class="subheader center">Tell Your Friends</h3>
+          </div>
+          <div class="small-11 large-6 large-centered small-centered columns">
+            <a href="http://www.twitter.com" class="secondary button radius expand ucase">Twitter</a>
+          </div>
+          <div class="small-11 large-6 large-centered small-centered columns">
+            <a href="http://www.facebook.com" class="secondary button radius expand ucase">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

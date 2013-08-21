@@ -1,33 +1,48 @@
 [
     {
-      "name": "AM",
-      "link": "http://AM.com",
-      "logo": "AM.png",
-      "shortDescription": "defeated Red dragonfly loves deep Indigo eider duck"
-    },
-    {
       "name": "Augies Quest",
       "link": "http://Augies.com",
       "logo": "augiesQuest.png",
-      "shortDescription": "shaky Green Lear's Macaw vs magnificent Greenish Grass-dart frog"
+      "shortDescription": "shaky Green Lear's Macaw vs magnificent Greenish Grass-dart frog",
+      "mission":"Smarty North American River Otter has tea with Smarty honey bee",
+      "vision":"A group of robust Bottle nose Dolphin battle Yellow Spotted Dogs",
+      "earnings":"1113"
     },
     {
       "name": "Give For Girls",
       "link": "http://Give.com",
       "logo": "giveForGirls.png",
-      "shortDescription": "Polar Bear has a Mongolian wild ass"
+      "shortDescription": "Polar Bear has a Mongolian wild ass",
+      "mission":"The rapid lion dances around an Orange King penguin outside of Smarty giraffe's house",
+      "vision":"Red Lesser Emperor dragonfly eats Smarty Common Gull and filthy Nothern River Otter",
+      "earnings":"1719"
     },
     {
       "name": "Red Cross",
       "link": "http://Red.com",
       "logo": "redCross.png",
-      "shortDescription": "New Zealand Falcon eats a defiant Red Southern Dart frog"
+      "shortDescription": "New Zealand Falcon eats a defiant Red Southern Dart frog",
+      "mission":"Enthusiastic Rock Pigeon, Rock Pigeon, Rock",
+      "vision":"Don't go chasing creepy white-tailed deers stick to the Smarty Spur-winged Goose that you're used to",
+      "earnings":"2731"
     },
     {
-      "name": "Ronald",
+      "name": "Ronald McDonald Foundation",
       "link": "http://Ronald.com",
       "logo": "ronald.png",
-      "shortDescription": "determined Blue Lear's Macaw takes a Sea Otter for a walk"
+      "shortDescription": "determined Blue Lear's Macaw takes a Sea Otter for a walk",
+      "mission":"Skinny Spotted Hyena visits Orange black mamba at the Smarty California Condor state park",
+      "vision":"Angry Indigo Red-breasted Merganser beats Smarty grizzly bear",
+      "earnings":"0"
+    },
+    {
+      "name": "Anime Midwest",
+      "link": "http://AM.com",
+      "logo": "AM.png",
+      "shortDescription": "defeated Red dragonfly loves deep Indigo eider duck",
+      "mission":"The Blue Man of War bird will marry a Smarty roadrunner",
+      "vision":"Blue black mamba eats with a comfortable greyhound",
+      "earnings":"12357"
     }
   ]
   

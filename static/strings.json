@@ -1,8 +1,8 @@
 {
   "cta":"Donate",
   "ctaValue":0.50,
-  "title":"Cause 4 Change",
-  "moreInfo":"learn more",
+  "title":"Bet on Chicago",
+  "moreInfo":"?",
     "charitySelected": "You've selected",
     "playNow":"Play The Lottery",
     "skipOne": {
@@ -11,10 +11,10 @@
     },
     "welcome" : {
       "logoSrc":"bwLogo4x.png",
-      "header":"C4C",
+      "header":"Bet On Chicago",
       "footer":"(click anywhere to close)",
       "lines" : [
-        "Play The C4C Lottery",
+        "Play",
         "Win weekly passes",
         "Give back to your community"
       ]

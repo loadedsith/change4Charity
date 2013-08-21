@@ -11,18 +11,26 @@
 
 
 html,body{
-  height:100%;
   overflow-x:hidden;
-  background-color:#999;
+}
+.footer{
+  color:Khaki;
+
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  
 }
 .container{
   overflow:hidden;
-  height:80%;
-  width:40%;
-  margin:5% auto;
-  background-color:#fff;
+  height:100%;
+  width:80%;
+  margin:0 auto 5%;
+  background-color:#FAAD39;
   .card{
-    background-color:#FF8000;
+    background-color:#B6B6B6;
     -webkit-animation-name: insertCard;
     -webkit-animation-duration: 7s;
     -webkit-animation-iteration-count: 1;
@@ -34,7 +42,7 @@ html,body{
     z-index:100;
     border-radius:20px;
     padding:15px;
-    top:-100%;
+    top:-1000%;
     position:relative;
     width:200px;
     height:300px;
@@ -79,14 +87,14 @@ html,body{
     bottom:0px;
     left:0px;
     z-index:1000;
-    background-color:#fff;
+    background-color:#FAAD39;
     .coins{
       @include perspective(500);
       overflow:hidden;
       position: relative;
       top: 0;
       left: 0;
-      height: 32%;
+      height: 60%;
       width: 300px;
       margin:-25px auto;
       
@@ -105,91 +113,91 @@ html,body{
         -webkit-animation-play-state: running;
         -webkit-animation-fill-mode: none;
         -webkit-animation-timing-function: linear;
-        -webkit-animation-duration: 2.3s;
+        -webkit-animation-duration: 2.5s;
         
         &:nth-of-type(1n+0){
               left: 5%;
               -webkit-animation-name: flipCoin1;
-              -webkit-animation-delay: 2.8s;
+              -webkit-animation-delay: 3s;
 
         };
         &:nth-of-type(1n+1){
               left: 7%;
               -webkit-animation-name: flipCoin2;
-              -webkit-animation-delay: 2.6s;
+              -webkit-animation-delay: 2.8s;
 
         };
         &:nth-of-type(1n+2){
               left: 12%;
               -webkit-animation-name: flipCoin3;
-              -webkit-animation-delay: 4s;
+              -webkit-animation-delay: 4.2s;
         };
         &:nth-of-type(1n+3){
             left: 0%;
             -webkit-animation-name: flipCoin4;
-            -webkit-animation-delay: 4.8s;
+            -webkit-animation-delay: 5s;
         };
         &:nth-of-type(1n+4){
             left: 12%;
             -webkit-animation-name: flipCoin5;
-            -webkit-animation-delay: 3.8s;
+            -webkit-animation-delay: 4s;
             
         };  
         &:nth-of-type(1n+5){
             left: 13%;
             -webkit-animation-name: flipCoin6;
-            -webkit-animation-delay: 3.6s;
+            -webkit-animation-delay: 3.8s;
             
             };                
         &:nth-of-type(1n+6){
             left: 14%;
             -webkit-animation-name: flipCoin7;
-            -webkit-animation-delay: 4.6s;
+            -webkit-animation-delay: 4.8s;
 
         };
         &:nth-of-type(1n+7){
               left: 5%;
               -webkit-animation-name: flipCoin15;
-              -webkit-animation-delay: 3.1s;
+              -webkit-animation-delay: 3.3s;
 
         };
         &:nth-of-type(1n+8){
               left: 7%;
               -webkit-animation-name: flipCoin8;
-              -webkit-animation-delay: 3.4s;
+              -webkit-animation-delay: 3.6s;
 
         };
         &:nth-of-type(1n+9){
               left: 12%;
               -webkit-animation-name: flipCoin9;
-              -webkit-animation-delay: 5s;
+              -webkit-animation-delay: 5.2s;
         };
         &:nth-of-type(1n+10){
             left: 0%;
             -webkit-animation-name: flipCoin10;
-            -webkit-animation-delay: 3.2s;
+            -webkit-animation-delay: 3.4s;
         };
         &:nth-of-type(1n+11){
             left: 12%;
             -webkit-animation-name: flipCoin11;
-            -webkit-animation-delay: 3.5s;
+            -webkit-animation-delay: 3.7s;
             
         };  
         &:nth-of-type(1n+12){
             left: 13%;
             -webkit-animation-name: flipCoin12;
-            -webkit-animation-delay: 3.2s;
+            -webkit-animation-delay: 3.4s;
             
             };                
         &:nth-of-type(1n+13){
             left: 14%;
             -webkit-animation-name: flipCoin13;
-            -webkit-animation-delay: 3.6s;
+            -webkit-animation-delay: 3.8s;
         };
         &:nth-of-type(1n+14){
             left: 14%;
             -webkit-animation-name: flipCoin14;
-            -webkit-animation-delay: 3.6s;
+            -webkit-animation-delay: 3.8s;
         };
         .front{
           font-size:28px;

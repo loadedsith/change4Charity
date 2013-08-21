@@ -8,7 +8,7 @@ $break: 768px;
 $base-font-size: 100% !default;
 
 //// $base-line-height is 24px while $base-font-size is 16px
-//// $base-line-height: 150%;
+$base-line-height: 100%;
 
 //// This is the default html and body font-size for the base em value.
 
@@ -24,9 +24,9 @@ $em-base: 16px !default;
 
 //// Various global styles
 
- $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-bg: #ffd776;
+$body-font-color: #6f6f6f;
+$body-font-family: 'Raleway', 'Helvetica Neue', serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -40,14 +40,14 @@ $em-base: 16px !default;
 
 //// Colors
 
- $primary-color: #FF8030;
- $secondary-color: #212424;
+ $primary-color: #FAB815;
+ $secondary-color: #34495E;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
 //// Make sure border radius matches unless we want it different.
 
- $global-radius: 7px;
+ $global-radius: 12px;
 // $global-rounded: 1000px;
 
 //// Inset shadow shiny edges and depressions.
@@ -116,11 +116,11 @@ $shiny-edge-size: 0 0px 3px 0px;
 
 //// Heading font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ $header-font-family: 'EB Garamond', serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
-// $header-line-height: 1.4;
+ $header-line-height: 1.8;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
 // $header-text-rendering: optimizeLegibility;
@@ -136,7 +136,7 @@ $shiny-edge-size: 0 0px 3px 0px;
 
 //// Subheaders
 
-// $subheader-line-height: 1.4;
+ $subheader-line-height: 1.6;
 // $subheader-font-color: lighten($header-font-color, 30%);
 // $subheader-font-weight: 300;
 // $subheader-top-margin: .2em;
@@ -152,8 +152,8 @@ $shiny-edge-size: 0 0px 3px 0px;
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
 // $paragraph-font-size: 1em;
-// $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: emCalc(20px);
+$paragraph-line-height: 2;
+$paragraph-margin-bottom: emCalc(30px);
 // $paragraph-aside-font-size: emCalc(14px);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
@@ -175,7 +175,7 @@ $shiny-edge-size: 0 0px 3px 0px;
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
 // $hr-border-color: #ddd;
-// $hr-margin: emCalc(20px);
+ $hr-margin: emCalc(20px);
 
 //// Lists
 
@@ -1191,5 +1191,5 @@ $price-money-bg: $panel-bg;
 //// Transitions and breakpoint styles
 
 // $topbar-transition-speed: 300ms;
-// $topbar-breakpoint: emCalc(520px); // Change to 9999px for always mobile layout
+ $topbar-breakpoint: emCalc(9999px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
